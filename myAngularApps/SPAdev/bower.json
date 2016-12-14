@@ -1,0 +1,20 @@
+{
+  "name": "devandtdd",
+  "homepage": "https://github.com/rohittiwarirvt/myLearn",
+  "authors": [
+    "Rohit Tiwari <rohittiwarirvt@gmail.com>"
+  ],
+  "description": "used to develop single library along with tdd",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.0"
+  }
+}

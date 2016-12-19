@@ -37,6 +37,7 @@ define('DB_CHARSET', 'utf8mb4');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -46,14 +47,26 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'dZ0leT!t-78:J*kc1]W.QW<US(UvYpKB4!nNW9G5|FN #drm?gK^-F00i)^D(wf<');
-define('SECURE_AUTH_KEY',  'EMYs%k:vtAEY@[VQJ>`D*}zYRGc;A-tNM<AC6*AO8nG`!k-!4Uq(Z-/Q!O}r{r$L');
-define('LOGGED_IN_KEY',    'ML_Z?nr:hf%K#ligaZ6ZG!B}ttK.=LO$U::zuad+DXmGzoru}kk5:&I[4yK0s54n');
-define('NONCE_KEY',        '{;y)&TP$EmKV88NXA`3;,AEFDQ888Hi8^d+Fi_|}RKiUK/3q|/(6S5VO4| /}EoA');
-define('AUTH_SALT',        'INM,+|G=bPZZa~%clg=>$rh +6-[I[f%vph[l2TmsHZn`f?3F:oB-X^HZq!R-}um');
-define('SECURE_AUTH_SALT', 'BirKKAv9%y*AgT6P 4%itMYoa?GD4F9Q}(Z*3d24NIvFfCR?s0tK|2(we=KThp-9');
-define('LOGGED_IN_SALT',   'Z.!P;Pv?>AWS5aysQn1N>)#[|mG-]Lds@`sygsVE2-lVc`X*rugH#t+T_Dn^a.TX');
-define('NONCE_SALT',       '6WND|ou!d<eK44L|,e{gj8%3/gKcd;m|J$IBK_VPWhVdhJ~M{av5gM~l.SRb 1aE');
+define('AUTH_KEY',         'drz1Iykj8Xs8GlWz1owNT5QHcuRVWqefHIexsHt8gzq2SeTkhETE8RUPciS8UZMg');
+define('SECURE_AUTH_KEY',  '92K6bLZzGPvUQw4so3zspq8qdVTYaJl6vLq464KvoaIejFEMzaww0dryS9zkdEwD');
+define('LOGGED_IN_KEY',    'EZIrFtqYG1kjfcaDWR01oDb3vmpfbY2tUIPZuL8kTEpnf4mAnwBFzumlygdxL64L');
+define('NONCE_KEY',        'vZZEAurmjGkE1NFLB2JbwdiqEEHRmKZ1497nG97wVDf6TUhVkTVUEU2UWobiOF0w');
+define('AUTH_SALT',        'SB8qUfcHxOJ0laz5Fx3vppRoQK4OAI3G84y3wMXI5poffKubPF042RIpZWRxFasy');
+define('SECURE_AUTH_SALT', 'tdylHp4uM6gRP4yTGmaEMlPfZDddiuUfyRQCdoKEOKVjq0nGCl9O2EU37rNt2WSb');
+define('LOGGED_IN_SALT',   'hP14tMudmwn7RzmXb0H00ZLU2wEoXy8ZxCMc66WdpBC5sRoEqF2Tq8jP4ALf4O0O');
+define('NONCE_SALT',       'GO5vNBIn28shXBvT5NeSd6alsZmVWenkSOTbj9JX9yWlx5orYX9sRYvunzDjcZgs');
+
+/**
+ * Other customizations.
+ */
+define('FS_METHOD','direct');define('FS_CHMOD_DIR',0755);define('FS_CHMOD_FILE',0644);
+define('WP_TEMP_DIR',dirname(__FILE__).'/wp-content/uploads');
+
+/**
+ * Turn off automatic updates since these are managed upstream.
+ */
+define('AUTOMATIC_UPDATER_DISABLED', true);
+
 
 /**#@-*/
 
@@ -63,7 +76,7 @@ define('NONCE_SALT',       '6WND|ou!d<eK44L|,e{gj8%3/gKcd;m|J$IBK_VPWhVdhJ~M{av5
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'qvkp_';
 
 /**
  * For developers: WordPress debugging mode.
@@ -77,13 +90,13 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-  define('ABSPATH', dirname(__FILE__) . '/');
+	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

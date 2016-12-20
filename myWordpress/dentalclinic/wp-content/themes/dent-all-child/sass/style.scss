@@ -17,8 +17,9 @@
 
 /* Add your own styles here */
 
+@import "partials/utilities";
+@import "partials/variables";
+@import "partials/common";
+@import "partials/header";
+@import "partials/footer";
 
-
-body {
-  background-color: red;
-}

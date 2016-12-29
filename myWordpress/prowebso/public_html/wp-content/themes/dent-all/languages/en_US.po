@@ -1,0 +1,1495 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dent-all\n"
+"POT-Creation-Date: 2015-10-03 17:29+0500\n"
+"PO-Revision-Date: 2016-06-13 11:51+0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: /Users/marchello/WEB/www/dent.loc/wp-content/themes\n"
+"Language: en_US\n"
+"X-Poedit-SearchPath-0: dent-all\n"
+
+#: dent-all/comments.php:10
+#, php-format
+msgid "Comments <span>%s</span>"
+msgstr ""
+
+#: dent-all/comments.php:11
+#, php-format
+msgid "Add Comment"
+msgstr ""
+
+#: dent-all/comments.php:18
+msgid "<i class=\"stm-icon-reply\"></i> <span>Reply</span>"
+msgstr ""
+
+#: dent-all/inc/extras.php:267
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+#: dent-all/inc/redux-config.php:558
+msgid ""
+"Copyright &copy; 2015 dental practice Theme by <a target=\"_blank\" href="
+"\"http://www.stylemixthemes.com/\">Stylemix Themes</a>"
+msgstr ""
+
+#: dent-all/inc/vc-config.php:561 dent-all/inc/vc-config.php:567
+msgid ""
+"<a href=\"http://www.latlong.net/convert-address-to-lat-long.html\">Here is "
+"a tool</a> where you can find Latitude & Longitude of your location"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:226
+#, php-format
+msgid "Options panel created using %1$s"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:226
+msgid "Redux Framework"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:230 dent-all/inc/redux/framework.php:234
+msgid "Options"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:1731
+msgid "Enable"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:1736
+msgid "Disable"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:1742
+msgid "moving the mouse over"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:1744
+msgid "clicking"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:1748
+#, php-format
+msgid ""
+"Hints are tooltips that popup when %d the hint icon, offering addition "
+"information about the field in which they appear.  They can be %d d by using "
+"the link below."
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:1753
+msgid "Hints"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:1880
+msgid "Default"
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:2759
+msgid "Invalid security credential.  Please reload the page and try again."
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:2768
+msgid "Invalid user capability.  Please reload the page and try again."
+msgstr ""
+
+#: dent-all/inc/redux/framework.php:2857
+msgid "Your panel has no fields. Nothing to save."
+msgstr ""
+
+#: dent-all/inc/redux/core/enqueue.php:451
+#: dent-all/inc/redux/inc/extensions/customizer/extension_customizer.php:686
+msgid "You have changes that are not saved. Would you like to save them now?"
+msgstr ""
+
+#: dent-all/inc/redux/core/enqueue.php:459
+#: dent-all/inc/redux/inc/extensions/customizer/extension_customizer.php:687
+msgid "Are you sure? Resetting will lose all custom values."
+msgstr ""
+
+#: dent-all/inc/redux/core/enqueue.php:467
+msgid "Are you sure? Resetting will lose all custom values in this section."
+msgstr ""
+
+#: dent-all/inc/redux/core/enqueue.php:475
+#: dent-all/inc/redux/inc/extensions/customizer/extension_customizer.php:688
+msgid ""
+"Your current options will be replaced with the values of this preset. Would "
+"you like to proceed?"
+msgstr ""
+
+#: dent-all/inc/redux/core/enqueue.php:482
+msgid "Please Wait"
+msgstr ""
+
+#: dent-all/inc/redux/core/enqueue.php:493
+msgid "There was an error saving. Here is the result of your action:"
+msgstr ""
+
+#: dent-all/inc/redux/core/enqueue.php:494
+msgid ""
+"There was a problem with your action. Please try again or reload the page."
+msgstr ""
+
+#: dent-all/inc/redux/core/panel.php:65
+msgid "Warning- This options panel will not work properly without javascript!"
+msgstr ""
+
+#: dent-all/inc/redux/core/panel.php:141
+msgid "Settings Imported!"
+msgstr ""
+
+#: dent-all/inc/redux/core/panel.php:156
+msgid "All Defaults Restored!"
+msgstr ""
+
+#: dent-all/inc/redux/core/panel.php:170
+msgid "Section Defaults Restored!"
+msgstr ""
+
+#: dent-all/inc/redux/core/panel.php:184
+msgid "Settings Saved!"
+msgstr ""
+
+#: dent-all/inc/redux/core/panel.php:204
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: dent-all/inc/redux/core/panel.php:212
+msgid "error(s) were found!"
+msgstr ""
+
+#: dent-all/inc/redux/core/panel.php:220
+msgid "warning(s) were found!"
+msgstr ""
+
+#: dent-all/inc/redux/core/panel.php:313
+msgid ""
+"<strong>Your panel has bundled outdated copies of Redux Framework template "
+"files</strong> &#8211; if you encounter functionality issues this could be "
+"the reason. Ensure you update or remove them."
+msgstr ""
+
+#: dent-all/inc/redux/inc/class.redux_cdn.php:74
+msgid ""
+"Please wait a few minutes, then try refreshing the page. Unable to load some "
+"remotely hosted scripts."
+msgstr ""
+
+#: dent-all/inc/redux/inc/class.redux_cdn.php:76
+#, php-format
+msgid ""
+"If you are developing offline, please download and install the <a href=\"%s"
+"\" target=\"_blank\">Redux Vendor Support</a> plugin/extension to bypass the "
+"our CDN and avoid this warning"
+msgstr ""
+
+#: dent-all/inc/redux/inc/class.redux_cdn.php:81
+msgid "Redux Framework Warning"
+msgstr ""
+
+#: dent-all/inc/redux/inc/class.redux_cdn.php:81
+#, php-format
+msgid "%s CDN unavailable.  Some controls may not render properly."
+msgstr ""
+
+#: dent-all/inc/redux/inc/class.redux_cdn.php:113
+#, php-format
+msgid ""
+"The <a href=\"%s\">Vendor Support plugin</a> (or extension) is either not "
+"installed or not activated and thus, some controls may not render properly.  "
+"Please ensure that it is installed and <a href=\"%s\">activated</a>"
+msgstr ""
+
+#: dent-all/inc/redux/inc/class.redux_filesystem.php:31
+#: dent-all/inc/redux/inc/class.redux_filesystem.php:60
+#: dent-all/inc/redux/inc/class.redux_filesystem.php:270
+msgid "File Permission Issues"
+msgstr ""
+
+#: dent-all/inc/redux/inc/class.redux_filesystem.php:31
+#, php-format
+msgid ""
+"We were unable to modify required files. Please check your permissions, or "
+"modify your wp-config.php file to contain your FTP login credentials as <a "
+"href=\"%s\" target=\"_blank\">outlined here</a>."
+msgstr ""
+
+#: dent-all/inc/redux/inc/class.redux_filesystem.php:60
+#: dent-all/inc/redux/inc/class.redux_filesystem.php:270
+#, php-format
+msgid ""
+"We were unable to modify required files. Please ensure that <code>%1s</code> "
+"has the proper read-write permissions, or modify your wp-config.php file to "
+"contain your FTP login credentials as <a href=\"%2s\" target=\"_blank"
+"\">outlined here</a>."
+msgstr ""
+
+#: dent-all/inc/redux/inc/class.redux_helpers.php:596
+#, php-format
+msgid ""
+"<code>%s</code> version <strong style=\"color:red\">%s</strong> is out of "
+"date. The core version is %s"
+msgstr ""
+
+#: dent-all/inc/redux/inc/tracking.php:152
+#, php-format
+msgid ""
+"This panel demonstrates the many features of Redux.  Before digging in, we "
+"suggest you get up to speed by reviewing %1$s."
+msgstr ""
+
+#: dent-all/inc/redux/inc/tracking.php:153
+#, php-format
+msgid ""
+"Want to get a head start? Use the %1$s. It will create a customized "
+"boilerplate theme or a standalone admin folder complete with all things "
+"Redux (with the help of Underscores and TGM). Save yourself a headache and "
+"try it today."
+msgstr ""
+
+#: dent-all/inc/redux/inc/tracking.php:154
+#, php-format
+msgid ""
+"Did you know we have extensions, which greatly enhance the features of "
+"Redux?  Visit our %1$s to learn more!"
+msgstr ""
+
+#: dent-all/inc/redux/inc/tracking.php:155
+#, php-format
+msgid ""
+"If so, please %1$s and consider making a %2$s to keep development of Redux "
+"moving forward."
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/customizer/extension_customizer.php:721
+msgid "You have changes that are not saved.  Would you like to save them now?"
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/customizer/extension_customizer.php:722
+msgid "Are you sure?  Resetting will lose all custom values."
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/customizer/extension_customizer.php:723
+msgid ""
+"Your current options will be replaced with the values of this preset.  Would "
+"you like to proceed?"
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/customizer/inc/customizer_panel.php:114
+#: dent-all/inc/redux/inc/extensions/customizer/inc/customizer_panel.php:142
+#, php-format
+msgid "You are customizing %s"
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/customizer/inc/customizer_section.php:72
+msgid "Press return or enter to open"
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/customizer/inc/customizer_section.php:79
+msgid "Back"
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/import_export/extension_import_export.php:120
+msgid "Import / Export"
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/import_export/import_export/field_import_export.php:104
+msgid ""
+"Input your backup file below and hit Import to restore your sites options "
+"from a backup."
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/import_export/import_export/field_import_export.php:111
+msgid ""
+"Input the URL to another sites options set and hit Import to load the "
+"options from that site."
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/import_export/import_export/field_import_export.php:116
+msgid ""
+"WARNING! This will overwrite all existing option values, please proceed with "
+"caution!"
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/import_export/import_export/field_import_export.php:124
+msgid ""
+"Here you can copy/download your current option settings. Keep this safe as "
+"you can use it as a backup should anything go wrong, or you can use it to "
+"restore your settings on this site (or any other site)."
+msgstr ""
+
+#: dent-all/inc/redux/inc/extensions/options_object/extension_options_object.php:82
+msgid "Options Object"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:124
+#: dent-all/inc/redux/inc/fields/color/field_color.php:73
+#: dent-all/inc/redux/inc/fields/color_gradient/field_color_gradient.php:79
+#: dent-all/inc/redux/inc/fields/color_gradient/field_color_gradient.php:91
+msgid "Transparent"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:141
+msgid "Background Repeat"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:157
+msgid "Background Clip"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:173
+msgid "Background Origin"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:188
+msgid "Background Size"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:203
+msgid "Background Attachment"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:223
+msgid "Background Position"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:277
+#: dent-all/inc/redux/inc/fields/media/field_media.php:149
+msgid "No media selected"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:314
+#: dent-all/inc/redux/inc/fields/media/field_media.php:198
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:126
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:188
+msgid "Upload"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/background/field_background.php:321
+#: dent-all/inc/redux/inc/fields/media/field_media.php:205
+#: dent-all/inc/redux/inc/fields/multi_text/field_multi_text.php:69
+#: dent-all/inc/redux/inc/fields/multi_text/field_multi_text.php:73
+#: dent-all/inc/redux/inc/fields/multi_text/field_multi_text.php:76
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:133
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:190
+msgid "Remove"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/border/field_border.php:125
+#: dent-all/inc/redux/inc/fields/spacing/field_spacing.php:191
+msgid "All"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/border/field_border.php:138
+#: dent-all/inc/redux/inc/fields/spacing/field_spacing.php:215
+msgid "Top"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/border/field_border.php:145
+#: dent-all/inc/redux/inc/fields/spacing/field_spacing.php:222
+msgid "Right"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/border/field_border.php:152
+#: dent-all/inc/redux/inc/fields/spacing/field_spacing.php:229
+msgid "Bottom"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/border/field_border.php:159
+#: dent-all/inc/redux/inc/fields/spacing/field_spacing.php:236
+msgid "Left"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/border/field_border.php:174
+msgid "Border style"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/color_gradient/field_color_gradient.php:68
+msgid "From "
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/color_gradient/field_color_gradient.php:82
+msgid "To "
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/dimensions/field_dimensions.php:162
+msgid "Width"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/dimensions/field_dimensions.php:178
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:442
+msgid "Height"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/dimensions/field_dimensions.php:189
+#: dent-all/inc/redux/inc/fields/dimensions/field_dimensions.php:190
+#: dent-all/inc/redux/inc/fields/spacing/field_spacing.php:245
+#: dent-all/inc/redux/inc/fields/spacing/field_spacing.php:246
+msgid "Units"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/gallery/field_gallery.php:73
+msgid "Add/Edit Gallery"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/gallery/field_gallery.php:74
+msgid "Clear Gallery"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/link_color/field_link_color.php:88
+msgid "Regular"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/link_color/field_link_color.php:92
+msgid "Hover"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/link_color/field_link_color.php:96
+msgid "Visited"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/link_color/field_link_color.php:100
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2215
+msgid "Active"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/multi_text/field_multi_text.php:61
+msgid "Add More"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/password/field_password.php:62
+msgid "Password"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/password/field_password.php:63
+msgid "Username"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/select/field_select.php:83
+#: dent-all/inc/redux/inc/fields/select_image/field_select_image.php:63
+msgid "Select an item"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/select/field_select.php:134
+#: dent-all/inc/redux/inc/fields/select_image/field_select_image.php:144
+msgid "No items of this type were found."
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:68
+msgid "Slide"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:73
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:174
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:145
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:200
+msgid "Title"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:149
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:204
+msgid "Description"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:153
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:207
+msgid "URL"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:167
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:220
+msgid "Delete"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/slides/field_slides.php:223
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/switch/field_switch.php:41
+msgid "On"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/switch/field_switch.php:44
+msgid "Off"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:231
+msgid "Font Family"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:232
+msgid "Font family"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:258
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:259
+msgid "Backup Font Family"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:273
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:281
+msgid "Font style"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:274
+msgid "Font Weight &amp; Style"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:281
+msgid "Style"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:321
+msgid "Font subsets"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:323
+msgid "Font Subsets"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:325
+msgid "Subsets"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:325
+msgid "Font script"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:342
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:343
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:344
+msgid "Text Align"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:365
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:366
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:367
+msgid "Text Transform"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:388
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:389
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:390
+msgid "Font Variant"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:408
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:409
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:410
+msgid "Text Decoration"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:432
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:433
+msgid "Font Size"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:433
+msgid "Size"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:441
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:442
+msgid "Line Height"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:450
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:451
+msgid "Word Spacing"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:459
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:460
+msgid "Letter Spacing"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:478
+msgid "Font Color"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:480
+msgid "Font color"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:890
+msgid "Standard Fonts"
+msgstr ""
+
+#: dent-all/inc/redux/inc/fields/typography/field_typography.php:991
+msgid "Google Webfonts"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/embedded.php:15
+#, php-format
+msgid ""
+"<span class=\"tc-lead tc-recommended\">RECOMMENDED</span>: If you are "
+"submitting to WordPress.org Theme Repository, it is <strong>strongly</"
+"strong> suggested that you read <a href=\"%s\" target=\"_blank\">this "
+"document</a>, or your theme will be rejected because of Redux."
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/embedded.php:24
+#, php-format
+msgid ""
+"<span class=\"tc-lead tc-required\">REQUIRED</span>: You MUST delete "
+"<strong> %s </strong>, or your theme will be rejected by WP.org theme "
+"submission because of Redux."
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/embedded.php:38
+msgid "Optional"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/embedded.php:40
+msgid ""
+"<span class=\"tc-lead tc-recommended\">RECOMMENDED</span>: The following "
+"arguments MUST be used for WP.org submissions, or you will be rejected "
+"because of your Redux configuration."
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/full_package.php:16
+msgid "Redux localization utilities"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/full_package.php:17
+msgid "Redux Resting Diles"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/full_package.php:18
+msgid "Redux Code Styles"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/full_package.php:19
+msgid "Redux Unit Testing"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/full_package.php:20
+msgid "Redux Plugin File"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/full_package.php:21
+msgid "Redux Boostrap Tests"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/full_package.php:22
+msgid "CI Testing FIle"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/full_package.php:23
+msgid "PHP Unit Testing"
+msgstr ""
+
+#: dent-all/inc/redux/inc/themecheck/checks/full_package.php:36
+msgid ""
+"It appears that you have embedded the full Redux package inside your theme. "
+"You need only embed the <strong>ReduxCore</strong> folder. Embedding "
+"anything else will get your rejected from theme submission. Suspected Redux "
+"package file(s):"
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/color/validation_color.php:15
+#: dent-all/inc/redux/inc/validation/color_rgba/validation_color_rgba.php:14
+#: dent-all/inc/redux/inc/validation/colorrgba/validation_colorrgba.php:16
+msgid "This field must be a valid color value."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/comma_numeric/validation_comma_numeric.php:16
+msgid ""
+"You must provide a comma separated list of numerical values for this option."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/css/validation_css.php:39
+msgid "Unsafe strings were found in your CSS and have been filtered out."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/date/validation_date.php:16
+msgid "This field must be a valid date."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/email/validation_email.php:16
+#: dent-all/inc/redux/inc/validation/email_not_empty/validation_email_not_empty.php:16
+msgid "You must provide a valid email for this option."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/no_html/validation_no_html.php:15
+msgid ""
+"You must not enter any HTML in this field, all HTML tags have been removed."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/no_special_chars/validation_no_special_chars.php:16
+msgid ""
+"You must not enter any special characters in this field, all special "
+"characters have been removed."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/not_empty/validation_not_empty.php:16
+msgid "This field cannot be empty. Please provide a value."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/numeric/validation_numeric.php:16
+#: dent-all/inc/redux/inc/validation/numeric_not_empty/validation_numeric_not_empty.php:16
+msgid "You must provide a numerical value for this option."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/unique_slug/validation_unique_slug.php:16
+#, php-format
+msgid ""
+"That URL slug is in use, please choose another. <code>%s</code> is open for "
+"use."
+msgstr ""
+
+#: dent-all/inc/redux/inc/validation/url/validation_url.php:16
+msgid "You must provide a valid URL for this option."
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/welcome.php:102
+msgid ""
+"If you like <strong>Redux</strong> please leave us a <a href=\"https://"
+"wordpress.org/support/view/plugin-reviews/redux-framework?filter=5#postform"
+"\" target=\"_blank\" class=\"redux-rating-link\" data-rated="
+"\"Thanks :)\">&#9733;&#9733;&#9733;&#9733;&#9733;</a> rating. A huge thank "
+"you from Redux in advance!"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/welcome.php:349
+msgid "Credits"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/welcome.php:512
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/about.php:2
+#, php-format
+msgid "Welcome to Redux Framework %s"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/about.php:5
+#, php-format
+msgid ""
+"Thank you for updating to the latest version! Redux Framework %s is a huge "
+"step forward in Redux Development. Look at all that's new."
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/about.php:8
+#: dent-all/inc/redux/inc/welcome/views/changelog.php:10
+#: dent-all/inc/redux/inc/welcome/views/credits.php:10
+#: dent-all/inc/redux/inc/welcome/views/extensions.php:81
+#: dent-all/inc/redux/inc/welcome/views/status_report.php:34
+#: dent-all/inc/redux/inc/welcome/views/support.php:8
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/about.php:15
+msgid "What is Redux Framework?"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/about.php:17
+msgid ""
+"Redux Framework is the core of many products on the web. It is an option "
+"framework which developers use to\n"
+"            enhance their products."
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/about.php:22
+msgid "Learn More"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/about.php:28
+msgid "New in this Release"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/credits.php:18
+#, php-format
+msgid ""
+"Redux is created by a community of developers world wide. Want to have your "
+"name listed too? <a href=\"%d\" target=\"_blank\">Contribute to Redux</a>."
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/extensions.php:76
+msgid ""
+"Supercharge your Redux experience. Our extensions provide you with features "
+"that will take your products to the next level."
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/status_report.php:120
+#, php-format
+msgid "To allow data saving, make <code>%s</code> writable."
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/status_report.php:220
+#, php-format
+msgid ""
+"%s - We recommend setting memory to at least 40MB. See: <a href=\"%s\" "
+"target=\"_blank\">Increasing memory allocated to PHP</a>"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/status_report.php:416
+#, php-format
+msgid "Default timezone is %s - it should be UTC"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/status_report.php:482
+#: dent-all/inc/redux/inc/welcome/views/status_report.php:497
+#, php-format
+msgid "Error: %s"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/status_report.php:737
+#, php-format
+msgid ""
+"If you're modifying Redux Framework or a parent theme you didn't build "
+"personally, we recommend using a child theme. See: <a href=\"%s\" target="
+"\"_blank\">How to create a child theme</a>"
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/support.php:35
+#, php-format
+msgid ""
+"This will provide to your developer all the information they may need to "
+"remedy your issue. This action WILL send information securely to a remote "
+"server. To see the type of information sent, please look at the  <a href=\"%s"
+"\">Status tab</a>."
+msgstr ""
+
+#: dent-all/inc/redux/inc/welcome/views/support.php:134
+#, php-format
+msgid ""
+"Should the developer not be responsive, read the <a href=\"%s\" target="
+"\"_blank\">following article</a> before asking for support from us directly."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:274
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/extension_wbc_importer.php:276
+msgid "Demo Importer"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:42
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:73
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:81
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:43
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:85
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:90
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:281
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/parsers.php:470
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:257
+msgid "Theme options Import file could not be found. Please try again."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:333
+msgid "Widget Import file could not be found. Please try again."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:407
+msgid "Sidebar does not exist in theme (using Inactive)"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:429
+msgid "Site does not support widget"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:452
+msgid "Widget already exists"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:501
+msgid "Imported"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:504
+msgid "Imported to Inactive"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/radium-importer.php:511
+msgid "No Title"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:134
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:143
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:194
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:198
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:207
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:135
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:178
+msgid "All done."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:178
+msgid "Have fun!"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:179
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:199
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:215
+#, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:240
+#, php-format
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:266
+msgid "Assign Authors"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:267
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:269
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:279
+msgid "Import Attachments"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:282
+msgid "Download and import file attachments"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:299
+msgid "Import author:"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:310
+msgid "or create new user with login name:"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:313
+msgid "as a new user:"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:321
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:323
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:324
+msgid "- Select -"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:374
+#, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:425
+#, php-format
+msgid "Failed to import category %s"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:465
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:511
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:652
+#, php-format
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:537
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:559
+#, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:618
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:783
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:790
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:853
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:866
+msgid "Invalid file type"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:910
+msgid "Remote server did not respond"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:916
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:923
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:928
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:934
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:1032
+msgid "Import WordPress"
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:1039
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:1054
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/inc/importer/wordpress-importer.php:1055
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: dent-all/inc/redux/redux-extensions/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:122
+msgid "Import Demo"
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/footer.tpl.php:50
+msgid "Save Changes"
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/footer.tpl.php:54
+msgid "Reset Section"
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/footer.tpl.php:55
+msgid "Reset All"
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/footer.tpl.php:60
+msgid "Working..."
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/header.tpl.php:11
+#: dent-all/inc/redux/templates/panel/header.tpl.php:49
+msgid "Developer Mode Enabled"
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/header.tpl.php:20
+msgid "WP_DEBUG is enabled"
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/header.tpl.php:26
+msgid "you are working in a localhost environment"
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/header.tpl.php:31
+msgid "and"
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/header.tpl.php:34
+msgid "This has been automatically enabled because"
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/header.tpl.php:36
+msgid ""
+"If you are not a developer, your theme/plugin author shipped with developer "
+"mode enabled. Contact them directly to fix it."
+msgstr ""
+
+#: dent-all/inc/redux/templates/panel/header.tpl.php:58
+msgid "FORCED DEV MODE OFF ENABLED"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:335
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:336
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:397
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:399
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3029
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:400
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2167
+msgid "Required"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2170
+msgid "Recommended"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2186
+msgid "WordPress Repository"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2189
+msgid "External Source"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2192
+msgid "Pre-Packaged"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2209
+msgid "Not Installed"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2213
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2221
+msgid "Required Update not Available"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2224
+msgid "Requires Update"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2227
+msgid "Update recommended"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2379
+msgid "Installed version:"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2387
+msgid "Minimum required version:"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2399
+msgid "Available version:"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2422
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2436
+msgid "Plugin"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2437
+msgid "Source"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2438
+msgid "Type"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2442
+msgid "Version"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2443
+msgid "Status"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2603
+msgid "Install"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2609
+msgid "Update"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2612
+msgid "Activate"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2643
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2681
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:2683
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3028
+msgid "Plugin activation failed."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3362
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3364
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3365
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3369
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3370
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3371
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3372
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3375
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3377
+msgid "All installations have been completed."
+msgstr ""
+
+#: dent-all/inc/tgm/tgm-plugin-activation.php:3378
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: dent-all/partials/content-none.php:3
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: dent-all/vc_templates/stm_opening_hours_item.php:49
+#, php-format
+msgid "<strong>%d h. %d min.</strong><br/>to closing"
+msgstr ""
+
+msgid "Contacts"
+msgstr ""
+
+msgid "Office"
+msgstr ""
+
+msgid "E-mail"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Opening hours"
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "Title:"
+msgstr ""
+
+msgid "Address:"
+msgstr ""
+
+msgid "E-mail:"
+msgstr ""
+
+msgid "Phone:"
+msgstr ""
+
+msgid "Hours:"
+msgstr ""
+
+msgid "Schedule Item"
+msgstr ""
+
+msgid "Our Social Pages"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
+msgid " today"
+msgstr ""
+
+msgid " output"
+msgstr ""
+
+msgid "Lunch:"
+msgstr ""
+
+msgid "Full Price"
+msgstr ""
+
+msgid "Read More"
+msgstr ""
+
+msgid "Before"
+msgstr ""
+
+msgid "After"
+msgstr ""
+
+msgid "Share:"
+msgstr ""
+
+msgid "Message"
+msgstr ""

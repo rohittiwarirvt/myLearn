@@ -1,0 +1,28 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="translate">position</custom-field>
+        <custom-field action="translate">email</custom-field>
+        <custom-field action="translate">facebook</custom-field>
+        <custom-field action="translate">twitter</custom-field>
+        <custom-field action="translate">featured</custom-field>
+        <custom-field action="translate">service</custom-field>
+        <custom-field action="translate">price</custom-field>
+        <custom-field action="translate">sale_price</custom-field>
+        <custom-field action="translate">icon</custom-field>
+        <custom-field action="translate">title</custom-field>
+        <custom-field action="translate">vacancy_location</custom-field>
+        <custom-field action="translate">vacancy_department</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">stm_service</custom-type>
+        <custom-type translate="1">stm_service_price</custom-type>
+        <custom-type translate="1">stm_staff</custom-type>
+        <custom-type translate="1">stm_testimonial</custom-type>
+        <custom-type translate="1">stm_sidebar</custom-type>
+        <custom-type translate="1">stm_vacancy</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">stm_service_category</taxonomy>
+        <taxonomy translate="1">stm_service_price_category</taxonomy>
+    </taxonomies>
+</wpml-config>

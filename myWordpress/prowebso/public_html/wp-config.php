@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', '202774-wordpress-aw74951');
+define('DB_NAME', 'prowebso');
 
 /** MySQL database username */
-define('DB_USER', '202774_aw74951');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'qu9552MZ');
+define('DB_PASSWORD', 'rekha');
 
 /** MySQL hostname */
-define('DB_HOST', 'wordpress-aw74951-202774.mysql.binero.se');
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -75,7 +75,7 @@ define('AUTOMATIC_UPDATER_DISABLED', true);
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'qvkp_';
+$table_prefix  = 'dddp_';
 
 /**
  * For developers: WordPress debugging mode.

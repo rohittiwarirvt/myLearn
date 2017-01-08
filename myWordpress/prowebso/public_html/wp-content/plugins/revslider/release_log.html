@@ -1,4 +1,101 @@
 <div class="slider-revolution-update-list">
+<h3 class="version-number">Version 5.3.0.2 StarPath (26th October 2016)</h3>
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Fixed Syntax and Logical Issues like Removing a Slide from Slider based on the Feedback of Sébastien Ledan (http://dotevo.com)! Thank you for the great Feedbacks and Suggestions</li>
+	<li>Fixed Slider disappearing in IE11 if Parallax Mode is activated. Double parameter definition in Animation Engine has been fixed</li>
+	<li>Fixed an issue where all extension modules should be loaded at once. Folder Name in Path has been renamed from extension to extensions</li>
+	<li>Fixed PHP7 issue: "Fatal error: Uncaught Error: [] operator not supported for strings"</li>
+	<li>Fixed preview issue where the Slide Editor was not working properly after opening and closing the preview</li>
+	<li>Fixed preview in Slide Editor, to show the current changes made without saving the Slide</li>
+	<li>Fixed an issue where cross referencing Static Layers were disappeared</li>
+	<li>Disappearing elements on Drag & Drop in Slide Editor has been fixed</li>
+</ul>
+
+<h3 class="version-number">Version 5.3.0.1 StarPath (22nd October 2016)</h3>
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Fixed an issue where in Viewpoint Scrolled Slides did not start straight but with a small delay</li>
+	<li>Fixed Restarted Static Layers which are animating on each Slide if Start time was smaller than 100ms</li>
+	<li>Fixed Warning: Illegal string offset 'width' in [...] object-library.class.php on line 994</li>
+	<li>Fixed Global Settings getting reset in certain cases. Which ultimately causes for some customers blank Sliders as the JavaScript files are no longer loaded in the footer</li>
+	<li>Fixed bug where actions in Static Layers could be lost after saving</li>
+</ul>
+
+<h3 class="version-number">Version 5.3.0 StarPath (21st October 2016)</h3>
+<div class="newfeature"><strong style="font-weight:700">NEW FEATURES</strong></div>
+<ul>
+	<li>New Brasilian/Portuguese translation added! Special thanks to Diego Fernandes</li>
+	<li>Introducing Rows and Columns as Layer Groups</li>
+	<li>Added Layer Groups for logical and physical grouping of Layers.</li>
+	<li>Animations are now allowed in multiple levels for Groups, Rows, Columns and wrapped Layers</li>
+	<li>Added Margin for relative Layers (Columns, Rows, Layers in Columns)</li>
+	<li>Rows can be sorted within Top, Middle and Bottom Containers</li>
+	<li>Added Post ID {{id}} into the Meta List</li>	
+	<li>Added Layer Background Images for Text, Column, Row, Group and Shape</li>
+	<li>Added Instagram Image Filtering for Slide Backgrounds</li>
+	<li>Slides will receive an Auto Height with Rows and Columns</li>
+	<li>Introducing Right Click Content Menu on Layers and BG in Slide Editor for quick Edit mode and shortcuts</li>
+	<li>Introducing the Object Library with dozens of new Images, BG Images and Objects</li>
+	<li>Added Font Icons to Object Library for quicker icon selection within a Text Layer</li>
+	<li>Copy/Paste Layer styles easily from one Layer to the other</li>
+	<li>Selecting more than one Layer, to move them together, now available</li>
+	<li>Introducing logical grouping of Layers</li>
+	<li>Added CSS Blend Modes for Text Layer to get some exclusive effects on backgrounds. (Will not work with older IE Browser)</li>
+	<li>Easy Editing and Movement of Groups and Layers in Groups</li>
+	<li>Added CTRL / CMD + Click function to enable multiple selections</li>
+	<li>Added device based level for Spacings like Paddings, Margins, Text-Aligns which can be set now individual based on Responsive Level</li>
+	<li>Added Ken Burns Live Editor</li>
+	<li>Added option to include all Slider Revolution JavaScript libraries on page load</li>
+	<li>Added new option on Slider Import, to be able to create blank pages with the Slider inside</li>
+</ul>
+<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+<ul>
+	<li>Improved loading speed at Slider Overview</li>
+	<li>Changed Timeline Interface for better and easier Time Settings</li>
+	<li>Add-On Deactivation Button more visual</li>
+	<li>Changed Button Hover feature to allow Hover during the Layer Animation already. Direct feedback from Button to customer</li>
+	<li>Changed the Layer Animation Core. Introducing Timeline feature which will allow build multiple frames within one Layer Animation</li>
+	<li>Improved the Timeline functionality</li>
+	<li>Fixed Template and Object Library Loading methods to improve the Loading speed of Background Edit Modes</li>
+	<li>Further WPML improvements</li>
+	<li>Removed deprecated function, removed with PHP 7</li>
+	<li>Padding, Margin and Text Align are now saved for all devices on saving a style</li>
+</ul>
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Improved Google Font loading by removing duplicated inclusions</li>
+	<li>Fixed Slot Animation Issues where Slot Amount was ignored in Fade Slots Tranitions</li>
+	<li>Fixed issue where Layer On Complete Event was triggered twice on Slide Changes. This had negative influence i.e. on Add Ons like White Board</li>
+	<li>Fixed SVG Resizing issues in the Slide Editor after changing SVG Source of an Object Layer</li>
+	<li>Fixed Dotted Overlays issues on Slides</li>
+	<li>Fixed CTRL+S (CMD+S) Quick save functions</li>
+	<li>Fixed Image Size and Aspect Ratio issues in Slide Editor</li>
+	<li>Fixed a bug where FullScreen Slider Offset Container parameter was not working with the Carousel Slider Layout</li>
+	<li>Fixed Slide Direction Animation on HOrizontal and Vertical direction when slide change has been triggered by Mouse Scroll</li>
+	<li>Fixed Ken Burns Issues where Horizontal and Vertical Start Offsets were not implemented well</li>
+	<li>YouTube Playback on Mobile Phones lost Focus and lost Video after Slide Change in some rare situations has been fixed</li>
+	<li>Fixed a YouTube Bug which was not allow to trigger YouTube Videos via Layer Action on Mobiles</li>
+	<li>Fixed Blurry Buttons in YouTube Videos on Mobile Phones</li>
+	<li>Issue where Pendulum Easing was ignored in frontend fixed</li>
+	<li>Parallax effet on Background Media was not working without Existing Layer in Slide has been fixed</li>
+	<li>Facebook Timeline Images did not show under certain circumstances before. Now they do.
+</ul>
+
+
+
+<h3 class="version-number">Version 5.2.6 StarPath (24th June 2016)</h3>
+<div class="change"><strong style="font-weight:700">CHANGES</strong></div>
+<ul>
+	<li>Deactivating a purchase code will now remove it from the purchase code field</li>
+	<li>Changed activation message if purchase code is already registered</li>
+</ul>
+<div class="bugfix"><strong style="font-weight:700">BUGFIXES</strong></div>
+<ul>
+	<li>Fixed issue with latest WooCommerce update</li>
+	<li>Removed the SVG copy failure notice</li>
+</ul>
+
 
 <h3 class="version-number">Version 5.2.5.4 StarPath (14th June 2016)</h3>
 <div class="change"><strong style="font-weight:700">CHANGES</strong></div>

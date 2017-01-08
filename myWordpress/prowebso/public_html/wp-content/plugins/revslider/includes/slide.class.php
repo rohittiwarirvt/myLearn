@@ -82,8 +82,11 @@ class RevSliderSlide extends RevSliderElementsBase{
 			$imageUrl = RevSliderFunctions::getVal($params, "image");
 			
 			$imgID = RevSliderBase::get_image_id_by_url($imageUrl);
-			if($imgID !== false){
+			if($imgID !== false && $imgID !== null){
 				$imageUrl = RevSliderFunctionsWP::getUrlAttachmentImage($imgID, $imgResolution);
+			}else{ //we may be from the object library
+				$objlib = new RevSliderObjectLibrary();
+				$imageUrl = $objlib->get_correct_size_url($imageUrl, $imgResolution); //check for size to be used
 			}
 		}
 		
@@ -1110,7 +1113,22 @@ class RevSliderSlide extends RevSliderElementsBase{
 			$image_url = $this->decode_facebook_url(RevSliderFunctions::getVal($this->postData, 'picture', ''));
 			$image_url = parse_str(parse_url($image_url, PHP_URL_QUERY), $array);
 			$image_url = explode('&', $array['url']);
-			$return = $image_url[0];
+			
+			 /* patch for when url returned as "fbstaging://" */
+	        if(strpos($image_url[0], 'fbstaging') !== false) {
+	            
+	            $new_url = RevSliderFunctions::getVal($this->postData, 'picture', '');
+	            $new_url = explode('&w=', $new_url);
+	            
+	            if(count($new_url) > 1) {
+	                
+	                $end_url = explode('&url=', $new_url[1]);                   
+	                if(count($end_url) > 1) $image_url = array($new_url[0] . '&url=' . $end_url[1]);
+	            }
+	        }
+	        /* END patch */
+	        
+	        $return = $image_url[0];
 		}
 		return apply_filters('revslider_slide_get_facebook_timeline_image', $return, $object_id, $picture, $this);
 	}
@@ -1380,6 +1398,7 @@ class RevSliderSlide extends RevSliderElementsBase{
 		$text = str_replace(array('%catlist%', '{{catlist}}'), $catlist, $text);
 		$text = str_replace(array('%catlist_raw%', '{{catlist_raw}}'), $catlist_raw, $text);
 		$text = str_replace(array('%taglist%', '{{taglist}}'), $taglist, $text);
+		$text = str_replace(array('%id%', '{{id}}'), $post_id, $text);
 		
 		foreach($img_sizes as $img_handle => $img_name){
 			$url = (isset($attr['img_urls']) && isset($attr['img_urls'][$img_handle]) && isset($attr['img_urls'][$img_handle]['url'])) ? $attr['img_urls'][$img_handle]['url'] : '';
@@ -1469,8 +1488,7 @@ class RevSliderSlide extends RevSliderElementsBase{
 		
 		if(RevSliderWooCommerce::isWooCommerceExists()){
 			$product = get_product($post_id);
-			
-			if(!empty($product)):
+			if($product !== false){
 				$wc_full_price = $product->get_price_html();
 				$wc_price = wc_price($product->get_price());
 				$wc_price_no_cur = $product->get_price();
@@ -1542,7 +1560,7 @@ class RevSliderSlide extends RevSliderElementsBase{
 				$text = str_replace(array('%wc_rating_count%', '{{wc_rating_count}}'), $wc_rating_count, $text);
 				$text = str_replace(array('%wc_review_count%', '{{wc_review_count}}'), $wc_review_count, $text);
 				$text = str_replace(array('%wc_tags%', '{{wc_tags}}'), $wc_tags, $text);
-			endif;
+			}
 		}
 		
 		return $text;
@@ -2048,7 +2066,6 @@ class RevSliderSlide extends RevSliderElementsBase{
 		
 		return RevSliderFunctions::getVal($this->params, $name, $default);
 	}
-	
 	
 	/**
 	 * set parameter
@@ -2755,7 +2772,6 @@ class RevSliderSlide extends RevSliderElementsBase{
 		
 		switch($slider_type){
 			case 'gallery':
-				//check if we are transparent for example
 				$imageID = RevSliderBase::getVar($params, "image_id");
 				if(empty($imageID)){
 					$thumb = RevSliderBase::getVar($params, "image");
@@ -2831,7 +2847,6 @@ class RevSliderSlide extends RevSliderElementsBase{
 			$data_urlImageForView = '';
 			$bg_extraClass = 'mini-transparent';
 			$bg_fullstyle = 'background-size: inherit; background-repeat: repeat;';
-			
 		}
 		
 		return apply_filters('revslider_slide_get_image_attributes', array(
@@ -3085,7 +3100,10 @@ class RevSliderSlide extends RevSliderElementsBase{
 			'video_height',
 			'video_width',
 			'scaleX',
-			'scaleY'
+			'scaleY',
+			'margin',
+			'padding',
+			'text-align'
 		));
 	}
 	

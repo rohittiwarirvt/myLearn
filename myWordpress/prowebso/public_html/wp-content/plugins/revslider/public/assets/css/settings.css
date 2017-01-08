@@ -11,6 +11,60 @@ email:     	info@themepunch.com
 website:   	http://www.themepunch.com
 -----------------------------------------------------------------------------*/
 
+#debungcontrolls {
+	z-index:100000;
+	position:fixed;
+	bottom:0px; width:100%;
+	height:auto;
+	background:rgba(0,0,0,0.6);
+	padding:10px;
+	box-sizing: border-box;
+}
+
+.debugtimeline {
+	width:100%;
+	height:10px;
+	position:relative;
+	display:block;
+	margin-bottom:3px;	
+	display:none;
+	white-space: nowrap;	
+	box-sizing: border-box;
+}
+
+.debugtimeline:hover {
+	height:15px;
+
+}
+
+.the_timeline_tester {
+	background:#e74c3c;
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:0;	
+}
+
+
+.debugtimeline.tl_slide .the_timeline_tester {
+	background:#f39c12;	
+}
+
+.debugtimeline.tl_frame .the_timeline_tester {
+	background:#3498db;	
+}
+
+.debugtimline_txt {
+	color:#fff;
+	font-weight: 400;
+	font-size:7px;
+	position:absolute;	
+	left:10px;
+	top:0px;
+	white-space: nowrap;
+	line-height: 10px;
+}
 
 
 .rtl {	direction: rtl;}
@@ -115,7 +169,8 @@ website:   	http://www.themepunch.com
 	overflow:visible;
 }
 
-.tp-overflow-hidden { overflow:hidden;}
+.tp-overflow-hidden { 	overflow:hidden !important;}
+.group_ov_hidden 	{	overflow:hidden}
 
 .tp-simpleresponsive img,
 .rev_slider img{
@@ -237,7 +292,7 @@ website:   	http://www.themepunch.com
 	-webkit-user-select: none;
 	-o-user-select: none;	
 	position:absolute;
-	-webkit-font-smoothing: antialiased !important;
+	-webkit-font-smoothing: antialiased !important;	
 }
 
 .tp-caption.tp-layer-selectable {
@@ -249,7 +304,8 @@ website:   	http://www.themepunch.com
 
 .tp-forcenotvisible,
 .tp-hide-revslider,
-.tp-caption.tp-hidden-caption {	
+.tp-caption.tp-hidden-caption,
+.tp-parallax-wrap.tp-hidden-caption {	
 	visibility:hidden !important; 
 	display:none !important
 }
@@ -262,9 +318,76 @@ website:   	http://www.themepunch.com
 	max-width: none !important
 }
 
+.tp-element-background 	{	position:absolute; top:0px;left:0px; width:100%;height:100%;z-index:0;}
+
+/***********************************************************
+	- 	ZONES / GOUP / ROW / COLUMN LAYERS AND HELPERS 	-
+***********************************************************/
+.rev_row_zone					{	position:absolute; width:100%;left:0px; box-sizing: border-box;min-height:50px; }
+
+.rev_row_zone_top 				{	top:0px;}
+.rev_row_zone_middle 			{	top:50%; -webit-transform:translateY(-50%);transform:translateY(-50%);}
+.rev_row_zone_bottom 			{	bottom:0px;}
+
+.rev_column .tp-parallax-wrap  { vertical-align: top }
+
+.rev_slider .tp-caption.rev_row 	{
+	display:table;
+	position:relative;
+	width:100% !important;
+	table-layout: fixed;
+	box-sizing: border-box;
+	vertical-align: top;
+	height:auto !important;
+}
+
+.rev_column {	
+	display: table-cell;
+	position: relative;
+	vertical-align: top;
+	height: auto;
+	box-sizing: border-box;	
+}
+
+.rev_column_inner {
+	box-sizing: border-box;
+	display: block;
+	position: relative;
+	width:100% !important;
+	height:auto !important;
+}
+
+.rev_column_bg {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    box-sizing: border-box;
+    background-clip: content-box;
+    border: 0px solid transparent;
+}
 
 
 
+.rev_column_inner .tp-parallax-wrap,
+.rev_column_inner .tp-loop-wrap,
+.rev_column_inner .tp-mask-wrap 			{	text-align: inherit; }
+.rev_column_inner .tp-mask-wrap 			{	display: inline-block;}
+
+
+.rev_column_inner .tp-parallax-wrap .tp-loop-wrap,
+.rev_column_inner .tp-parallax-wrap .tp-mask-wrap,
+.rev_column_inner .tp-parallax-wrap { position: relative !important; left:auto !important; top:auto !important; line-height: 0px;}
+
+.rev_column_inner .tp-parallax-wrap .tp-loop-wrap,
+.rev_column_inner .tp-parallax-wrap .tp-mask-wrap,
+.rev_column_inner .tp-parallax-wrap,
+.rev_column_inner .rev_layer_in_column { vertical-align: top; }
+
+.rev_break_columns { display: block !important }
+.rev_break_columns .tp-parallax-wrap.rev_column  { display:block !important; width:100% !important; }
 
 
 /**********************************************
@@ -496,6 +619,9 @@ img.tp-slider-alternative-image	{
 .rs-background-video-layer audio::-webkit-media-controls { display:none !important;}
 
 .tp-audio-html5 .tp-video-controls {	opacity: 1 !important; visibility: visible !important}
+
+.disabled_lc .tp-video-play-button { display:none !important; }
+.disabled_lc .tp-video-play-button { display:none !important; }
 
 /********************************
 	-	DOTTED OVERLAYS	-
@@ -1005,7 +1131,9 @@ img.tp-slider-alternative-image	{
 	width: 40px;
 	height: 40px;
 	background-color: #fff;
-	background:url(../assets/loader.gif) no-repeat center center;
+	background-image:url(../assets/loader.gif);
+	background-repeat:no-repeat;
+	background-position: center center;
 	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
 	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
 	margin-top:-20px;
@@ -1036,7 +1164,9 @@ img.tp-slider-alternative-image	{
 
 
 .tp-loader.spinner5 	{	
-	background:url(../assets/loader.gif) no-repeat 10px 10px;
+	background-image:url(../assets/loader.gif);
+	background-repeat:no-repeat;
+	background-position:10px 10px;
 	background-color:#fff;
 	margin:-22px -22px;
 	width:44px;height:44px;
@@ -1257,5 +1387,9 @@ body.rtl .tp-kbimg {left: 0 !important}
 
 
 
-
+/** 
+INSTAGRAM FILTERS BY UNA 
+https://una.im/CSSgram/
+**/
+.aden{-webkit-filter:hue-rotate(-20deg) contrast(.9) saturate(.85) brightness(1.2);filter:hue-rotate(-20deg) contrast(.9) saturate(.85) brightness(1.2)}.aden::after{background:-webkit-linear-gradient(left,rgba(66,10,14,.2),transparent);background:linear-gradient(to right,rgba(66,10,14,.2),transparent);mix-blend-mode:darken}.perpetua::after,.reyes::after{mix-blend-mode:soft-light;opacity:.5}.inkwell{-webkit-filter:sepia(.3) contrast(1.1) brightness(1.1) grayscale(1);filter:sepia(.3) contrast(1.1) brightness(1.1) grayscale(1)}.perpetua::after{background:-webkit-linear-gradient(top,#005b9a,#e6c13d);background:linear-gradient(to bottom,#005b9a,#e6c13d)}.reyes{-webkit-filter:sepia(.22) brightness(1.1) contrast(.85) saturate(.75);filter:sepia(.22) brightness(1.1) contrast(.85) saturate(.75)}.reyes::after{background:#efcdad}.gingham{-webkit-filter:brightness(1.05) hue-rotate(-10deg);filter:brightness(1.05) hue-rotate(-10deg)}.gingham::after{background:-webkit-linear-gradient(left,rgba(66,10,14,.2),transparent);background:linear-gradient(to right,rgba(66,10,14,.2),transparent);mix-blend-mode:darken}.toaster{-webkit-filter:contrast(1.5) brightness(.9);filter:contrast(1.5) brightness(.9)}.toaster::after{background:-webkit-radial-gradient(circle,#804e0f,#3b003b);background:radial-gradient(circle,#804e0f,#3b003b);mix-blend-mode:screen}.walden{-webkit-filter:brightness(1.1) hue-rotate(-10deg) sepia(.3) saturate(1.6);filter:brightness(1.1) hue-rotate(-10deg) sepia(.3) saturate(1.6)}.walden::after{background:#04c;mix-blend-mode:screen;opacity:.3}.hudson{-webkit-filter:brightness(1.2) contrast(.9) saturate(1.1);filter:brightness(1.2) contrast(.9) saturate(1.1)}.hudson::after{background:-webkit-radial-gradient(circle,#a6b1ff 50%,#342134);background:radial-gradient(circle,#a6b1ff 50%,#342134);mix-blend-mode:multiply;opacity:.5}.earlybird{-webkit-filter:contrast(.9) sepia(.2);filter:contrast(.9) sepia(.2)}.earlybird::after{background:-webkit-radial-gradient(circle,#d0ba8e 20%,#360309 85%,#1d0210 100%);background:radial-gradient(circle,#d0ba8e 20%,#360309 85%,#1d0210 100%);mix-blend-mode:overlay}.mayfair{-webkit-filter:contrast(1.1) saturate(1.1);filter:contrast(1.1) saturate(1.1)}.mayfair::after{background:-webkit-radial-gradient(40% 40%,circle,rgba(255,255,255,.8),rgba(255,200,200,.6),#111 60%);background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.8),rgba(255,200,200,.6),#111 60%);mix-blend-mode:overlay;opacity:.4}.lofi{-webkit-filter:saturate(1.1) contrast(1.5);filter:saturate(1.1) contrast(1.5)}.lofi::after{background:-webkit-radial-gradient(circle,transparent 70%,#222 150%);background:radial-gradient(circle,transparent 70%,#222 150%);mix-blend-mode:multiply}._1977{-webkit-filter:contrast(1.1) brightness(1.1) saturate(1.3);filter:contrast(1.1) brightness(1.1) saturate(1.3)}._1977:after{background:rgba(243,106,188,.3);mix-blend-mode:screen}.brooklyn{-webkit-filter:contrast(.9) brightness(1.1);filter:contrast(.9) brightness(1.1)}.brooklyn::after{background:-webkit-radial-gradient(circle,rgba(168,223,193,.4) 70%,#c4b7c8);background:radial-gradient(circle,rgba(168,223,193,.4) 70%,#c4b7c8);mix-blend-mode:overlay}.xpro2{-webkit-filter:sepia(.3);filter:sepia(.3)}.xpro2::after{background:-webkit-radial-gradient(circle,#e6e7e0 40%,rgba(43,42,161,.6) 110%);background:radial-gradient(circle,#e6e7e0 40%,rgba(43,42,161,.6) 110%);mix-blend-mode:color-burn}.nashville{-webkit-filter:sepia(.2) contrast(1.2) brightness(1.05) saturate(1.2);filter:sepia(.2) contrast(1.2) brightness(1.05) saturate(1.2)}.nashville::after{background:rgba(0,70,150,.4);mix-blend-mode:lighten}.nashville::before{background:rgba(247,176,153,.56);mix-blend-mode:darken}.lark{-webkit-filter:contrast(.9);filter:contrast(.9)}.lark::after{background:rgba(242,242,242,.8);mix-blend-mode:darken}.lark::before{background:#22253f;mix-blend-mode:color-dodge}.moon{-webkit-filter:grayscale(1) contrast(1.1) brightness(1.1);filter:grayscale(1) contrast(1.1) brightness(1.1)}.moon::before{background:#a0a0a0;mix-blend-mode:soft-light}.moon::after{background:#383838;mix-blend-mode:lighten}.clarendon{-webkit-filter:contrast(1.2) saturate(1.35);filter:contrast(1.2) saturate(1.35)}.clarendon:before{background:rgba(127,187,227,.2);mix-blend-mode:overlay}.willow{-webkit-filter:grayscale(.5) contrast(.95) brightness(.9);filter:grayscale(.5) contrast(.95) brightness(.9)}.willow::before{background-color:radial-gradient(40%,circle,#d4a9af 55%,#000 150%);mix-blend-mode:overlay}.willow::after{background-color:#d8cdcb;mix-blend-mode:color}.rise{-webkit-filter:brightness(1.05) sepia(.2) contrast(.9) saturate(.9);filter:brightness(1.05) sepia(.2) contrast(.9) saturate(.9)}.rise::after{background:-webkit-radial-gradient(circle,rgba(232,197,152,.8),transparent 90%);background:radial-gradient(circle,rgba(232,197,152,.8),transparent 90%);mix-blend-mode:overlay;opacity:.6}.rise::before{background:-webkit-radial-gradient(circle,rgba(236,205,169,.15) 55%,rgba(50,30,7,.4));background:radial-gradient(circle,rgba(236,205,169,.15) 55%,rgba(50,30,7,.4));mix-blend-mode:multiply}._1977:after,._1977:before,.aden:after,.aden:before,.brooklyn:after,.brooklyn:before,.clarendon:after,.clarendon:before,.earlybird:after,.earlybird:before,.gingham:after,.gingham:before,.hudson:after,.hudson:before,.inkwell:after,.inkwell:before,.lark:after,.lark:before,.lofi:after,.lofi:before,.mayfair:after,.mayfair:before,.moon:after,.moon:before,.nashville:after,.nashville:before,.perpetua:after,.perpetua:before,.reyes:after,.reyes:before,.rise:after,.rise:before,.slumber:after,.slumber:before,.toaster:after,.toaster:before,.walden:after,.walden:before,.willow:after,.willow:before,.xpro2:after,.xpro2:before{content:'';display:block;height:100%;width:100%;top:0;left:0;position:absolute;pointer-events:none}._1977,.aden,.brooklyn,.clarendon,.earlybird,.gingham,.hudson,.inkwell,.lark,.lofi,.mayfair,.moon,.nashville,.perpetua,.reyes,.rise,.slumber,.toaster,.walden,.willow,.xpro2{position:relative}._1977 img,.aden img,.brooklyn img,.clarendon img,.earlybird img,.gingham img,.hudson img,.inkwell img,.lark img,.lofi img,.mayfair img,.moon img,.nashville img,.perpetua img,.reyes img,.rise img,.slumber img,.toaster img,.walden img,.willow img,.xpro2 img{width:100%;z-index:1}._1977:before,.aden:before,.brooklyn:before,.clarendon:before,.earlybird:before,.gingham:before,.hudson:before,.inkwell:before,.lark:before,.lofi:before,.mayfair:before,.moon:before,.nashville:before,.perpetua:before,.reyes:before,.rise:before,.slumber:before,.toaster:before,.walden:before,.willow:before,.xpro2:before{z-index:2}._1977:after,.aden:after,.brooklyn:after,.clarendon:after,.earlybird:after,.gingham:after,.hudson:after,.inkwell:after,.lark:after,.lofi:after,.mayfair:after,.moon:after,.nashville:after,.perpetua:after,.reyes:after,.rise:after,.slumber:after,.toaster:after,.walden:after,.willow:after,.xpro2:after{z-index:3}.slumber{-webkit-filter:saturate(.66) brightness(1.05);filter:saturate(.66) brightness(1.05)}.slumber::after{background:rgba(125,105,24,.5);mix-blend-mode:soft-light}.slumber::before{background:rgba(69,41,12,.4);mix-blend-mode:lighten}
 

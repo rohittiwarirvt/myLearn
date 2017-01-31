@@ -4,7 +4,7 @@ Plugin Name: Slider Revolution
 Plugin URI: http://revolution.themepunch.com/
 Description: Slider Revolution - Premium responsive slider
 Author: ThemePunch
-Version: 5.2.5.4
+Version: 5.3.0.2
 Author URI: http://themepunch.com
 */
 
@@ -17,7 +17,7 @@ if(class_exists('RevSliderFront')) {
 	die('ERROR: It looks like you have more than one instance of Slider Revolution installed. Please remove additional instances for this plugin to work again.');
 }
 
-$revSliderVersion = "5.2.5.4";
+$revSliderVersion = "5.3.0.2";
 $revSliderAsTheme = false;
 $revslider_screens = array();
 $revslider_fonts = array();
@@ -72,8 +72,10 @@ require_once(RS_PLUGIN_PATH . 'includes/output.class.php');
 require_once(RS_PLUGIN_PATH . 'includes/slide.class.php');
 require_once(RS_PLUGIN_PATH . 'includes/widget.class.php');
 require_once(RS_PLUGIN_PATH . 'includes/navigation.class.php');
+require_once(RS_PLUGIN_PATH . 'includes/object-library.class.php');
 require_once(RS_PLUGIN_PATH . 'includes/template.class.php');
 require_once(RS_PLUGIN_PATH . 'includes/external-sources.class.php');
+require_once(RS_PLUGIN_PATH . 'includes/page-template.class.php');
 
 require_once(RS_PLUGIN_PATH . 'includes/tinybox.class.php');
 require_once(RS_PLUGIN_PATH . 'includes/extension.class.php');
@@ -146,14 +148,13 @@ try{
 
 	add_shortcode( 'rev_slider', 'rev_slider_shortcode' );
 	
-	add_action('plugins_loaded', array('RevSliderBase', 'public_folder_unzip'));
-	
 	/**
 	 * Call Extensions
 	 */
 	$revext = new RevSliderExtension();
 	
 	add_action('plugins_loaded', array( 'RevSliderTinyBox', 'visual_composer_include' )); //VC functionality
+	add_action('plugins_loaded', array( 'RevSliderPageTemplate', 'get_instance' ));
 	
 	if(is_admin()){ //load admin part
 	

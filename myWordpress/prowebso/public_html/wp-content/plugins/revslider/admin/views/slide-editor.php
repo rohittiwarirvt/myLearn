@@ -167,6 +167,8 @@ $ext_width = RevSliderFunctions::getVal($slideParams, 'ext_width', '1920');
 $ext_height = RevSliderFunctions::getVal($slideParams, 'ext_height', '1080');
 $use_parallax = RevSliderFunctions::getVal($slideParams, 'use_parallax', $def_use_parallax);
 
+$mediafilter = RevSliderFunctions::getVal($slideParams, 'media-filter-type', 'none');
+
 $parallax_level[] =  RevSliderFunctions::getVal($sliderParams,"parallax_level_1","5");
 $parallax_level[] =  RevSliderFunctions::getVal($sliderParams,"parallax_level_2","10");
 $parallax_level[] =  RevSliderFunctions::getVal($sliderParams,"parallax_level_3","15");
@@ -466,7 +468,10 @@ if($slide->isStaticSlide() || $slider->isSlidesFromPosts()){ //insert sliderid f
 	<div class="clear_both"></div>
 
 	<div class="title_line" style="margin-bottom:0px !important;">
-		<div id="icon-options-general" class="icon32"></div>		
+		<?php 
+			$icon_general = '<div class="icon32" id="icon-options-general"></div>';
+			echo apply_filters( 'rev_icon_general_filter', $icon_general ); 
+		?>		
 		<a href="<?php echo RevSliderGlobals::LINK_HELP_SLIDE; ?>" class="button-primary float_right revblue mtop_10 mleft_10" target="_blank"><?php _e("Help",'revslider'); ?></a>
 	</div>
 
@@ -566,7 +571,7 @@ if($slide->isStaticSlide() || $slider->isSlidesFromPosts()){ //insert sliderid f
 		Without those functions the editor may not work correctly. Please remove those custom jquery ui includes in order the editor will work correctly.", 'revslider'); ?>
 	</div>
 	
-	<div class="edit_slide_wrapper<?php echo ($slide->isStaticSlide()) ? ' rev_static_layers' : ''; ?>">
+	<div id="id-esw" class="<?php echo ($slide->isStaticSlide()) ? ' rev_static_layers' : ''; ?>">
 		<?php
 		require self::getPathTemplate('slide-stage');
 		?>
@@ -658,6 +663,7 @@ if($slide->isStaticSlide() || $slider->isSlidesFromPosts()){ //insert sliderid f
 						<tr><td><a href="javascript:UniteLayersRev.insertTemplate('catlist')">{{catlist}}</a></td><td><?php _e("List of categories with links",'revslider'); ?></td></tr>
 						<tr><td><a href="javascript:UniteLayersRev.insertTemplate('catlist_raw')">{{catlist_raw}}</a></td><td><?php _e("List of categories without links",'revslider'); ?></td></tr>
 						<tr><td><a href="javascript:UniteLayersRev.insertTemplate('taglist')">{{taglist}}</a></td><td><?php _e("List of tags with links",'revslider'); ?></td></tr>
+						<tr><td><a href="javascript:UniteLayersRev.insertTemplate('id')">{{id}}</a></td><td><?php _e("Post ID",'revslider'); ?></td></tr>
 					</table>
 					<table class="table_template_help" id="slide-images-template-entry" style="display: none;">
 						<?php
@@ -1063,12 +1069,17 @@ if($slide->isStaticSlide() || $slider->isSlidesFromPosts()){ //insert sliderid f
 
 					border:false,
 										
-				    change:function(event,ui) {
-				    	/*var col = jQuery(event.target).val();
-				    	if (col.length<5) {
-				    		col = "#"+col[1]+col[1]+col[2]+col[2]+col[3]+col[3];
-				    	}				    	
-				    	jQuery(event.target).val(col);*/
+				    change:function(event,ui) {				    					    
+				    	if (event.target.value.length<7) {
+				    		if (event.target.value.indexOf('#')===-1)
+				    			event.target.value = "#"+event.target.value;
+				    		if (event.target.value.length<5) {
+				    			var oldcolor = event.target.value,
+				    				newcolor = "#"+oldcolor[1]+oldcolor[1]+oldcolor[2]+oldcolor[2]+oldcolor[3]+oldcolor[3];
+				    			event.target.value = newcolor;
+
+				    		}
+				    	}
 				    	switch (jQuery(event.target).attr('name')) {
 							case "adbutton-color-1":
 							case "adbutton-color-2":

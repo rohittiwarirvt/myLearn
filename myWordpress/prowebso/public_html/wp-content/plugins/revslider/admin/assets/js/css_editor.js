@@ -454,6 +454,8 @@ var UniteCssEditorRev = new function(){
 	t.saveStylesInDb = function(handle, new_style, dialog_obj){
 		var data = {'idle':{},'hover':{}};
 		
+		var layer = UniteLayersRev.getCurrentLayer();
+		
 		data['handle'] = handle;
 		
 		data['idle']['color'] = jQuery('input[name="color_static"]').val();
@@ -464,10 +466,16 @@ var UniteCssEditorRev = new function(){
 		
 		data['idle']['font-style'] = (jQuery('input[name="css_font-style"]').is(':checked')) ? 'italic' : 'normal';
 		data['idle']['font-family'] = jQuery('input[name="css_font-family"]').val();
-		data['idle']['padding'] = {};
-		jQuery('input[name="css_padding[]"]').each(function(i){ data['idle']['padding'][i] = jQuery(this).val();});
 		data['idle']['text-decoration'] = jQuery('select[name="css_text-decoration"] option:selected').val();
-		data['idle']['text-align'] = jQuery('select[name="css_text-align"] option:selected').val();
+		
+		//data['idle']['padding'] = {};
+		//jQuery('input[name="css_padding[]"]').each(function(i){ data['idle']['padding'][i] = jQuery(this).val();});
+		//data['idle']['text-align'] = jQuery('select[name="css_text-align"] option:selected').val();
+		//get certain data from all device sizes, so from the current layer directly
+		data['idle']['text-align'] = layer['text-align'];
+		data['idle']['margin'] = layer['margin'];
+		data['idle']['padding'] = layer['padding'];
+		
 		data['idle']['background-color'] = jQuery('input[name="css_background-color"]').val();
 		data['idle']['background-transparency'] = jQuery('input[name="css_background-transparency"]').val();
 		data['idle']['border-color'] = jQuery('input[name="css_border-color-show"]').val();
@@ -536,6 +544,7 @@ var UniteCssEditorRev = new function(){
 		}
 		
 		var donow = (new_style === true) ? 'insert_captions_css' : 'update_captions_css'; // ? create new : update existing
+		
 		
 		//make changes to database
 		UniteAdminRev.ajaxRequest(donow,data,function(response){

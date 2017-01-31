@@ -238,14 +238,20 @@
 			</div>
 			
 			<div id="rev-youtube-options" class="video-settings-line mb10 rs-hide-on-audio">
-				<label for="input_video_speed"><?php _e('Video Speed:', 'revslider'); ?></label>
-				<select id="input_video_speed" style="width:75px">
-					<option value="0.25"><?php _e('0.25', 'revslider'); ?></option>
-					<option value="0.50"><?php _e('0.50', 'revslider'); ?></option>
-					<option value="1"><?php _e('1', 'revslider'); ?></option>
-					<option value="1.5"><?php _e('1.5', 'revslider'); ?></option>
-					<option value="2"><?php _e('2', 'revslider'); ?></option>
-				</select>
+				<div class="mb10">
+					<label for="input_video_speed"><?php _e('Video Speed:', 'revslider'); ?></label>
+					<select id="input_video_speed" style="width:75px">
+						<option value="0.25"><?php _e('0.25', 'revslider'); ?></option>
+						<option value="0.50"><?php _e('0.50', 'revslider'); ?></option>
+						<option value="1"><?php _e('1', 'revslider'); ?></option>
+						<option value="1.5"><?php _e('1.5', 'revslider'); ?></option>
+						<option value="2"><?php _e('2', 'revslider'); ?></option>
+					</select>
+				</div>
+				<div class="mb10">
+					<label for="input_video_play_inline"><?php _e('Play Video Inline:', 'revslider'); ?></label>
+					<input type="checkbox" class="checkbox_video_dialog tp-moderncheckbox" id="input_video_play_inline" >
+				</div>
 			</div>
 			
 			<div class="mb10 rs-show-on-audio" style="display: none">

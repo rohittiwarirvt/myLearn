@@ -129,7 +129,7 @@ class RevSliderBase {
 			
 		}catch (Exception $e){
 			header("status: 500");
-			echo $e->getMessage();
+			echo __('Image not Found', 'revslider');
 			exit();
 		}
 	}
@@ -357,6 +357,7 @@ class RevSliderBase {
 		$svg_sets['Social'] = array('path' => $path.'social/', 'url' => $url.'social/');
 		$svg_sets['Toggle'] = array('path' => $path.'toggle/', 'url' => $url.'toggle/');
 		
+		
 		$svg_sets = apply_filters('revslider_get_svg_sets', $svg_sets);
 		
 		return $svg_sets;
@@ -570,11 +571,18 @@ class RevSliderBase {
 					echo $image.__(' not found!<br>', 'revslider');
 				}else{
 					if(!isset($alreadyImported['images/'.$image])){
-						if($strip == true){ //pclzip
-							$importImage = RevSliderFunctionsWP::import_media($d_path.str_replace('//', '/', 'images/'.$image), $alias.'/');
+						//check if we are object folder, if yes, do not import into media library but add it to the object folder
+						$uimg = ($strip == true) ? str_replace('//', '/', 'images/'.$image) : $image; //pclzip
+						
+						$object_library = (strpos($uimg, 'revslider/objects/') === 0) ? true : false;
+						
+						if($object_library === true){ //copy the image to the objects folder if false
+							$objlib = new RevSliderObjectLibrary();
+							$importImage = $objlib->_import_object($d_path.'images/'.$uimg);
 						}else{
-							$importImage = RevSliderFunctionsWP::import_media($d_path.'images/'.$image, $alias.'/');
+							$importImage = RevSliderFunctionsWP::import_media($d_path.'images/'.$uimg, $alias.'/');
 						}
+						
 						if($importImage !== false){
 							$alreadyImported['images/'.$image] = $importImage['path'];
 							
@@ -612,6 +620,7 @@ class RevSliderBase {
 		}
 	}
 	
+	
 	/**
 	 * prints out debug text if constant TP_DEBUG is defined and true
  	 * @since: 5.2.4
@@ -637,50 +646,7 @@ class RevSliderBase {
 			return false;
 		}
 	}
-	
-	
-	
-	public static function public_folder_unzip(){
-		$opt = get_option('rs_public_version', '1');
-		
-		$do_update = false;
-		
-		
-		//on revslider update, unzip it
-		if(version_compare($opt, RevSliderGlobals::SLIDER_REVISION, '<')){
-			$do_update = true;
-		}
-		
-		$upload_dir = wp_upload_dir();
-		$path = $upload_dir['basedir'].'/revslider/assets/svg/';
-		
-		//if both are not existing, update
-		if(!file_exists($path.'action/ic_3d_rotation_24px.svg')){ //!file_exists(RS_PLUGIN_PATH . 'public/assets/assets/svg/action/ic_3d_rotation_24px.svg') && 
-			$do_update = true;
-		}
-		
-		if($do_update){
-			require_once(ABSPATH . 'wp-admin/includes/file.php');
-		
-			WP_Filesystem();
-			
-			//$unzipfile = unzip_file( RS_PLUGIN_PATH . 'public/assets/assets/svg/svg.zip', RS_PLUGIN_PATH . 'public/assets/assets/svg/');
-			$unzipfile = unzip_file(RS_PLUGIN_PATH . 'public/assets/assets/svg/svg.zip', $path);
-			if($unzipfile === true){
-				update_option('rs_public_version', RevSliderGlobals::SLIDER_REVISION);
-			}else{
-				add_action('admin_notices', array('RevSliderBase', 'copy_notice'));
-			}
-		}
-	}
-	
-	public static function copy_notice(){
-		?>
-		<div class="error below-h2 rs-update-notice-wrap" id="message" style="clear:both;display: block;position:relative;margin:35px 20px 25px 0px"><div style="display:table;width:100%;"><div style="vertical-align:middle;display:table-cell;min-width:100%;padding-right:15px;">
-			<p><?php _e('Slider Revolution error: could not unzip revslider/public/assets/svg/svg.zip into the uploads/revslider/assets/svg/ folder, please make sure that the uploads folders is writable', 'revslider'); ?></p>
-		</div></div></div>
-		<?php
-	}
+
 }
 
 /**

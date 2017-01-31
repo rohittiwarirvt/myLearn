@@ -1,12 +1,17 @@
 /********************************************
  * REVOLUTION 5.0 EXTENSION - CAROUSEL
- * @version: 1.0.2 (01.10.2015)
+ * @version: 1.1 (25.10.2015)
  * @requires jquery.themepunch.revolution.js
  * @author ThemePunch
 *********************************************/
 (function($) {
-
-var _R = jQuery.fn.revolution;
+"use strict";
+var _R = jQuery.fn.revolution,
+	extension = {	alias:"Carousel Min JS",
+					name:"revolution.extensions.carousel.min.js",
+					min_core: "5.0",
+					version:"1.1.0"
+			  };
 
 	///////////////////////////////////////////
 	// 	EXTENDED FUNCTIONS AVAILABLE GLOBAL  //
@@ -15,6 +20,8 @@ jQuery.extend(true,_R, {
 
 	// CALCULATE CAROUSEL POSITIONS
 	prepareCarousel : function(opt,a,direction) {	
+
+		if (_R.compare_version(extension).check==="stop") return false;
 
 		direction = opt.carousel.lastdirection = dircheck(direction,opt.carousel.lastdirection);		
 		setCarouselDefaults(opt);	
@@ -62,7 +69,7 @@ jQuery.extend(true,_R, {
 		var _ = opt.carousel,
 			slidepositions = new Array(),
 			len = _.slides.length,
-			leftlimit = _.horizontal_align ==="right" ? leftlimit = opt.width : 0;
+			leftlimit = _.horizontal_align ==="right" ? opt.width : 0;
 		
 
 		for (var i=0;i<len;i++) {					
@@ -298,7 +305,7 @@ var animateCarousel = function(opt,direction,nsae) {
 			_R.organiseCarousel(opt,direction,false,true);	
 			var li = jQuery(opt.li[_.focused]);	
 			opt.c.find('.next-revslide').removeClass("next-revslide");
-			if (nsae) _R.callingNewSlide(opt,opt.c,li.data('index'));
+			if (nsae) _R.callingNewSlide(opt.c,li.data('index'));
 		}, ease:punchgs.Expo.easeOut});	
 }
 

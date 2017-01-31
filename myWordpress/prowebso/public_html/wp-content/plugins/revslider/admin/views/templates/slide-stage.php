@@ -1,13 +1,15 @@
 <?php
 if( !defined( 'ABSPATH') ) exit();
+$obj_library = new RevSliderObjectLibrary();
 
 $startanims = $operations->getArrAnimations();
-
 $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slider);
 ?>
 
+
+
 <div style="width:100%;height:20px"></div>
-<div class="editor_buttons_wrapper  postbox unite-postbox" style="max-width:100% !important; min-width:1140px !important">
+<div class="editor_buttons_wrapper  postbox unite-postbox" style="max-width:100% !important; min-width:1200px !important">
 	<div class="box-closed tp-accordion" style="border-bottom:5px solid #ddd;">
 		<ul class="rs-layer-settings-tabs">
 			<li id="rs-style-tab-button" data-content="#rs-style-content-wrapper" class="selected"><i style="height:45px" class="rs-mini-layer-icon rs-icon-droplet rs-toolbar-icon"></i>
@@ -31,17 +33,17 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 					<i class="eg-icon-pause"></i>
 				</span>
 			</li>
-			<li data-content="#rs-visibility-content-wrapper"><i style="height:45px" class="rs-mini-layer-icon rs-icon-visibility rs-toolbar-icon"></i><?php _e("Visibility",'revslider'); ?></li>
-			<li data-content="#rs-behavior-content-wrapper"><i style="height:45px" class="rs-mini-layer-icon eg-icon-resize-full-2 rs-toolbar-icon "></i><?php _e("Behavior",'revslider'); ?></li>
-			<li data-content="#rs-action-content-wrapper"><i style="height:45px; font-size:16px" class="rs-mini-layer-icon eg-icon-link rs-toolbar-icon"></i><?php _e("Actions",'revslider'); ?></li>
+			<li id="v_layers_mp_4" data-content="#rs-visibility-content-wrapper"><i style="height:45px" class="rs-mini-layer-icon rs-icon-visibility rs-toolbar-icon"></i><?php _e("Visibility",'revslider'); ?></li>
+			<li id="v_layers_mp_5" data-content="#rs-behavior-content-wrapper"><i style="height:45px" class="rs-mini-layer-icon eg-icon-resize-full-2 rs-toolbar-icon "></i><?php _e("Behavior",'revslider'); ?></li>
+			<li id="v_layers_mp_6" data-content="#rs-action-content-wrapper"><i style="height:45px; font-size:16px" class="rs-mini-layer-icon eg-icon-link rs-toolbar-icon"></i><?php _e("Actions",'revslider'); ?></li>
 			
-			<li data-content="#rs-attribute-content-wrapper"><i style="height:45px" class="rs-mini-layer-icon rs-icon-edit-basic rs-toolbar-icon"></i><?php _e("Attributes",'revslider'); ?></li>
+			<li id="v_layers_mp_7" data-content="#rs-attribute-content-wrapper"><i style="height:45px" class="rs-mini-layer-icon rs-icon-edit-basic rs-toolbar-icon"></i><?php _e("Attributes",'revslider'); ?></li>
 			<?php if($slide->isStaticSlide()){ ?>
-			<li data-content="#rs-static-content-wrapper"><i style="height:45px" class="rs-mini-layer-icon eg-icon-dribbble-1 rs-toolbar-icon"></i><?php _e("Static Layers",'revslider'); ?></li>
+			<li id="v_layers_mp_8" data-content="#rs-static-content-wrapper"><i style="height:45px" class="rs-mini-layer-icon eg-icon-dribbble-1 rs-toolbar-icon"></i><?php _e("Static Layers",'revslider'); ?></li>
 			<?php } ?>
-			<li data-content="#rs-parallax-content-wrapper"><i style="height:45px; font-size:16px;" class="rs-mini-layer-icon eg-icon-picture-1 rs-toolbar-icon"></i><?php _e("Parallax / 3D",'revslider'); ?></li>
+			<li id="v_layers_mp_9" data-content="#rs-parallax-content-wrapper"><i style="height:45px; font-size:16px;" class="rs-mini-layer-icon eg-icon-picture-1 rs-toolbar-icon"></i><?php _e("Parallax / 3D",'revslider'); ?></li>			
 			<?php if(!empty($slider_addons)){ ?>
-			<li class="rs-addon-tab-button" data-content="#rs-addon-wrapper"><i style="height:45px; font-size:16px;" class="rs-mini-layer-icon eg-icon-plus-circled rs-toolbar-icon"></i><?php _e("Add-ons",'revslider'); ?></li>
+			<li id="v_layers_mp_10" class="rs-addon-tab-button" data-content="#rs-addon-wrapper"><i style="height:45px; font-size:16px;" class="rs-mini-layer-icon eg-icon-plus-circled rs-toolbar-icon"></i><?php _e("Add-ons",'revslider'); ?></li>
 			<?php } ?>
 		</ul>
 		<div style="clear:both"></div>
@@ -52,9 +54,9 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 	<form name="form_layers" class="form_layers notselected">
 
 		<!-- LAYER STYLING -->
-		<div class="layer-settings-toolbar" id="rs-style-content-wrapper" style="">
+		<div class="layer-settings-toolbar " id="rs-style-content-wrapper" style="">
 			<?php //add global styles editor ?>
-			<div id="css_static_editor_wrap" title="<?php _e("Global Style Editor",'revslider') ?>" style="display:none;">
+			<div id="css_static_editor_wrap ho_row_ ho_column_ ho_group_" title="<?php _e("Global Style Editor",'revslider') ?>" style="display:none;">
 				<div id="css-static-accordion">
 					<h3><?php _e("Dynamic Styles (Not Editable):",'revslider')?></h3>
 					<div class="css_editor_novice_wrap">
@@ -73,7 +75,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 			<div>
 
 				<!-- FONT TEMPLATE -->
-				<span class="rs-layer-toolbar-box " style="padding-right:15px;">
+				<span class="rs-layer-toolbar-box ho_row_ ho_column_ ho_group_" style="padding-right:15px;">
 					<i class="rtlmr0 rs-mini-layer-icon rs-icon-fonttemplate rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Caption Style",'revslider'); ?>" style="margin-right:10px"></i>
 					<input type="text"  style="width:150px; padding-right:30px;" class="textbox-caption rs-layer-input-field tipsy_enabled_top" title="<?php _e("Style Template",'revslider'); ?>"  id="layer_caption" name="layer_caption" value="-" />
 					<span id="layer_captions_down" ><i class="eg-icon-arrow-combo"></i></span>
@@ -95,7 +97,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 
 
 				
-				<span class="rs-layer-toolbar-box hide_on_shapelayer hide_on_videolayer hide_on_imagelayer">
+				<span class="rs-layer-toolbar-box ho_shape_ ho_video_ ho_image_ ho_row_ ho_column_ ho_group_">
 					<!-- FONT SIZE -->
 					<i class="rs-mini-layer-icon rs-icon-fontsize rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Font Size (px)",'revslider'); ?>" style="margin-right:6px" ></i>
 					<input type="text"  data-suffix="px" class="rs-layer-input-field tipsy_enabled_top" title="<?php _e("Font Size",'revslider'); ?>" style="width:61px" id="layer_font_size_s" name="font_size_static" value="20px" />
@@ -105,12 +107,12 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 					<!-- LINE HEIGHT -->
 					<i class="rs-mini-layer-icon rs-icon-lineheight rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Line Height (px)",'revslider'); ?>" style="margin-right:11px" ></i>
 					<input type="text" data-suffix="px" class="rs-layer-input-field tipsy_enabled_top" title="<?php _e("Line Height",'revslider'); ?>" style="width:61px" id="layer_line_height_s" name="line_height_static" value="22px" />
-					<span class="rs-layer-toolbar-space" style="margin-right:6px" ></span>
+					<span class="rs-layer-toolbar-space" style="margin-right:10px" ></span>
 				</span>
 
 
 				<!-- WRAP -->
-				<span class="rs-layer-toolbar-box tipsy_enabled_top" style="display: none" title="<?php _e("White Space",'revslider'); ?>">
+				<span class="rs-layer-toolbar-box tipsy_enabled_top ho_row_ ho_column_ ho_group_" style="display: none" title="<?php _e("White Space",'revslider'); ?>">
 					<i class="rs-mini-layer-icon rs-icon-wrap rs-toolbar-icon"></i>
 					<select class="rs-layer-input-field" style="width:95px" id="layer_whitespace" name="layer_whitespace">
 						<option value="normal"><?php _e('Normal', 'revslider'); ?></option>
@@ -122,7 +124,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 				</span>
 
 				<!-- ALIGN -->
-				<span class="rs-layer-toolbar-box tipsy_enabled_top" style="padding-right:18px;" id="rs-align-wrapper">
+				<span class="rs-layer-toolbar-box tipsy_enabled_top ho_row_ ho_sltic_ ho_column_" style="padding-right:18px;" id="rs-align-wrapper">
 					<i class="rs-mini-layer-icon eg-icon-arrow-combo rs-toolbar-icon" style="margin-right:3px"></i>
 					<a href="javascript:void(0)" id='align_left' data-hor="left"  class='revnewgray layer-toolbar-button rs-new-align-button tipsy_enabled_top' title="<?php _e("Layer Align Left",'revslider'); ?>"><i class="rs-mini-layer-icon rs-icon-alignleft rs-toolbar-icon"></i></a>
 					<a href="javascript:void(0)" id='align_center_h' data-hor="center" class='revnewgray layer-toolbar-button rs-new-align-button tipsy_enabled_top' title="<?php _e("Layer Align Center",'revslider'); ?>"><i class="rs-mini-layer-icon rs-icon-aligncenterh rs-toolbar-icon"></i></a>
@@ -131,32 +133,34 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 
 				</span>
 
-				<span class="rs-layer-toolbar-box">
+				<span class="rs-layer-toolbar-box ho_row_ ho_column_ ho_sltic_">
 					<!-- POSITION X -->
 					<i class="rs-mini-layer-icon rs-icon-xoffset rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Horizontal Offset from Aligned Position (px)",'revslider'); ?>" style="margin-right:8px"></i>
-					<input type="text" data-suffix="px" class="text-sidebar setting-disabled rs-layer-input-field tipsy_enabled_top" title="<?php _e("Horizontal Offset from Aligned Position (px)",'revslider'); ?>" style="width:50px" id="layer_left" name="layer_left" value="" disabled="disabled">
+					<input type="text" data-suffix="px" class="text-sidebar setting-disabled rs-layer-input-field tipsy_enabled_top" title="<?php _e("Horizontal Offset from Aligned Position (px)",'revslider'); ?>" style="width:60px" id="layer_left" name="layer_left" value="" disabled="disabled">
 					<span class="rs-layer-toolbar-space" style="margin-right:10px"></span>
 
 					<!-- POSITION Y -->
 					<i class="rs-mini-layer-icon rs-icon-yoffset rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Vertical Offset from Aligned Position (px)",'revslider'); ?>" style="margin-right:4px"></i>
-					<input type="text" data-suffix="px" class="text-sidebar setting-disabled rs-layer-input-field tipsy_enabled_top" title="<?php _e("Vertical Offset from Aligned Position (px)",'revslider'); ?>" style="width:50px" id="layer_top" name="layer_top" value="" disabled="disabled">
-					<span class="rs-layer-toolbar-space" style="margin-right:10px"></span>
+					<input type="text" data-suffix="px" class="text-sidebar setting-disabled rs-layer-input-field tipsy_enabled_top" title="<?php _e("Vertical Offset from Aligned Position (px)",'revslider'); ?>" style="width:60px" id="layer_top" name="layer_top" value="" disabled="disabled">					
 				</span>
 
-				<span class="rs-layer-toolbar-box hide_on_shapelayer hide_on_videolayer hide_on_imagelayer hide_on_buttonlayer">
-				<!-- HTML TAG -->
-					<i class="rs-mini-layer-icon eg-icon-code rs-toolbar-icon tipsy_enabled_top" title="<?php _e("HTML Tag for Layer",'revslider'); ?>"></i>
-					<select class="rs-layer-input-field tipsy_enabled_top" title="<?php _e("HTML Tag",'revslider'); ?>" style="width:61px" id="layer_html_tag" name="layer_html_tag">
-						<option value="div">&lt;div&gt; - default</option>
-						<option value="p">&lt;p&gt;</option>
-						<option value="h1">&lt;h1&gt;</option>
-						<option value="h2">&lt;h2&gt;</option>
-						<option value="h3">&lt;h3&gt;</option>
-						<option value="h4">&lt;h4&gt;</option>
-						<option value="h5">&lt;h5&gt;</option>
-						<option value="h6">&lt;h6&gt;</option>
-						<option value="span">&lt;span&gt;</option>
-					</select>					
+
+				<span class="rs-layer-toolbar-box">
+					<!-- HTML TAG -->
+					<span class="ho_shape_ ho_video_ ho_image_ ho_button_ ho_column_ ho_row_ ho_group_">				
+						<i class="rs-mini-layer-icon eg-icon-code rs-toolbar-icon tipsy_enabled_top" title="<?php _e("HTML Tag for Layer",'revslider'); ?>"></i>
+						<select class="rs-layer-input-field tipsy_enabled_top" title="<?php _e("HTML Tag",'revslider'); ?>" style="width:61px" id="layer_html_tag" name="layer_html_tag">
+							<option value="div">&lt;div&gt; - default</option>
+							<option value="p">&lt;p&gt;</option>
+							<option value="h1">&lt;h1&gt;</option>
+							<option value="h2">&lt;h2&gt;</option>
+							<option value="h3">&lt;h3&gt;</option>
+							<option value="h4">&lt;h4&gt;</option>
+							<option value="h5">&lt;h5&gt;</option>
+							<option value="h6">&lt;h6&gt;</option>
+							<option value="span">&lt;span&gt;</option>
+						</select>					
+					</span>
 				</span>
 			</div>
 
@@ -164,7 +168,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 			<div style="border-top:1px solid #ddd;">
 
 				<!-- FONT FAMILY-->
-				<span class="rs-layer-toolbar-box hide_on_shapelayer hide_on_videolayer hide_on_imagelayer" style="padding-right:0px;">
+				<span class="rs-layer-toolbar-box ho_shape_ ho_video_ ho_image_ ho_row_ ho_column_ ho_group_" style="padding-right:0px;">
 					<i class="rs-mini-layer-icon rs-icon-fontfamily rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Font Family",'revslider'); ?>" style="margin-right:10px"></i>
 					<input type="text" class="rs-staticcustomstylechange text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Font Family",'revslider'); ?>" style="width:185px" type="text" id="css_font-family" name="css_font-family" value="" autocomplete="off"> <?php /*  id="font_family" */ ?>
 					<span id="css_fonts_down" class="ui-state-active" style="position: relative;"><i class="eg-icon-arrow-combo"></i></span>
@@ -174,7 +178,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 
 
 				<!-- FONT DIRECT MANAGEMENT -->
-				<span class="rs-layer-toolbar-box hide_on_shapelayer hide_on_videolayer hide_on_imagelayer">
+				<span class="rs-layer-toolbar-box ho_shape_ ho_video_ ho_image_ ho_row_ ho_column_ ho_group_">
 
 					<!-- FONT WEIGHT -->
 					<i class="rs-mini-layer-icon rs-icon-fontweight rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Font Weight",'revslider'); ?>"></i>
@@ -197,7 +201,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 				</span>
 
 				<!-- ALIGN -->
-				<span class="rs-layer-toolbar-box tipsy_enabled_top" style="padding-right:18px;" id="rs-align-wrapper-ver">
+				<span class="rs-layer-toolbar-box tipsy_enabled_top ho_sltic_ ho_column_" style="padding-right:18px;" id="rs-align-wrapper-ver">
 					<i class="rs-mini-layer-icon eg-icon-arrow-combo rs-toolbar-icon" style="margin-right:3px"></i>															
 					<a href="javascript:void(0)" id='align_top' data-ver="top" class='revnewgray layer-toolbar-button rs-new-align-button tipsy_enabled_top' title="<?php _e("Layer Align Top",'revslider'); ?>"><i class="rs-mini-layer-icon rs-icon-aligntop rs-toolbar-icon"></i></a>
 					<a href="javascript:void(0)" id='align_center_v' data-ver="middle" class='revnewgray layer-toolbar-button rs-new-align-button tipsy_enabled_top' title="<?php _e("Layer Align Middle",'revslider'); ?>"><i class="rs-mini-layer-icon rs-icon-aligncenterv rs-toolbar-icon"></i></a>
@@ -205,22 +209,90 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 					<input type="text"  class='text-sidebar' style="display:none" id="layer_align_vert" name="layer_align_vert" value="top" />
 				</span>
 
-				<span class="rs-layer-toolbar-box">
-					<!-- WIDTH -->
-					<i class="rs-mini-layer-icon rs-icon-maxwidth rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Layer Width (px). Use 'auto' to respect White Space",'revslider'); ?>" style="margin-right:3px"></i>
-					<input type="text" data-suffix="px" class="text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Layer Width (px). Use 'auto' to respect White Space",'revslider'); ?>" style="display:none;width:50px" id="layer_max_width" name="layer_max_width" value="auto">
-					<input type="text" data-suffix="px" class="text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Layer Width (px). Use 'auto' to respect White Space",'revslider'); ?>" style="width:50px" id="layer_scaleX" name="layer_scaleX" value="">
-					<input type="text" data-suffix="px" class="text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Video Width (px). Use 'auto' to respect White Space",'revslider'); ?>" style="display:none;width:50px" id="layer_video_width" name="layer_video_width" value="">
-					<span class="rs-layer-toolbar-space" style="margin-right:11px"></span>
+				<span class="rs-layer-toolbar-box" style="position:relative">
+				
 
-					<i class="rs-mini-layer-icon rs-icon-maxheight rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Layer Height (px). Use 'auto' to respect White Space",'revslider'); ?>"></i>
-					<input type="text" data-suffix="px" class="text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Layer Height (px). Use 'auto' to respect White Space",'revslider'); ?>" style="display:none;width:50px" id="layer_max_height" name="layer_max_height" value="auto">
-					<input type="text" data-suffix="px" class="text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Layer Height (px) Use 'auto' to respect White Space",'revslider'); ?>" style="width:50px" id="layer_scaleY" name="layer_scaleY" value="">
-					<input type="text" data-suffix="px" class="text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Video Height (px). Use 'auto' to respect White Space",'revslider'); ?>" style="display:none;width:50px" id="layer_video_height" name="layer_video_height" value="">
-					<span class="rs-layer-toolbar-space" style="margin-right:11px"></span>					
+					<!-- IMAGE SIZE -->
+					<span id="layer_scaleXY_wrapper" class="ho_row_ ho_column_" style="display:none">
+						<i class="rs-mini-layer-icon rs-icon-maxwidth rs-toolbar-icon tipsy_enabled_top " title="<?php _e("Layer Width (px/%). Use 'auto' to respect White Space",'revslider'); ?>" style="margin-right:3px"></i>						
+						<input type="text" data-suffix="px" data-suffixalt="%" class="input-deepselects text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Layer Width (px/%). Use 'auto' to respect White Space",'revslider'); ?>" style="width:60px" id="layer_scaleX" name="layer_scaleX" value="" data-deepwidth="125" data-selects="Custom %||Custom PX||100%||100px||auto" data-svalues ="50%||150px||100%||100px||auto" data-icons="wrench||wrench||filter||filter||font">						
+						<span class="rs-layer-toolbar-space" style="margin-right:11px"></span>						
+						<i class="rs-mini-layer-icon rs-icon-maxheight rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Layer Height (px). Use 'auto' to respect White Space",'revslider'); ?>"></i>						
+						<input type="text" data-suffix="px" data-suffixalt="%" class="input-deepselects text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Layer Height (px) Use 'auto' to respect White Space",'revslider'); ?>" style="width:60px" id="layer_scaleY" name="layer_scaleY" value="" data-deepwidth="125" data-selects="Custom %||Custom PX||100%||100px||auto" data-svalues ="50%||150px||100%||100px||auto" data-icons="wrench||wrench||filter||filter||font">						
+					</span>
+					<!-- DEFAULT LAYER SIZE -->
+					<span id="layer_max_widthheight_wrapper" class="ho_row_ ho_column_">
+						<i class="rs-mini-layer-icon rs-icon-maxwidth rs-toolbar-icon tipsy_enabled_top " title="<?php _e("Layer Width (px/%). Use 'auto' to respect White Space",'revslider'); ?>" style="margin-right:3px"></i>
+						<input type="text" data-suffix="px" data-suffixalt="%" class="input-deepselects text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Layer Width (px/%). Use 'auto' to respect White Space",'revslider'); ?>" style="width:60px" id="layer_max_width" name="layer_max_width" value="auto" data-deepwidth="125" data-selects="Custom %||Custom PX||100%||100px||auto" data-svalues ="50%||150px||100%||100px||auto" data-icons="wrench||wrench||filter||filter||font">						
+						<span class="rs-layer-toolbar-space" style="margin-right:11px"></span>
+						<i class="rs-mini-layer-icon rs-icon-maxheight rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Layer Height (px). Use 'auto' to respect White Space",'revslider'); ?>"></i>
+						<input type="text" data-suffix="px" data-suffixalt="%" class="input-deepselects text-sidebar rs-layer-input-field tipsy_enabled_top " title="<?php _e("Layer Height (px). Use 'auto' to respect White Space",'revslider'); ?>" style="width:60px" id="layer_max_height" name="layer_max_height" value="auto" data-deepwidth="125" data-selects="Custom %||Custom PX||100%||100px||auto" data-svalues ="50%||150px||100%||100px||auto" data-icons="wrench||wrench||filter||filter||font">
+					</span>
+					<!-- VIDEO SIZE -->
+					<span id="layer_video_widthheight_wrapper" class="ho_row_ ho_column_" style="display:none">
+						<i class="rs-mini-layer-icon rs-icon-maxwidth rs-toolbar-icon tipsy_enabled_top " title="<?php _e("Layer Width (px/%). Use 'auto' to respect White Space",'revslider'); ?>" style="margin-right:3px"></i>						
+						<input type="text" data-suffix="px" data-suffixalt="%" class="input-deepselects text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Video Width (px/%). Use 'auto' to respect White Space",'revslider'); ?>" style="width:60px" id="layer_video_width" name="layer_video_width" value="" data-deepwidth="125" data-selects="Custom %||Custom PX||100%||100px||auto" data-svalues ="50%||150px||100%||100px||auto" data-icons="wrench||wrench||filter||filter||font">					
+						<span class="rs-layer-toolbar-space" style="margin-right:11px"></span>
+						<i class="rs-mini-layer-icon rs-icon-maxheight rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Layer Height (px). Use 'auto' to respect White Space",'revslider'); ?>"></i>
+						<input type="text" data-suffix="px" data-suffixalt="%" class="input-deepselects text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Video Height (px). Use 'auto' to respect White Space",'revslider'); ?>" style="width:60px" id="layer_video_height" name="layer_video_height" value="" data-deepwidth="125" data-selects="Custom %||Custom PX||100%||100px||auto" data-svalues ="50%||150px||100%||100px||auto" data-icons="wrench||wrench||filter||filter||font">					
+					</span>
 
-					<span id="layer-covermode-wrapper" class="tipsy_enabled_top" title="<?php _e("Cover Mode",'revslider'); ?>">
-						<i class="rs-mini-layer-icon eg-icon-resize-normal rs-toolbar-icon"></i>
+					<!-- MIN HEIGHT -->
+					<span id="layer_minwidthheight_wrapper" style="display:none">
+						<i class="rs-mini-layer-icon rs-icon-maxwidth rs-toolbar-icon tipsy_enabled_top ho_column_" title="<?php _e("Min Width of Element. Use 'auto' to respect White Space",'revslider'); ?>" style="margin-right:3px"></i>						
+						<input type="text" data-suffix="px" data-suffixalt="%" class="input-deepselects text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Min Width",'revslider'); ?>" style="width:60px" id="layer_min_width" name="layer_min_width" value="" data-deepwidth="125" data-selects="Custom %||Custom PX||100%||100px||auto" data-svalues ="50%||150px||100%||100px||auto" data-icons="wrench||wrench||filter||filter||font">
+						<span class="rs-layer-toolbar-space" style="margin-right:11px"></span>
+						<i class="rs-mini-layer-icon rs-icon-minheight rs-toolbar-icon tipsy_enabled_top " title="<?php _e("Min Height (px).",'revslider'); ?>"></i>					
+						<input type="text" data-suffix="px" class="text-sidebar rs-layer-input-field tipsy_enabled_top " title="<?php _e("Min. Height (px)",'revslider'); ?>" style="width:60px" id="layer_min_height" name="layer_min_height" value="">											
+					</span>
+
+					<!-- RESET ORIGINAL SIZE -->
+					<span id="reset-scale" class="ho_column_ ho_row_ ho_group_ ho_svg_ ho_text_ ho_video_ ho_shape_"></span>
+
+					<!-- MEDIA PROPORTION -->
+					<span id="layer-prop-wrapper" class="rs-proportion-check layer-toolbar-button ho_column_ ho_row_ ho_svg_" title="<?php _e("Keep Aspect Ratio (on/off)",'revslider'); ?>">												
+						<input type="checkbox" id="layer_proportional_scale" class="inputCheckbox" name="layer_proportional_scale">
+					</span>
+
+				</span>
+
+				<span class="rs-layer-toolbar-box">	
+						
+					
+
+					
+
+					
+
+					<!-- LINE BREAK -->					
+					<span id="layer-linebreak-wrapper" class="rs-linebreak-check layer-toolbar-button tipsy_enabled_top ho_column_ ho_row_ ho_group_ ho_svg_" title="<?php _e("Auto Linebreak (on/off - White Space:normal / nowrap).  ",'revslider'); ?>">												
+						<input type="checkbox" id="layer_auto_line_break" class="inputCheckbox" name="layer_auto_line_break" >
+					</span>
+
+					<!-- DISPLAY MODE -->					
+					<span id="layer-displaymode-wrapper" class="rs-displaymode-check layer-toolbar-button tipsy_enabled_top show_on_miw ho_row_ ho_column_ ho_row_ ho_group_ ho_svg_" title="<?php _e("Display Mode Block / Inline-Block).  ",'revslider'); ?>">												
+						<input type="checkbox" id="layer_displaymode" class="inputCheckbox" name="layer_displaymode" >						
+					</span>
+
+					<!-- DISPLAY OPTIONS (NONE VISIBLE) -->
+					<span class="rs-layer-toolbar-box tipsy_enabled_top" style="display: none">						
+						<select id="layer_display" name="layer_display">
+							<option value="block" selected="selected"><?php _e('Block', 'revslider'); ?></option>
+							<option value="inline-block"><?php _e('Inline-Block', 'revslider'); ?></option>
+							<option value="flex"><?php _e('Flex', 'revslider'); ?></option>
+							<option value="table"><?php _e('Table', 'revslider'); ?></option>
+							<option value="table-cell"><?php _e('Table-Cell', 'revslider'); ?></option>
+						</select>
+					</span>
+
+					
+				</span>
+
+				<span class="rs-layer-toolbar-box">	
+
+					<!-- COVERMODE -->
+					<span id="layer-covermode-wrapper" class="tipsy_enabled_top ho_row_ ho_column_" title="<?php _e("Cover Mode",'revslider'); ?>">						
+						<i class="rs-mini-layer-icon rs-toolbar-icon rs-cover-size-icon"></i>
 						<select class="rs-layer-input-field"  style="width:75px" id="layer_cover_mode" name="layer_cover_mode">
 							<option value="custom"><?php _e('Custom', 'revslider'); ?></option>
 							<option value="fullwidth"><?php _e('Full Width', 'revslider'); ?></option>
@@ -229,21 +301,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 							<option value="cover-proportional"><?php _e('Cover', 'revslider'); ?></option>
 						</select>
 					</span>
-					<span class="rs-layer-toolbar-space" style="margin-right:11px"></span>
 					
-					<span id="layer-linebreak-wrapper" class="rs-linebreak-check layer-toolbar-button tipsy_enabled_top" title="<?php _e("Auto Linebreak (on/off - White Space:normal / nowrap).  ",'revslider'); ?>" style="">
-						<i class="rs-mini-layer-icon eg-icon-paragraph rs-toolbar-icon"></i>
-						<input type="checkbox" id="layer_auto_line_break" class="inputCheckbox" name="layer_auto_line_break" style="width: 26px;height: 26px;margin: 0px;position: absolute;top: 0px;left: 0px; filter: alpha(opacity=0);-moz-opacity: 0.0;-khtml-opacity: 0.0;opacity: 0.0;">
-					</span>
-
-					<span id="layer-prop-wrapper" class="rs-proportion-check layer-toolbar-button tipsy_enabled_top" title="<?php _e("Keep Aspect Ratio (on/off)",'revslider'); ?>" style="position:relative; display:inline-block;  width:26px; padding:0px; text-align:center; vertical-align: middle">
-						<i class="rs-mini-layer-icon eg-icon-link rs-toolbar-icon"></i>
-						<input type="checkbox" id="layer_proportional_scale" class="inputCheckbox" name="layer_proportional_scale" style="width: 26px;height: 26px;margin: 0px;position: absolute;top: 0px;left: 0px; filter: alpha(opacity=0);-moz-opacity: 0.0;-khtml-opacity: 0.0;opacity: 0.0;">
-					</span>
-
-					<a href="javascript:void(0)" id="reset-scale" class="revnewgray layer-toolbar-button  tipsy_enabled_top" title="<?php _e("Reset original size",'revslider'); ?>"><i class="eg-icon-resize-normal"></i></a>
-					
-
 				</span>
 			</div>
 
@@ -256,20 +314,21 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 						<div id="tp-idle-state-advanced-style" style="float:left; padding-left:20px;">
 							
 							<ul class="rs-layer-animation-settings-tabs" style="display:inline-block; ">
-								<li data-content="#style-sub-font" class="selected"><?php _e("Font",'revslider'); ?></li>
+								<li data-content="#style-sub-font" class="selected ho_row_ ho_column_ ho_group_ ho_image_ ho_shape_"><?php _e("Font",'revslider'); ?></li>
 								<li data-content="#style-sub-background"><?php _e("Background",'revslider'); ?></li>
+								<li data-content="#style-sub-spaces"><?php _e("Spaces",'revslider'); ?></li>
 								<li data-content="#style-sub-border"><?php _e("Border",'revslider'); ?></li>
 								<li data-content="#style-sub-transfrom" ><?php _e("Transform",'revslider'); ?></li>
 								<li data-content="#style-sub-rotation" ><?php _e("Rotation",'revslider'); ?></li>
 								<li data-content="#style-sub-perspective"><?php _e("Perspective",'revslider'); ?></li>								
-								<li data-content="#style-sub-svg"><?php _e("SVG",'revslider'); ?></li>
-								<li data-content="#style-sub-sharpc"><?php _e("Corners",'revslider'); ?></li>								
+								<li data-content="#style-sub-svg" class="ho_row_ ho_column_ ho_group_ ho_image_ ho_shape_ ho_video_ ho_button_"><?php _e("SVG",'revslider'); ?></li>
+								<li data-content="#style-sub-sharpc" class="ho_row_ ho_column_ ho_group_ ho_image_"><?php _e("Corners",'revslider'); ?></li>								
 								<li data-content="#style-sub-advcss"><?php _e("Advanced CSS",'revslider'); ?></li>		
 								<li data-content="#style-sub-hover"><?php _e("Hover",'revslider'); ?></li>
 								<li data-content="#style-sub-toggle"><?php _e("Toggle",'revslider'); ?></li>		
 							</ul>
 							<div style="width:100%;height:1px;display:block"></div>
-							<span id="style-sub-font" class="rs-layer-toolbar-box hide_on_shapelayer hide_on_videolayer hide_on_imagelayer" style="display:block">
+							<span id="style-sub-font" class="rs-layer-toolbar-box ho_shape_ ho_video_ ho_image_ ho_row_ ho_column_ ho_group_" style="display:block">
 
 								<!-- FONT OPACITY -->
 								<i class="rs-mini-layer-icon rs-icon-opacity rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Font Opacity",'revslider'); ?>" style="margin-right:10px"></i>
@@ -302,15 +361,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 								</select>
 
 
-								<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
 								
-								<!-- TEXT ALIGN -->
-								<i class="rs-mini-layer-icon eg-icon-menu rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Text Align",'revslider'); ?>" style="margin-right:10px"></i>
-								<select class="rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Text Align",'revslider'); ?>" style="width:100px;cursor:pointer" id="css_text-align" name="css_text-align">
-									<option value="left"><?php _e('Left', 'revslider'); ?></option>
-									<option value="center"><?php _e('Center', 'revslider'); ?></option>
-									<option value="right"><?php _e('Right', 'revslider'); ?></option>
-								</select>
 
 							
 
@@ -340,6 +391,74 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 								<input data-suffix="" data-steps="0.05" data-min="0" data-max="1" class="rs-staticcustomstylechange pad-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Background Opacity",'revslider'); ?>" style="width:50px" type="text" id="css_background-transparency" name="css_background-transparency" value="1">
 								<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
 								
+								<!-- BLEND MODE -->
+								<i class="rs-mini-layer-icon fa-icon-star-half-empty rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Blend Mode (Not available for IE)",'revslider'); ?>" style="margin-right:10px"></i>
+								<select class="rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Blend Mode (Not available for IE)",'revslider'); ?>" style="width:100px;cursor:pointer" id="layer_blend_mode" name="layer_blend_mode">
+									<option value="normal"><?php _e('normal', 'revslider'); ?></option>
+									<option value="multiply"><?php _e('multiply', 'revslider'); ?></option>
+									<option value="screen"><?php _e('screen', 'revslider'); ?></option>
+									<option value="overlay"><?php _e('overlay', 'revslider'); ?></option>
+									<option value="darken"><?php _e('darken', 'revslider'); ?></option>
+									<option value="lighten"><?php _e('lighten', 'revslider'); ?></option>
+									<option value="color-dodge"><?php _e('color-dodge', 'revslider'); ?></option>
+									<option value="color-burn"><?php _e('color-burn', 'revslider'); ?></option>
+									<option value="hard-light"><?php _e('hard-light', 'revslider'); ?></option>
+									<option value="soft-light"><?php _e('soft-light', 'revslider'); ?></option>
+									<option value="difference"><?php _e('difference', 'revslider'); ?></option>
+									<option value="exclusion"><?php _e('exclusion', 'revslider'); ?></option>
+									<option value="hue"><?php _e('hue', 'revslider'); ?></option>
+									<option value="saturation"><?php _e('saturation', 'revslider'); ?></option>
+									<option value="color"><?php _e('color', 'revslider'); ?></option>
+									<option value="luminosity"><?php _e('luminosity', 'revslider'); ?></option>									
+								</select>
+								<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
+								
+								<span class="ho_image_ ho_video_ ho_audio_ ho_image_ ">
+									<!-- BACKGROUND IMAGE FOR CERTAIN LAYERS -->
+									<i class="rs-mini-layer-icon eg-icon-picture-1 rs-toolbar-icon tipsy_enabled_top" title="<?php _e('Background Image','revslider'); ?>" style="margin-right:10px"></i>
+									<a href="javascript:void(0)" id="button_change_background_image" class="button-primary revblue" ><i class="fa-icon-wordpress"></i></a>
+									<a href="javascript:void(0)" id="button_change_background_image_objlib" class="button-primary revpurple" ><i class="fa-icon-book"></i></a>
+									<a href="javascript:void(0)" id="button_clear_background_image" class="button-primary revred" ><i class="fa-icon-trash"></i></a>
+									<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
+										
+									<!-- BACKGROUND POSITION ALIGN -->
+									<i class="rs-mini-layer-icon eg-icon-move rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Background Position",'revslider'); ?>" style="margin-right:5px"></i>
+									<select class="rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Background Position",'revslider'); ?>" style="width:100px;cursor:pointer" id="layer_bg_position" name="layer_bg_position">
+										<option value="left top"><?php _e('Left Top', 'revslider'); ?></option>
+										<option value="center top"><?php _e('Center Top', 'revslider'); ?></option>
+										<option value="right top"><?php _e('Right Top', 'revslider'); ?></option>
+										<option value="left center"><?php _e('Left Center', 'revslider'); ?></option>
+										<option value="center center"><?php _e('Center Center', 'revslider'); ?></option>
+										<option value="right center"><?php _e('Right Center', 'revslider'); ?></option>
+										<option value="left bottom"><?php _e('Left Bottom', 'revslider'); ?></option>
+										<option value="center bottom"><?php _e('Center Bottom', 'revslider'); ?></option>
+										<option value="right bottom"><?php _e('Right Bottom', 'revslider'); ?></option>
+									</select>
+									<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
+
+									<!-- BACKGROUND SIZE  -->
+									<i class="rs-mini-layer-icon fa-icon-arrows-alt rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Background Size",'revslider'); ?>"></i>
+									<select class="rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Background Size",'revslider'); ?>" style="width:100px;cursor:pointer" id="layer_bg_size" name="layer_bg_size">
+										<option value="cover"><?php _e('Cover', 'revslider'); ?></option>
+										<option value="contain"><?php _e('Contain', 'revslider'); ?></option>
+									</select>
+									<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
+									
+									<!-- BACKGROUND REPEAT  -->
+									<i class="rs-mini-layer-icon  fa-icon-th-large rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Background Repeat",'revslider'); ?>" ></i>
+									<select class="rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e('Background Repeat','revslider'); ?>" style="width:100px;cursor:pointer" id="layer_bg_repeat" name="layer_bg_repeat">
+										<option value="no-repeat">no-repeat</option>
+										<option value="repeat">repeat</option>
+										<option value="repeat-x">repeat-x</option>
+										<option value="repeat-y">repeat-y</option>
+									</select>
+								</span>
+							</span>
+
+							<!-- LAYER SPACING'S -->
+							<span id="style-sub-spaces" class="rs-layer-toolbar-box" style="display:none;border:none;">
+								
+								
 								<!-- PADDING -->
 								<i class="rs-mini-layer-icon rs-icon-padding rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Padding",'revslider'); ?>" style="margin-right:10px"></i>
 								<input data-suffix="px" class="rs-staticcustomstylechange pad-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Padding Top",'revslider'); ?>" style="width:50px" type="text" name="css_padding[]" value="">
@@ -348,26 +467,49 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 								<input data-suffix="px" class="rs-staticcustomstylechange pad-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Padding Left",'revslider'); ?>" style="width:50px" type="text" name="css_padding[]" value="">
 								<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
 
-								<!-- BACKGROUND POSITION ALIGN -->
-								<!--<i class="rs-mini-layer-icon eg-icon-move rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Background Position",'revslider'); ?>" style="margin-right:10px"></i>
-								<select class="rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Background Position",'revslider'); ?>" style="width:100px;cursor:pointer" name="layer_bg_position">
-									<option value="left top"><?php _e('Left Top', 'revslider'); ?></option>
-									<option value="center top"><?php _e('Center Top', 'revslider'); ?></option>
-									<option value="right top"><?php _e('Right Top', 'revslider'); ?></option>
-									<option value="left center"><?php _e('Left Center', 'revslider'); ?></option>
-									<option value="center center"><?php _e('Center Center', 'revslider'); ?></option>
-									<option value="right center"><?php _e('Right Center', 'revslider'); ?></option>
-									<option value="left bottom"><?php _e('Left Bottom', 'revslider'); ?></option>
-									<option value="center bottom"><?php _e('Center Bottom', 'revslider'); ?></option>
-									<option value="right bottom"><?php _e('Right Bottom', 'revslider'); ?></option>
-								</select>	-->
+								<!-- MARGIN -->
+								<i class="rs-mini-layer-icon rs-icon-margin rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Margin",'revslider'); ?>" style="margin-right:10px"></i>
+								<input data-suffix="px" class="rs-staticcustomstylechange margin-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Margin Top",'revslider'); ?>" style="width:50px" type="text" name="css_margin[]" value="">
+								<input data-suffix="px" class="rs-staticcustomstylechange margin-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Margin Right",'revslider'); ?>" style="width:50px" type="text" name="css_margin[]" value="">
+								<input data-suffix="px" class="rs-staticcustomstylechange margin-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Margin Bottom",'revslider'); ?>" style="width:50px" type="text" name="css_margin[]" value="">
+								<input data-suffix="px" class="rs-staticcustomstylechange margin-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Margin Left",'revslider'); ?>" style="width:50px" type="text" name="css_margin[]" value="">
+								<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
+								
+								<!-- TEXT ALIGN -->
+								<i class="ho_row_ rs-mini-layer-icon rs-icon-text-align rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Text Align",'revslider'); ?>" style="margin-right:10px"></i>
+								<select class="ho_row_ rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Text Align",'revslider'); ?>" style="width:100px;cursor:pointer" id="css_text-align" name="css_text-align">
+									<option value="inherit"><?php _e('Inherit', 'revslider'); ?></option>
+									<option value="left"><?php _e('Left', 'revslider'); ?></option>
+									<option value="center"><?php _e('Center', 'revslider'); ?></option>
+									<option value="right"><?php _e('Right', 'revslider'); ?></option>
+								</select>
+								<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
 
-								<!-- BACKGROUND SIZE  -->
-								<!--<i class="rs-mini-layer-icon eg-icon-crop rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Background Size",'revslider'); ?>" style="margin-right:10px"></i>
-								<select class="rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Background Size",'revslider'); ?>" style="width:100px;cursor:pointer" name="layer_bg_size">
-									<option value="cover"><?php _e('Cover', 'revslider'); ?></option>
-									<option value="contain"><?php _e('Contain', 'revslider'); ?></option>
+								<!-- TEXT ALIGN VERTICAL (NOT USED YET, NOT VISIBLE !!)-->
+								<!--<i class="ho_row_ rs-mini-layer-icon rs-icon-vertical-align rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Vertical Align ",'revslider'); ?>" style="margin-right:10px"></i>
+								<select class="ho_row_ rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Vertical Align",'revslider'); ?>" style="width:100px;cursor:pointer" id="css_vertical-align" name="css_vertical-align">
+									<option value="top"><?php _e('Top', 'revslider'); ?></option>
+									<option value="middle"><?php _e('Middle', 'revslider'); ?></option>
+									<option value="bottom"><?php _e('Bottom', 'revslider'); ?></option>
 								</select>-->
+
+								<!-- ROW BREAK (NOT VISIBLE !!) -->								
+								<select style="display:none" class="rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Columns Break at",'revslider'); ?>" style="width:100px;cursor:pointer" id="column_break_at" name="column_break_at">
+									<option value="notebook"><?php _e('notebook', 'revslider'); ?></option>
+									<option value="tablet"><?php _e('tablet', 'revslider'); ?></option>
+									<option value="mobile" selected="selected"><?php _e('mobile', 'revslider'); ?></option>
+								</select>
+
+
+								<!-- OVERFLOW (HIDDEN/VISIBLE) ONLY FOR GROUPS FIRST -->
+								<i class="ho_row_ ho_column_ ho_image_ ho_shape_ ho_button_ ho_video_ ho_svg_ ho_sltic_ ho_text_ rs-mini-layer-icon fa-icon-object-group rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Overflow",'revslider'); ?>" style="margin-right:10px"></i>
+								<select class="ho_row_ ho_column_ ho_image_ ho_shape_ ho_button_ ho_video_ ho_svg_ ho_sltic_ ho_text_ rs-staticcustomstylechange rs-layer-input-field  tipsy_enabled_top" title="<?php _e("Overflow",'revslider'); ?>" style="width:100px;cursor:pointer" id="css_overflow" name="css_overflow">
+									<option value="visible"><?php _e('Visible', 'revslider'); ?></option>
+									<option value="hidden"><?php _e('Hidden', 'revslider'); ?></option>									
+								</select>
+								<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
+
+								
 							</span>
 
 							<span id="style-sub-border" class="rs-layer-toolbar-box" style="display:none;border:none;">
@@ -394,7 +536,11 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 
 								<!-- BORDER WIDTH-->
 								<i class="rs-mini-layer-icon rs-icon-borderwidth rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Border Width",'revslider'); ?>" style="margin-right:10px"></i>
-								<input data-suffix="px" class="rs-staticcustomstylechange pad-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width",'revslider'); ?>" style="width:50px" type="text" id="css_border-width" name="css_border-width" value="0">
+								<input data-suffix="px" class="rs-staticcustomstylechange corn-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width Top",'revslider'); ?>" style="width:50px" type="text" name="css_border-width[]" value="0">
+								<input data-suffix="px" class="rs-staticcustomstylechange corn-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width Right",'revslider'); ?>" style="width:50px" type="text" name="css_border-width[]" value="0">
+								<input data-suffix="px" class="rs-staticcustomstylechange corn-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width Bottom",'revslider'); ?>" style="width:50px" type="text" name="css_border-width[]" value="0">
+								<input data-suffix="px" class="rs-staticcustomstylechange corn-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width Left",'revslider'); ?>" style="width:50px" type="text" name="css_border-width[]" value="0">
+								
 								<span class="rs-layer-toolbar-space" style="margin-right:16px"></span>
 
 								<!-- BORDER RADIUS -->
@@ -505,13 +651,19 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 									<option value="zoom-in"><?php _e('zoom-in', 'revslider'); ?></option>
 									<option value="zoom-out"><?php _e('zoom-out', 'revslider'); ?></option>
 								</select>
-								
-								
 								<span class="rs-layer-toolbar-space" style="margin-right: 10px"></span>
-
+								
 								<!-- HOVER Z-INDEX -->
 								<i class="rs-mini-layer-icon eg-icon-resize-vertical rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Z-Index",'revslider'); ?>" style="margin-right:10px"></i>
 								<input type="text" style="width:90px; padding-right:10px;" class="rs-staticcustomstylechange textbox-caption rs-layer-input-field tipsy_enabled_top" title="<?php _e("Hover Z-Index (Enter z-index level or enter auto for default value)",'revslider'); ?>" id="hover_zindex" name="hover_zindex" value="auto">
+								<span class="rs-layer-toolbar-space" style="margin-right: 10px"></span>
+
+								<!--Force Straight Hover Rendering -->
+								<span><?php _e("Force Animation",'revslider'); ?></span>
+								<span class="rs-layer-toolbar-space"></span>
+								<input id="force_hover" name="force_hover" type="checkbox" class="tp-moderncheckbox" />
+								
+								
 								
 							</span>
 
@@ -524,9 +676,15 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 								<span class="rs-layer-toolbar-space" style="margin-right: 10px"></span>
 
 								<!-- Toggle ACTIVE Mode -->
-								<span><?php _e("Toggle Active use Hover State",'revslider'); ?></span>
+								<span><?php _e("Use Hover Style when Toggle is Active",'revslider'); ?></span>
 								<span class="rs-layer-toolbar-space"></span>
-								<input id="toggle_use_hover" name="toggle_allow" type="checkbox" class="tp-moderncheckbox" />
+								<input id="toggle_use_hover" name="toggle_use_hover" type="checkbox" class="tp-moderncheckbox" />
+								<span class="rs-layer-toolbar-space" style="margin-right: 10px"></span>								
+
+								<!-- Toggle Invers Mode -->
+								<span><?php _e("Invers Toggle Content",'revslider'); ?></span>
+								<span class="rs-layer-toolbar-space"></span>
+								<input id="toggle_inverse_content" name="toggle_inverse_content" type="checkbox" class="tp-moderncheckbox" />
 								<span class="rs-layer-toolbar-space" style="margin-right: 10px"></span>								
 								
 							</span>
@@ -646,6 +804,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 									<!-- FONT HOVER OPACITY -->
 									<i class="rs-mini-layer-icon rs-icon-opacity rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Font Hover Opacity",'revslider'); ?>" style="margin-right:10px"></i>
 									<input data-suffix="" data-steps="0.05" data-min="0" data-max="1" class="rs-staticcustomstylechange pad-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Font Hover Opacity",'revslider'); ?>" style="width:50px" type="text" id="hover_css_font-transparency" name="hover_css_font-transparency" value="1">
+									<span class="rs-layer-toolbar-space" style="margin-right:15px"></span>
 
 									<!-- DECORATION -->
 									<i class="rs-mini-layer-icon rs-icon-decoration rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Font Decoration",'revslider'); ?>" style="margin-right:10px"></i>
@@ -693,7 +852,10 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 
 									<!-- BORDER WIDTH-->
 									<i class="rs-mini-layer-icon rs-icon-borderwidth rs-toolbar-icon tipsy_enabled_top" title="<?php _e("Border Width",'revslider'); ?>" style="margin-right:10px"></i>
-									<input data-suffix="px" class="rs-staticcustomstylechange pad-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width",'revslider'); ?>" style="width:50px" type="text" id="hover_css_border-width" name="hover_css_border-width" value="0">
+									<input data-suffix="px" class="rs-staticcustomstylechange corn-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width",'revslider'); ?>" style="width:50px" type="text" name="hover_css_border-width[]" value="0">
+									<input data-suffix="px" class="rs-staticcustomstylechange corn-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width",'revslider'); ?>" style="width:50px" type="text" name="hover_css_border-width[]" value="0">
+									<input data-suffix="px" class="rs-staticcustomstylechange corn-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width",'revslider'); ?>" style="width:50px" type="text" name="hover_css_border-width[]" value="0">
+									<input data-suffix="px" class="rs-staticcustomstylechange corn-input text-sidebar rs-layer-input-field tipsy_enabled_top" title="<?php _e("Border Width",'revslider'); ?>" style="width:50px" type="text" name="hover_css_border-width[]" value="0">
 									<span class="rs-layer-toolbar-space" style="margin-right:16px"></span>
 
 									<!-- BORDER RADIUS -->
@@ -1331,6 +1493,8 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 			jQuery('#parallax_level').change();			
 		</script>
 		
+		
+		
 		<!-- ADDON SETTINGS -->
 		<div class="layer-settings-toolbar" id="rs-addon-wrapper" style="display:none;">
 			<div id="rs-addon-wrapper-button-row">
@@ -1436,45 +1600,32 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 				<!-- ID -->
 				<span class="rs-layer-toolbar-box">
 					<span><?php _e("ID",'revslider'); ?></span>
-					<span class="rs-layer-toolbar-space"></span>
+					<span class="rs-layer-toolbar-space" style="margin-right:11px"></span>
 					<input type="text" style="width:105px;" class="textbox-caption rs-layer-input-field" id="layer_id" name="layer_id" value="">
 				</span>
 				
+								
 				<!-- CLASSES -->
 				<span class="rs-layer-toolbar-box">
 					<span><?php _e("Classes",'revslider'); ?></span>
 					<span class="rs-layer-toolbar-space"></span>
 					<input type="text" style="width:105px;" class="textbox-caption rs-layer-input-field" id="layer_classes" name="layer_classes" value="">
 				</span>
-				
-				<!-- TITLE -->
+
+				<!-- WRAPPER ID -->
 				<span class="rs-layer-toolbar-box">
-					<span><?php _e("Title",'revslider'); ?></span>
+					<span><?php _e("Wrapper ID",'revslider'); ?></span>
 					<span class="rs-layer-toolbar-space"></span>
-					<input type="text" style="width:105px;" class="textbox-caption rs-layer-input-field" id="layer_title" name="layer_title" value="">
+					<input type="text" style="width:105px;" class="textbox-caption rs-layer-input-field" id="layer_wrapper_id" name="layer_wrapper_id" value="">
 				</span>
 				
-				<!-- REL -->
+				<!-- WRAPPER CLASSES -->
 				<span class="rs-layer-toolbar-box">
-					<span><?php _e("Rel",'revslider'); ?></span>
+					<span><?php _e("Wrapper Classes",'revslider'); ?></span>
 					<span class="rs-layer-toolbar-space"></span>
-					<input type="text" style="width:105px;" class="textbox-caption rs-layer-input-field" id="layer_rel" name="layer_rel" value="">
-					<span class="rs-layer-toolbar-space"></span>
+					<input type="text" style="width:105px;" class="textbox-caption rs-layer-input-field" id="layer_wrapper_classes" name="layer_wrapper_classes" value="">
 				</span>
 
-				<!-- ALT -->
-				<span class="rs-layer-toolbar-box">
-					<span><?php _e("Alt",'revslider'); ?></span>
-					<span class="rs-layer-toolbar-space"></span>
-					<select id="layer_alt_option" name="layer_alt_option" class="rs-layer-input-field" style="width:100px">
-						<option value="media_library"><?php _e('From Media Library', 'revslider'); ?></option>
-						<option value="file_name"><?php _e('From Filename', 'revslider'); ?></option>
-						<option value="custom"><?php _e('Custom', 'revslider'); ?></option>
-					</select>
-					<input type="text" style="display: none; width:105px;" class="textbox-caption rs-layer-input-field" id="layer_alt" name="layer_alt" value="">
-				</span>
-				
-				
 				<!-- INTERNAL CLASSES -->
 				<span class="rs-layer-toolbar-box">
 					<span><?php _e("Internal Classes:",'revslider'); ?></span>
@@ -1487,6 +1638,39 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 					<span class="rs-internal-class-wrapper"></span>
 					<span class="rs-layer-toolbar-space"></span>
 				</span>
+
+			</div>
+			<div>
+				<!-- REL -->
+				<span class="rs-layer-toolbar-box">
+					<span><?php _e("Rel",'revslider'); ?></span>
+					<span class="rs-layer-toolbar-space"></span>
+					<input type="text" style="width:105px;" class="textbox-caption rs-layer-input-field" id="layer_rel" name="layer_rel" value="">					
+				</span>
+
+				<!-- TITLE -->
+				<span class="rs-layer-toolbar-box">
+					<span><?php _e("Title",'revslider'); ?></span>
+					<span class="rs-layer-toolbar-space"></span>
+					<input type="text" style="width:105px;" class="textbox-caption rs-layer-input-field" id="layer_title" name="layer_title" value="">
+				</span>
+				
+				
+
+				<!-- ALT -->
+				<span id="layer_alt_row" class="rs-layer-toolbar-box">
+					<span><?php _e("Alt",'revslider'); ?></span>
+					<span class="rs-layer-toolbar-space"></span>
+					<select id="layer_alt_option" name="layer_alt_option" class="rs-layer-input-field" style="width:100px">
+						<option value="media_library"><?php _e('From Media Library', 'revslider'); ?></option>
+						<option value="file_name"><?php _e('From Filename', 'revslider'); ?></option>
+						<option value="custom"><?php _e('Custom', 'revslider'); ?></option>
+					</select>
+					<input type="text" style="display: none; width:105px;" class="textbox-caption rs-layer-input-field" id="layer_alt" name="layer_alt" value="">
+				</span>
+				
+				
+				
 				
 				<?php 
 				//ONLY FOR DEBUG!!
@@ -1552,13 +1736,13 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 		<div class="layer-settings-toolbar" id="rs-behavior-content-wrapper" style="display:none">
 			<div class="topdddborder">
 					
-				<span class="rs-layer-toolbar-box">
+				<span class="rs-layer-toolbar-box ho_column_ ho_row_">
 					<span><?php _e("Auto Responsive",'revslider'); ?></span>
 					<span class="rs-layer-toolbar-space" style="margin-right:18px"></span>
 					<input type="checkbox" id="layer_resize-full" class="tp-moderncheckbox" name="layer_resize-full" checked="checked">
 				</span>
 
-				<span class="rs-layer-toolbar-box">
+				<span class="rs-layer-toolbar-box ho_row_ ho_column_ ho_group_">
 					<span><?php _e("Child Elements Responsive",'revslider'); ?></span>
 					<span class="rs-layer-toolbar-space" style="margin-right:18px"></span>
 					<input type="checkbox" id="layer_resizeme" class="tp-moderncheckbox" name="layer_resizeme" checked="checked">
@@ -1579,6 +1763,14 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 					<input type="checkbox" id="layer_resp_offset" class="tp-moderncheckbox" name="layer_resp_offset" checked="checked">
 				</span>
 				
+				<span class="rs-layer-toolbar-box" style="display:none">
+					<span><?php _e("Position",'revslider'); ?></span>
+					<span class="rs-layer-toolbar-space"></span>
+					<select id="layer-css-position" name="layer-css-position" class="rs-layer-input-field" style="width:150px">
+						<option value="absolute" selected="selected"><?php _e("absoolue",'revslider'); ?></option>
+						<option value="relative"><?php _e("relative",'revslider'); ?></option>
+					</select>
+				</span>
 			</div>
 			
 			<span class="rs-layer-toolbar-box rs-lazy-load-images-wrap">
@@ -1601,7 +1793,8 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 					}
 					?>
 				</select>
-			</span>			
+			</span>
+			
 			
 		</div>
 
@@ -1692,7 +1885,9 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 	<script>
 		var __slidertype  = "<?php echo $slidertype; ?>";
 	</script>
-	<div id="thelayer-editor-wrapper">
+	
+	<div id="thelayer-editor-wrapper" class="context_menu_trigger">
+
 		<!-- THE EDITOR PART -->
 		<div id="horlinie"><div id="horlinetext">0</div></div>
 		<div id="verlinie"><div id="verlinetext">0</div></div>
@@ -1747,7 +1942,13 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 				</ul>
 			</div-->
 			
+			<div id="object_library_call_wrapper">
+				<a href="javascript:void(0)" id="button_add_object_layer" class=""><i class="fa-icon-book"></i><span class="add-layer-txt"><?php _e("Object Library",'revslider')?></span></a>
+			</div>
+
+
 			<div id="add-layer-selector-container">
+				
 				<a href="javascript:void(0)" id="button_add_any_layer" class="add-layer-button-any tipsy_enabled_top"><i class="rs-icon-addlayer2"></i><span class="add-layer-txt"><?php _e("Add Layer",'revslider')?></span></a>
 				<div id="add-new-layer-container-wrapper">
 					<div id="add-new-layer-container">
@@ -1756,8 +1957,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 						<a href="javascript:void(0)" id="button_add_layer_audio" data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layeraudio_n"></i><span class="add-layer-txt"><?php _e("Audio",'revslider')?></span></a>
 						<a href="javascript:void(0)" id="button_add_layer_video" data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layervideo_n"></i><span class="add-layer-txt"><?php _e("Video",'revslider')?></span></a>
 						<a href="javascript:void(0)" id="button_add_layer_button" data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layerbutton_n"></i><span class="add-layer-txt"><?php _e("Button",'revslider')?></span></a>
-						<a href="javascript:void(0)" id="button_add_layer_shape" data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layershape_n"></i><span class="add-layer-txt"><?php _e("Shape",'revslider')?></span></a>
-						<!--<a href="javascript:void(0)" id="button_add_layer_group" data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layergroup_n"></i><span class="add-layer-txt"><?php _e("Group",'revslider')?></span></a>-->
+						<a href="javascript:void(0)" id="button_add_layer_shape" data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layershape_n"></i><span class="add-layer-txt"><?php _e("Shape",'revslider')?></span></a>						
 						<a href="javascript:void(0)" id="button_add_layer_svg" data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="rs-icon-layersvg_n"></i><span class="add-layer-txt"><?php _e("Object",'revslider')?></span></a>
 						<a href="javascript:void(0)" id="button_add_layer_import" data-isstatic="<?php echo $add_static; ?>" class="add-layer-button" ><i class="eg-icon-download"></i><span class="add-layer-txt"><?php _e("Import",'revslider')?></span></a>
 					</div>
@@ -1788,7 +1988,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 				<div id="rs-set-style-on-devices">
 					<span id="rs-set-style-on-devices-button"></span>
 					<div id="rs-set-style-on-devices-dialog">
-						<label style="font-size:14px; color:#fff; margin-bottom:10px"><?php _e("Force Inherit Styles",'revslider'); ?></label>
+						<label style="font-size:14px; color:#fff; margin-bottom:10px; display:block;"><?php _e("Force Inherit Styles",'revslider'); ?></label>
 						<div class="rs-set-style-on-device-row">
 							<label style="width: 100px"><?php _e("Color",'revslider'); ?></label>
 							<input type="checkbox" id="on_all_devices_color" name="on_all_devices_color" class="rs-set-device-chk tp-moderncheckbox"  />
@@ -1833,8 +2033,8 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 						<span style="display:none;" id="button_change_image_source" class="layer-short-tool revblue"><i class="eg-icon-pencil"></i></span>		
 						
 						<span style="display:none" id="button_reset_size" class="layer-short-tool revblue"><i class="eg-icon-resize-normal"></i></span>				
-						<span id="button_delete_layer" class="layer-short-tool revred"><i class="rs-lighttrash"></i></span>
-						<span id="button_duplicate_layer" class="layer-short-tool revyellow" data-isstatic="<?php echo $add_static; ?>"><i class="rs-lightcopy"></i></span>				
+						<span id="button_delete_layer" class="ho_column_ layer-short-tool revred"><i class="rs-lighttrash"></i></span>
+						<span id="button_duplicate_layer" class="ho_column_ layer-short-tool revyellow" data-isstatic="<?php echo $add_static; ?>"><i class="rs-lightcopy"></i></span>				
 						<span style="display:none;"  id="tp-addiconbutton" class="layer-short-tool revblue"><i class="eg-icon-th"></i></span>
 						<?php if($slider_type != 'gallery'){ ?>
 							<span id="linkInsertTemplate"  style="display:none" class="layer-short-tool revyellow"><i class="eg-icon-filter"></i></span>					
@@ -1849,8 +2049,8 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 					<div id="quick-layers">	
 
 						<div class="tp-clearfix"></div>
-						<ul class="quick-layers-list">
-							<li class="nolayersavailable"><div class="add-layer-button"><?php _e("Slide contains no layers",'revslider')?></div></li>
+						<ul class="quick-layers-list" id="quick-layers-list-id">
+							<li id="nolayersavailable" class="nolayersavailable"><div class="add-layer-button"><?php _e("Slide contains no layers",'revslider')?></div></li>
 						</ul>
 						<!--<div style="text-align:center; display:block; padding:0px 10px;">
 							<span class="gototimeline">Animation Timeline</span>
@@ -1893,7 +2093,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 								jQuery('#quick-layers-wrapper').slideDown(300);
 								camt.addClass("opened");
 								t.find('i').addClass("eg-icon-up").removeClass("eg-icon-menu");
-								jQuery('.quick-layers-list').perfectScrollbar("update");
+								jQuery('#quick-layers-list-id').perfectScrollbar("update");
 								
 								// KRIKI
 								jQuery('#layer_text_wrapper').hide();
@@ -1916,14 +2116,51 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 				</div>
 				<div class="slotholder" style="overflow:hidden;width:100%;height:100%;position:absolute;top:0px;left:0px;z-index:1">
 					<div class="tp-bgimg defaultimg" style="width: 100%;height: 100%;position: absolute;top:0px;left:0px; <?php echo $style_wrapper.$divbgminwidth.$maxbgwidth ?>"></div>
-				</div>
+				</div>				
 				<div id="divLayers" class="<?php echo $divLayersClass?>" style="<?php echo $style.$divLayersWidth; ?>">
-					<div class="slide_layers_border"></div>
+					<div id="focusongroup"></div>
+					<div class="slide_layers_border bg_context_listener"></div>
+					<div class="row-zone-container bg_context_listener" id="row-zone-top"></div>
+					<div class="row-zone-container bg_context_listener" id="row-zone-middle"></div>
+					<div class="row-zone-container bg_context_listener" id="row-zone-bottom"></div>
 				</div>
-			</div>
-			
+			</div>			
 		</div>
 
+		<!-- Row Layout Composer -->
+		<div id="rs-layout-row-composer">
+			<div id="rs-layout-row-picker">
+				<div id="rowlayout1" class="rowlayout-single" data-comp="1"></div>
+				<div id="rowlayout2" class="rowlayout-single" data-comp="1/2 + 1/2"></div>
+				<div id="rowlayout3" class="rowlayout-single" data-comp="1/3 + 1/3 + 1/3"></div>
+				<div id="rowlayout4" class="rowlayout-single" data-comp="1/4 + 1/4 + 1/4 + 1/4"></div>
+				<div id="rowlayout5" class="rowlayout-single" data-comp="1/6 + 1/6 + 1/6 + 1/6 + 1/6 + 1/6"></div>
+				<div id="rowlayout6" class="rowlayout-single" data-comp="1/4 + 1/2 + 1/4"></div>
+				<div id="rowlayout7" class="rowlayout-single" data-comp="1/6 + 2/3 + 1/6"></div>
+				<div id="rowlayout8" class="rowlayout-single" data-comp="2/3 + 1/3"></div>
+				<div id="rowlayout9" class="rowlayout-single" data-comp="3/4 + 1/4"></div>
+			</div>
+			<div id="rs-layout-row-custom">
+				<input type="text" placeholder="<?php _e('Enter Custom Layout. e.g.:1/2 + 1/2', 'revslider'); ?>" id="rs-row-layout" name="rs-row-layout"> <div id="rs-check-row-layout" href="javascript:void(0);"><?php _e('Update', 'revslider'); ?></div> 
+			</div>
+			<div id="rs-layout-row-break">
+				<span class="setting_text_3"><?php _e('Break Columns at:', 'revslider'); ?></span>
+				<span id="rs-row-break-on-btn">						
+					<div data-val="notebook" class="rs-row-break-selector rs-slide-ds-notebook"></div>					
+					<div data-val="tablet" class="rs-row-break-selector rs-slide-ds-tablet"></div>					
+					<div data-val="mobile" class="rs-row-break-selector rs-slide-ds-mobile"></div>				
+				</span>
+
+			</div>
+			<script>
+				jQuery('.rowlayout-single').click(function() {
+					jQuery('#rs-row-layout').val(jQuery(this).data('comp'));
+					jQuery('#rs-check-row-layout').click();
+				})
+			</script>
+		</div>		
+
+		
 
 		
 		
@@ -2036,50 +2273,29 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 				</select>
 			</span>
 		</div>
+
+		<div id="timline-manual-dialog" style="display:none">			
+			<!-- ANIMATION  TIME AND DURATION -->
+			<span style="min-width:370px">
+				<label><?php _e("Frame Start",'revslider'); ?></label>						
+				<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="clayer_start_time" name="clayer_start_time" value="0">
+				<span class="over-ms">ms</span>			
+				<span class="rs-layer-toolbar-space" style="margin-right:20px"></span>
+				<label style="margin-left:10px"><?php _e("Duration",'revslider'); ?></label>						
+				<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="clayer_start_speed" name="clayer_start_speed" value="0">
+				<span class="over-ms">ms</span>
+			</span>			
+			<span id="timline-manual-closer"><i class="eg-icon-cancel"></i></span>
+			<span id="timline-manual-apply"><i class="eg-icon-ok"></i></span>
+		</div>
 	</div>
 
+
+
 	<!-- THE CURRENT TIMER FOR LAYER -->
-	<div style="direction:ltr !important">
+	<div id="mtw-wrapper">
 		<div id="mastertimer-wrapper" class="layer_sortbox">
-				<div id="timline-manual-dialog" style="display:none">
-					<span class="helper-dialog-title"><?php _e("Layer Animation Timing",'revslider'); ?></span>
-					<!-- ANIMATION START TIME -->
-					<span>
-						<label style="width:70px"><?php _e("Start Time",'revslider'); ?></label>						
-						<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="clayer_start_time" name="clayer_start_time" value="0">
-						<span class="over-ms">ms</span>
-					</span>
-					<span class="rs-layer-toolbar-space" style="margin-right:20px"></span>
-
-					<!-- ANIMATION END TIME -->
-					<span>
-						<label style="width:70px"><?php _e("End Time",'revslider'); ?></label>						
-						<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="clayer_end_time" name="clayer_end_time" value="0">
-						<span class="over-ms">ms</span>
-					</span>
-
-					
-					<span class="tp-clearfix" style="margin-bottom:10px"></span>
-					
-					
-
-					<!-- ANIMATION START DURATION -->
-					<span>
-						<label style="width:70px"><?php _e("Start speed",'revslider'); ?></label>						
-						<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="clayer_start_speed" name="clayer_start_speed" value="0">
-						<span class="over-ms">ms</span>
-					</span>
-
-					<span class="rs-layer-toolbar-space" style="margin-right:20px"></span>
-
-					<!-- ANIMATION END DURATION -->
-					<span>
-						<label style="width:70px"><?php _e("End Speed",'revslider'); ?></label>						
-						<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="clayer_end_speed" name="clayer_end_speed" value="0">
-						<span class="over-ms">ms</span>
-					</span>				
-					<div id="timline-manual-closer"><i class="eg-icon-cancel"></i></div>
-				</div>
+				
 
 
 				<div id="master-selectedlayer-t"></div>
@@ -2095,60 +2311,77 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 
 						<div id="master-timer-time">00:00.00</div>
 					</div>
-					<div class="layers-wrapper">
+					<div id="v_lw_le" class="layers-wrapper">
 						<div class="layers-wrapper-scroll">
 							<div id="layers-left" class="sortlist">
-								<ul>
+								<div class="mastertimer-slide-border"></div>
+								<ul id="layers-left-ul" class="mjs-nestedSortable-branch">
 									<li id="slide_in_sort" class="mastertimer-layer mastertimer-slide ui-state-default" style="overflow: visible !important; z-index: 1000; position: relative">
-										<div id="fake-select-label-wrapper">
-											<span class="mastertimer-timeline-selector-row timeline-title-line tipsy_enabled_top" title="Select Layers in Timeline">
-												<i style="font-size:14px; vertical-align:top;" class="eg-icon-cog"></i>
+										<span class="list-of-layer-links multiple-selector tipsy_enabled_top" original-title="Select Multiple Layers">														
+											<span class="list-of-layer-links-inner">				
+												<input id="timing-all-onoff-checkbox" name="timing-all-onoff-checkbox" type="checkbox"></input>												
+												<span data-linktype="1" class="timing-layer-link-type-element layer-link-type-1"></span>				
+												<span data-linktype="2" class="timing-layer-link-type-element layer-link-type-2"></span>				
+												<span data-linktype="3" class="timing-layer-link-type-element layer-link-type-3"></span>				
+												<span data-linktype="4" class="timing-layer-link-type-element layer-link-type-4"></span>				
+												<span data-linktype="5" class="timing-layer-link-type-element layer-link-type-5"></span>				
+												<span data-linktype="0" class="timing-layer-link-type-element layer-link-type-0"></span>			
+											</span>		
+										</span>
+										<div id="fake-select-title-wrapper">											
+											<span id="fake-select-i" class="timeline-title-line mastertimer-timeline-selector-row">
+												<i style="vertical-align:top; font-size:14px;margin-left:0px;margin-right:0px;" class="eg-icon-cog"></i>
 											</span>
-											<span id="fake-select-i" class="timeline-title-line mastertimer-timeline-zindex-row">
-												<i style="vertical-align:top; font-size:14px;margin-left:7px;margin-right:0px;" class="eg-icon-menu"></i>
-											</span>
-											<span id="fake-select-label"><?php _e('Animation', 'revslider'); ?></span>
+											<span id="fake-select-title"><?php _e('Slide Main Background', 'revslider'); ?></span>
+											<!--<span id="fake-select-label"><?php _e('Animation', 'revslider'); ?></span>-->
 										</div>
 									</li>
+									<li id="last_drop_zone_layers"></li>
 								</ul>								
-								<div class="bottom-layers-divider"></div>
+								<!--<div class="bottom-layers-divider"></div>-->
 							</div>
-						</div>
+						</div>						
 					</div>
 				</div>
 
 				<div class="master-rightcell">
+					<div id="linear-bg-fixer"></div>
 					<div id="master-rightheader">
-						<div id="mastertimer-position"><span id="mastertimer-poscurtime"><?php _e('DragMe','revslider'); ?></span></div>
+						
+						<div id="mastertimer-position" class="timerinidle"><span id="mastertimer-poscurtime"><?php _e('DragMe','revslider'); ?></span></div>
 						<div id="mastertimer-maxtime"><span id="mastertimer-maxcurtime"></span></div>
 						<div id="mastertimer-curtime"><span id="mastertimer-curtimeinner"></span></div>
+					
 						<div id="mastertimer-idlezone"></div>
 
 
 						<div class="mastertimer">
 
 							<div id="mastertimer-linear">
-								<ul class="linear-texts">
-								</ul>
+								<ul  class="linear-texts">
+
+								</ul>								
 							</div>
 						</div>
 					</div>
 
-					<div class="layers-wrapper">
+					<div class="layers-wrapper" id="layers-wrapper-right-wrapper">
 						<div id="mastertimer-curtime-b"></div>
 						<div class="layers-wrapper-scroll">
 							<div id="layers-right">
-								<ul>
+								<div class="mastertimer-slide-border"></div>
+								<ul style="border-bottom: 5px solid #d5d5d5;" id="layers-right-ul">									
 									<li id="slide_in_sort_time" class="mastertimer-layer mastertimer-slide ui-state-default">
+										<div class="timeline_full"><span id="fake_layer_as_slide_title"><span id="fake-select-pre"><?php _e("Slide BG Animation",'revslider'); ?></span><span id="fake-select-label"><?php _e('Animation', 'revslider'); ?></span></span></div>
 										<div class="timeline">
-											<div class="tl-fullanim">
-												<div class="tl-startanim">
-													<span class="sortbox_speedin">100</span>
-													<span class="start-anim-puller"></span>
+											<div data-frameindex="0" class="timeline_frame">
+												<span class="timebefore_cont"></span>
+												<div class="tl_speed_wrapper">
+													<div class="tlf_speed"><span class="duration_cont"></span></div>													
 												</div>
-											</div>
-											<div class="slide-idle-section"></div>
+											</div>											
 										</div>
+										<div class="slide-idle-section"></div>
 									</li>
 								</ul>
 							</div>
@@ -2156,98 +2389,26 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 					</div>
 				</div>
 				<div id="timing-helper">
-					<div id="timing-helper-dialog" style="display:none">
-						<span class="helper-dialog-title"><?php _e("Bulk Timing of Layers ",'revslider'); ?></span>
-						
-						<!-- SHIFT START TIME -->
-						<span id="th-shift-time-wrapper" style="display:none">
-							<label style="width:170px"><?php _e("Shift Start Time",'revslider'); ?></label>							
-							<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="atlayer_shift_time" name="atlayer_shift_time" value="0">
-							<span class="over-ms">ms</span><span style="margin-left:40px"><?php _e("(+/- values allowed)",'revslider'); ?></span>
-						</span>
+					<div id="whiteblock_extrawrapper">
+						<div id="add_new_group"><i class="fa-icon-object-group"></i><span><?php _e('ADD GROUP', 'revslider'); ?></span></div>
+						<?php if($slide->isStaticSlide()){ } else {?>
+							<div id="add_new_row"><i class="eg-icon-folder"></i><span><?php _e('ADD ROW', 'revslider'); ?></span></div>
+						<?php } ?>
 
-						<!-- ANIMATION START TIME -->
-						<span id="th-start-time-wrapper" style="display:none">
-							<label style="width:170px"><?php _e("Adjust to Start Time ",'revslider'); ?></label>							
-							<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="atlayer_start_time" name="atlayer_start_time" value="0">
-							<span class="over-ms">ms</span>
-						</span>
-						
-						
-						<!-- ANIMATION END TIME -->
-						<span id="th-end-time-wrapper" style="display:none">
-							<label style="width:170px"><?php _e("Adjust to End Time ",'revslider'); ?></label>							
-							<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="atlayer_end_time" name="atlayer_end_time" value="0">
-							<span class="over-ms">ms</span>
-						</span>
-
-						<!-- ANIMATION IN ENDS AT TIME -->
-						<span id="th-animend-start-time-wrapper" style="display:none">
-							<label style="width:170px"><?php _e("'In' animations finnish at:",'revslider'); ?></label>							
-							<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="atlayer_animend_start_time" name="atlayer_animend_start_time" value="0">
-							<span class="over-ms">ms</span>
-						</span>
-
-						<!-- ANIMATION OUT STARTS AT TIME -->
-						<span id="th-animend-end-time-wrapper" style="display:none">
-							<label style="width:170px"><?php _e("'Out' animations starts at:",'revslider'); ?></label>							
-							<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="atlayer_animend_end_time" name="atlayer_animend_end_time" value="0">
-							<span class="over-ms">ms</span>
-						</span>
-						
-						<span class="tp-clearfix" style="margin-bottom:10px;"></span>
-
-						<!-- ANIMATION DELAYS -->
-						<span id="th-delay-time-wrapper" style="display:none">
-							<label style="width:170px"><?php _e("Delays",'revslider'); ?></label>							
-							<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="atlayer_delays" name="atlayer_delays" value="0">
-							<span class="over-ms">ms</span>
-						</span>
-						
-
-						<!-- ANIMATION DELAYS -->
-						<span id="th-overlap-time-wrapper" style="display:none">
-							<label style="width:170px"><?php _e("Overlaps",'revslider'); ?></label>							
-							<input type="text" style="width:90px;" class="textbox-caption rs-layer-input-field" id="atlayer_overlaps" name="atlayer_overlaps" value="0">
-							<span class="over-ms">ms</span>
-						</span>
-
-						
-
-						<span class="tp-clearfix" style="margin-bottom:10px;"></span>
-
-						<span id="th-endpos-keep-wrpaper" style="display:none">
-							<label style="width:170px"><?php _e("Keep End Time Position",'revslider'); ?></label>
-							<input type="checkbox" id="th-endpos-keep" name="th-endpos-keep" class="tp-moderncheckbox">																
-						</span>
-
-						<span id="th-startpos-keep-wrpaper" style="display:none">
-							<label style="width:170px"><?php _e("Keep Start Time Position",'revslider'); ?></label>
-							<input type="checkbox" id="th-startpos-keep" name="th-startpos-keep" class="tp-moderncheckbox">																
-						</span>
-
-						<div style="position:absolute; bottom:17px; right:20px;">
-							<div id="adjust-timing-helper"><i class="eg-icon-check"></i><span><?php _e("Set",'revslider'); ?></span></div>							
-						</div>
-
-						<div id="timing-helper-closer"><i class="eg-icon-cancel"></i></div>
-						<span class="tp-clearfix"></span>
+						<label id="abs_rel_label"><?php _e('Show Frame Times:', 'revslider'); ?></label>
+						<select name="abs_rel_timeline" id="abs_rel_timeline" class="rs-layer-input-field">
+							<option value="absolute"><?php _e('ABSOLUTE', 'revslider'); ?></option>
+							<option value="relative"><?php _e('RELATIVE', 'revslider'); ?></option>
+						</select>
 					</div>
+
+
+					
 
 					<div class="timing-all-checker-wrapper">
 						<div class="timing-all-checker"></div>
 					</div>
-					<div class="timing-helper-title"><?php _e("Auto-Time Selected Layers",'revslider'); ?></div>
-					<div class="timing-helper-actions">
-						<div data-ref="0" class="notclickable autotiming-action autotiming-action-0"></div>
-						<div data-ref="7" class="notclickable autotiming-action autotiming-action-7"></div>
-						<div data-ref="1" class="notclickable autotiming-action autotiming-action-1"></div>
-						<div data-ref="2" class="notclickable autotiming-action autotiming-action-2"></div>
-						<div data-ref="3" class="notclickable autotiming-action autotiming-action-3"></div>
-						<div data-ref="4" class="notclickable autotiming-action autotiming-action-4"></div>
-						<div data-ref="5" class="notclickable autotiming-action autotiming-action-5"></div>
-						<div data-ref="6" class="notclickable autotiming-action autotiming-action-6"></div>
-					</div>
+					
 				</div>
 				<div id="mastertimer-wrapper-resizer"></div>
 		</div>
@@ -2255,192 +2416,9 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 	<div id="tp-thelistofclasses"></div>
 	<div id="tp-thelistoffonts"></div>
 	
-	<!-- THE BUTTON DIALOG WINDOW -->
-	<div id="dialog_addsvg" class="dialog-addsvg" title="<?php _e("Add Object Layer",'revslider'); ?>" style="display:none">
-		<div class="addsvg-dialog-inner">
-			<div id="addsvg-list-of-items">
-				<div class="object_library_search_wrapper">
-					<input type="text" id="obj_library_search" placeholder="<?php _e("Search for Objects...",'revslider'); ?>" /><span id="obj_library_search_trigger"><i class="eg-icon-search"></i></span>
-				</div>
-				<div class="object-tag-list"></div>
-				<div id="object_library_results">
-					<div id="object_library_results-inner">
-					</div>
-				</div>
-				<script>
-					var svg_libraries = [];									
-				<?php
-				$svgs = RevSliderBase::get_svg_sets_full();
-				if(!empty($svgs) && is_array($svgs)){
-					foreach($svgs as $svghandle => $svgfiles){						
-						?>																																	
-							jQuery('.object-tag-list').append('<span class="obj_library_cats" data-group="<?php echo $svghandle; ?>"><?php echo $svghandle; ?></span>')
-							jQuery('#object_library_results-inner').append('<div style="display:none" class="rs-svg-library rs-svg-<?php echo esc_attr($svghandle); ?>"</div>');
-							svg_libraries.push({handle:"<?php echo $svghandle;?>", list:[
-							<?php				
-							$first = true;				
-							foreach($svgfiles as $svgfile => $svgpath){
-								 if ($first===false) echo ",";
-								 echo '{src:';
-								 echo '"'.$svgpath.'"';		
-								 echo ', type:"svg", group:"'.$svghandle.'"';									
-								 echo '}';
-								 $first = false;
-							}							
-							?>			
-							]});
-						<?php
-					}
-				}				
-				?>	
-
-
-
-				// LOAD OBJECTS ON DEMAND WHEN THEY BECOME VISIBLE
-				function loadSVGNow(d) {				
-					d.data('loaded',true)
-					var src = d.data('src');									
-					jQuery.get(src, function(data) {
-						  var div = document.createElement("div");					  	 
-						  div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);									  						  
-						  d.find('.obj_item_media_holder').append(div);						  
-						  jQuery('#object_library_results').perfectScrollbar("update");
-					});
-				}
-
-				function ol_itemVisible(o,st) {					
-					var t = o.position().top;					
-					if (t-st>-170 && t-st<420 && !o.data('loaded')) 
-						loadSVGNow(o);					
-				}
-
-				function ol_checkVisibilityOfItems() {
-					var c = jQuery('#object_library_results-inner'),
-						st = c.scrollTop();
-						
-					if (jQuery('#dialog_addsvg').parent().css("display")==="block") {
-						jQuery('#object_library_results-inner .obj_library_item').each(function() {
-							var o = jQuery(this);
-							if (o.hasClass("showit")) 
-								ol_itemVisible(o,st);								
-							
-						});
-					}
-				}
-
-				// ADD THE ITEMS TO THE MAIN CONTAINER (ONLY EMPTY PLACEHOLDERS FIRST)				
-				var c = jQuery('#object_library_results-inner');
-				jQuery.each(svg_libraries, function(i,library) {
-					jQuery.each(library.list,function(i,item) {
-						var ref = 'svg-item-'+library.handle+'-'+i,
-							titl = item.src.split("/"),
-							tt = item.type=="svg" ? '<div class="obj_library_item_type_svg">SVG</div>' : '<div class="obj_library_item_type_imgage">IMAGE</div>'
-					  	titl = titl.length>1 ? titl[titl.length-1].split(".") : "No Title.png";
-					  	titl = titl.length>1 ? titl[0] : "No Title";
-					  	titl = titl.replace(/\_/g," ");
-					  	titl = titl.replace(/\-/g," ");
-					  	item.title = titl.toLowerCase().split(" ");					  	
-						c.append('<div data-title="'+titl+'" data-src="'+item.src+'" data-group="'+item.group+'" class="obj_library_item svgadd-single-item"><div id="'+ref+'" class="svgadd-single-item_svg_holder obj_item_media_holder"></div><div class="obj_lib_item_title">'+titl+'</div>'+tt+'</div>');						
-						item.ref = jQuery("#"+ref).parent();
-					});
-				});
-				jQuery('#object_library_results').perfectScrollbar("update");											
-				ol_checkVisibilityOfItems();
-
-				// TAKE CARE ABOUT SCROLL OF THE LIBRARY CONTAINER
-				jQuery('#object_library_results').perfectScrollbar({wheelPropagation:false,suppressScrollX:true});
-				document.addEventListener('ps-scroll-y', function (e) {
-					if (jQuery(e.target).closest('#object_library_results').length>0) {
-						ol_checkVisibilityOfItems();
-					}
-				});
-
-
-				// CHANGING THE TAGS SHOULD CHANGE THE LIST OF ITEMS
-				jQuery('.obj_library_cats').on('click',function() {	
-					jQuery('#object_library_results').scrollTop(0);
-					jQuery('.obj_library_cats').removeClass("selected");
-					jQuery('#obj_library_cats_searchresult').remove();
-					jQuery(this).addClass("selected");
-					jQuery('.obj_library_cats.selected').each(function() {
-						var searched_lib = jQuery(this).data('group');
-						jQuery('.obj_library_item').each(function() {
-							var o = jQuery(this);
-							if (o.data('group')==searched_lib)
-								o.addClass("showit")
-							else
-								o.removeClass("showit");
-						});
-					});
-					ol_checkVisibilityOfItems()
-				
-				});			
-
-				// SEARCH FOR OBJECTS
-				function searchForObjects() {
-					jQuery('#object_library_results').scrollTop(0);
-					jQuery('#obj_library_cats_searchresult').remove();
-					var searchfor = jQuery('#obj_library_search').val(),
-						res = 0;
-					searchfor = searchfor.replace(/\ /g,",");
-					searchfor = searchfor.split(",");
-
-					jQuery.each(svg_libraries, function(i,library) {
-						jQuery.each(library.list,function(i,item) {			
-							var found = false;				
-							jQuery.each(searchfor, function(i,sf){	
-									if (sf.length>2) {										
-										if (jQuery.isArray(item.title)) {
-											if (jQuery.inArray(sf.toLowerCase(),item.title)>=0) {
-													item.ref.addClass("showit");
-													res++;
-													found = true;
-													return true;
-											} else {
-												jQuery.each(item.title,function(i,tt){
-													if (tt.indexOf(sf)>=0) {
-														item.ref.addClass("showit");
-														res++;
-														found = true;
-														return true;
-													}		
-												});
-											}										
-										} else {
-											if (sf.toLowerCase() === item.title) {
-												item.ref.addClass("showit");
-												res++;
-												found = true;
-												return true;
-											}
-										}
-									}
-
-							});
-							if (!found) item.ref.removeClass("showit");
-						});
-						
-					});
-					jQuery('.obj_library_cats').removeClass("selected");
-					jQuery('.object-tag-list').prepend('<span class="obj_library_cats selected" id="obj_library_cats_searchresult">Found ('+res+') elements</span>');					
-					ol_checkVisibilityOfItems();
-				}
-
-				var objl_keyuprefresh;
-				jQuery("#obj_library_search").keyup(function(){
-					clearTimeout(objl_keyuprefresh);
-					var v = jQuery(this).val();
-					objl_keyuprefresh = setTimeout(function() {						
-						if (v.length>2)
-							searchForObjects();
-					},150);
-				});
-				jQuery('#obj_library_search_trigger').click(searchForObjects);
-
-				</script>
-			</div>
-		</div>
-	</div>
+	<?php
+	$obj_library->write_markup();
+	?>
 	
 	<!-- THE BUTTON DIALOG WINDOW -->
 	<div id="dialog_addbutton" class="dialog-addbutton" title="<?php _e("Add Button Layer",'revslider'); ?>" style="display:none">
@@ -2926,7 +2904,12 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 		<p style="margin:20px 0px 0px 0px;font-size:13px;color:#999;font-style:italic"><?php _e('Advanced Styles will alwys be applied to all Device Sizes.', 'revslider'); ?></p>
 	</div>
 	
+	<div id="delete-full-group-dialog" title="<?php _e('Remove Group with Content', 'revslider') ?>" style="display:none;min-width:575px">
+		<div class=""><?php _e('Further Layers exist in the Container. Please choose from following options:', 'revslider') ?></div>		
+	</div>
+
 	
+
 <script type="text/html" id="tmpl-rs-action-layer-wrap">
 	<li class="layer_action_row layer_action_wrap">
 		<# if(data['edit'] == true){ #>
@@ -3018,7 +3001,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 		<span class="action-target-layer" style="display:none;">
 			<span><?php _e("Target",'revslider'); ?></span>
 			<span class="rs-layer-toolbar-space"></span>
-			<select name="<# if(data['edit'] == false){ #>no_<# } #>layer_target[]" class="<# if(data['edit'] == false){ #>rs_disabled_field <# } #>rs-layer-input-field" style="width:100px;margin-right:30px;" data-selectoption="{{ data['layer_target'] }}">
+			<select name="<# if(data['edit'] == false){ #>no_<# } #>layer_target[]" id="layer_target" class="<# if(data['edit'] == false){ #>rs_disabled_field <# } #>rs-layer-input-field" style="width:100px;margin-right:30px;" data-selectoption="{{ data['layer_target'] }}">
 			</select>
 			
 		</span>		
@@ -3033,7 +3016,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 			</select>
 		</span>	
 
-		<!-- TOGGLE CLAS FUNCTION-->
+		<!-- TOGGLE CLASS FUNCTION-->
 		<span class="action-toggleclass" style="display:none;">	
 			<span class="rs-layer-toolbar-space"></span>
 			<span><?php _e("Class",'revslider'); ?></span>
@@ -3043,10 +3026,10 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 		
 		<!-- Trigger States -->
 		<span class="action-triggerstates" style="display: none; white-space:nowrap">
-			<span class="rs-layer-toolbar-space"></span>
+			<span class="rs-layer-toolbar-space" style="margin-left:42px"></span>
 			<span><?php _e("Animation Timing",'revslider'); ?></span>
 			<span class="rs-layer-toolbar-space" ></span>
-			<select name="<# if(data['edit'] == false){ #>no_<# } #>do-layer-animation-overwrite[]" class="<# if(data['edit'] == false){ #>rs_disabled_field <# } #>rs-layer-input-field" style="width:150px">
+			<select name="<# if(data['edit'] == false){ #>no_<# } #>do-layer-animation-overwrite[]" class="<# if(data['edit'] == false){ #>rs_disabled_field <# } #>rs-layer-input-field" style="width:150px; margin-right:23px">
 				<option value="default"><?php _e("In and Out Animation Default",'revslider'); ?></option>
 				<option value="waitout"><?php _e("In Animation Default and Out Animation Wait for Trigger",'revslider'); ?></option>
 				<option value="wait"><?php _e("Wait for Trigger",'revslider'); ?></option>
@@ -3059,12 +3042,16 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 				<option value="keep"><?php _e("Keep last selected State",'revslider'); ?></option>
 			</select>
 		</span>
-		<span class="action-delay-wrapper" style="display: none; white-space:nowrap">
-			<span class="rs-layer-toolbar-space"  style="width:30px"></span>
+
+		<?php do_action( 'rs_action_add_layer_action_details' ); ?>
+
+		<span class="action-delay-wrapper" style="display: none; white-space:nowrap">			
 			<span><?php _e("Delay",'revslider'); ?></span>
 			<span class="rs-layer-toolbar-space"></span>
 			<input type="text" style="width:60px;margin-top:-2px" class="<# if(data['edit'] == false){ #>rs_disabled_field <# } #>textbox-caption rs-layer-input-field" name="<# if(data['edit'] == false){ #>no_<# } #>layer_action_delay[]" value="{{ data['action_delay'] }}"> <?php _e('ms', 'revslider'); ?>
 		</span>
+
+
 	</li>
 </script>
 
@@ -3196,9 +3183,6 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 				o.pad="0";
 				
 			}
-
-			
-						
 			
 			if (p.find('.example-shape').length==0)
 				p.append('<div class="example-shape-wrapper"><div class="example-shape"></div></div>');
@@ -3220,7 +3204,7 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 
 		jQuery(document).ready(function() {
 
-			jQuery('.quick-layers-list').perfectScrollbar({wheelPropagation:false});
+			jQuery('#quick-layers-list-id').perfectScrollbar({wheelPropagation:false});
 
 			// MANAGE BG COLOR OF DIALOG BOXES
 			jQuery('.addbutton-bg-dark').click(function() { jQuery('#addbutton-examples').css({backgroundColor:"#333333"});})
@@ -3253,27 +3237,29 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 
 			
 			function makelayerswrapperscrollable() {
-				jQuery('.master-rightcell .layers-wrapper').perfectScrollbar({ wheelPropagation:true,suppressScrollY:true});
+				jQuery('.master-rightcell .layers-wrapper').perfectScrollbar({wheelPropagation:true, suppressScrollY:true});
 				jQuery('.master-leftcell .layers-wrapper').perfectScrollbar({wheelPropagation:true,suppressScrollX:true});					
 			}
 
 			document.addEventListener('ps-scroll-y', function (e) {
-				if (jQuery(e.target).closest('.master-rightcell').length>0) 
-						jQuery('.master-leftcell .layers-wrapper').scrollTop(jQuery('.master-rightcell .layers-wrapper').scrollTop());
-				else		        
-		        if (jQuery(e.target).closest('.master-leftcell').length>0) 
-						jQuery('.master-rightcell .layers-wrapper').scrollTop(jQuery('.master-leftcell .layers-wrapper').scrollTop());						
-				
+				if (jQuery(e.target).closest('.master-rightcell').length>0) {
+					var st = jQuery('.master-rightcell .layers-wrapper').scrollTop();							
+					jQuery('.master-leftcell .layers-wrapper').scrollTop(st);						
+				} else
+		        if (jQuery(e.target).closest('.master-leftcell').length>0) {
+	        		var st = jQuery('.master-leftcell .layers-wrapper').scrollTop();
+					jQuery('.master-rightcell .layers-wrapper').scrollTop(st);												
+				}				
 		    });
 
 			document.addEventListener('ps-scroll-x', function (e) {
 				 if (jQuery(e.target).closest('.master-rightcell').length>0) {
 					 	var ls = parseInt(jQuery('.master-rightcell .layers-wrapper').scrollLeft(),0);
-						jQuery('#master-rightheader').css({left:(0-ls)}).data('left',(0-ls));
+						jQuery('#master-rightheader').css({left:(15-ls)}).data('left',(15-ls));
 				 }
 			});
 
-			jQuery('#master-rightheader').data('left',0);
+			jQuery('#master-rightheader').data('left',15);
 			
 			makelayerswrapperscrollable();
 			
@@ -3305,17 +3291,17 @@ $slider_addons = apply_filters('revslider_slide_addons', array(), $slide, $slide
 					
 				},
 				stop:function() {
-					var maxh = ((jQuery('#layers-right ul li').length+1)*32) - ((jQuery('#layers-right ul li.layer-deleted').length+1)*32),	
+					var maxh = ((jQuery('#layers-right ul li').length+1)*30) - ((jQuery('#layers-right ul li.layer-deleted').length+1)*30),	
 						curh = jQuery('#mastertimer-wrapper').height();
 					
-					if (curh-5>maxh) {
-						punchgs.TweenLite.set(jQuery('.layers-wrapper'),{height:maxh-5});
-						punchgs.TweenLite.set(jQuery('#mastertimer-wrapper'),{height:maxh-5})
+					if (curh>maxh+3) {
+						punchgs.TweenLite.set(jQuery('.layers-wrapper'),{height:maxh+3});
+						punchgs.TweenLite.set(jQuery('#mastertimer-wrapper'),{height:maxh+3})
 					}
-															
+					
 					jQuery('.master-rightcell .layers-wrapper').perfectScrollbar({wheelPropagation:true});
 					jQuery('.master-leftcell .layers-wrapper').perfectScrollbar({wheelPropagation:true, suppressScrollX:true});
-
+					jQuery('#mastertimer-curtime-b').height(maxh+3);
 				}
 			});
 			

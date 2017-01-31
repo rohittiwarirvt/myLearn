@@ -375,8 +375,9 @@ var UniteAdminRev = new function(){
 		showAjaxLoader();
 		hideAjaxButton();
 		
-		if(hideOverlay===undefined)
+		if(hideOverlay===undefined) 			
 			showWaitAMinute({fadeIn:300,text:rev_lang.please_wait_a_moment});
+		
 		
 		jQuery.ajax({
 			type:"post",
@@ -717,13 +718,20 @@ var UniteAdminRev = new function(){
 		url = jQuery.trim(url);
 		
 		var video_id = url.split('v=')[1];
+		
 		if(video_id){
 			var ampersandPosition = video_id.indexOf('&');
 			if(ampersandPosition != -1) {
 			  video_id = video_id.substring(0, ampersandPosition);
 			}
 		}else{
-			video_id = url;
+			//check if we are youtube.be
+			var check = url.split('/')[3];
+			if(check){
+				video_id = check;
+			}else{
+				video_id = url;
+			}
 		}
 		
 		return(video_id);
@@ -998,6 +1006,7 @@ var UniteAdminRev = new function(){
 		jQuery("#input_video_preview").val("");
 		jQuery("#input_use_poster_on_mobile").prop("checked","");
 		jQuery("#input_video_show_visibility").prop("checked","");
+		jQuery("#input_video_play_inline").prop("checked","");
 		
 		jQuery("#input_video_start_at").val('');
 		jQuery("#input_video_end_at").val('');
@@ -1020,6 +1029,7 @@ var UniteAdminRev = new function(){
 		RevSliderSettings.onoffStatus(jQuery("#input_video_large_controls"));
 		RevSliderSettings.onoffStatus(jQuery("#input_video_leave_fs_on_pause"));
 		RevSliderSettings.onoffStatus(jQuery("#input_video_show_visibility"));
+		RevSliderSettings.onoffStatus(jQuery("#input_video_play_inline"));
 		
 		jQuery('#button-video-add').hide();
 		jQuery('#button-audio-add').hide();
@@ -1123,6 +1133,12 @@ var UniteAdminRev = new function(){
 			jQuery("#input_video_show_visibility").prop("checked","checked");
 		}else{
 			jQuery("#input_video_show_visibility").prop("checked","");
+		}
+		
+		if(data.video_play_inline && data.video_play_inline == true){
+			jQuery("#input_video_play_inline").prop("checked","checked");
+		}else{
+			jQuery("#input_video_play_inline").prop("checked","");
 		}
 		
 		if(data.autoplayonlyfirsttime && data.autoplayonlyfirsttime == true)
@@ -1295,6 +1311,7 @@ var UniteAdminRev = new function(){
 		RevSliderSettings.onoffStatus(jQuery('#input_video_large_controls'));
 		RevSliderSettings.onoffStatus(jQuery('#input_video_leave_fs_on_pause'));
 		RevSliderSettings.onoffStatus(jQuery('#input_video_show_visibility'));
+		RevSliderSettings.onoffStatus(jQuery('#input_video_play_inline'));
 		
 		
 		if(data.video_type == 'audio'){
@@ -1319,6 +1336,7 @@ var UniteAdminRev = new function(){
 		//obj.autoplay = jQuery("#input_video_autoplay").is(":checked");
 		obj.use_poster_on_mobile = jQuery("#input_use_poster_on_mobile").is(":checked");
 		obj.video_show_visibility = jQuery("#input_video_show_visibility").is(":checked");
+		obj.video_play_inline = jQuery("#input_video_play_inline").is(":checked");
 		//obj.autoplayonlyfirsttime = jQuery("#input_video_autoplay_first_time").is(":checked");
 		obj.nextslide = jQuery("#input_video_nextslide").is(":checked");
 		obj.forcerewind = jQuery("#input_video_force_rewind").is(":checked");
@@ -1487,6 +1505,7 @@ var UniteAdminRev = new function(){
 			youtubeID = jQuery.trim(youtubeID);
 			
 			youtubeID = getYoutubeIDFromUrl(youtubeID);
+			jQuery("#youtube_id").val(youtubeID);
 			
 			var img = new Image();
 			img.onload = function() {
@@ -1704,6 +1723,12 @@ var UniteAdminRev = new function(){
 			UniteAdminRev.ajaxRequest("activate_purchase_code",data,function(response){
 				if(response.success == false){
 					jQuery('#register-wrong-purchase-code').click();
+				}else{
+					if(response.error !== undefined){
+						if(response.error == 'exist'){
+							t.showErrorMessage(response.msg);
+						}
+					}
 				}
 			},undefined,true);
 		});

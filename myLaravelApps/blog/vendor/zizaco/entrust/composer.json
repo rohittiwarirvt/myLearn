@@ -1,7 +1,13 @@
 {
 	"name": "zizaco/entrust",
 	"description": "This is the module which helps in creation entrust software",
-	"psr-4": {
-		"Zicaco\\Entrust\\": "src/Entrust"
+	"autoload": {
+			"classmap": [
+				"src/commands"
+			],	
+			"psr-4": {
+				"Zizaco\\Entrust\\": "src/Entrust"
+			}
+
 	}
 }

@@ -39,7 +39,7 @@ class CreateAadharTable extends Migration
             $table->integer('city_id');
             $table->integer('pincode');
             $table->integer('stage_id'); 
-            $table->intger('address_type_id');
+            $table->integer('address_type_id');
             $table->integer('poa_id');  
             $table->string('line_1'); 
             $table->string('line_2');

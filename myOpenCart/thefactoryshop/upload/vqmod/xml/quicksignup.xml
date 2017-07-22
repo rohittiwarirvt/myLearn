@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<name>Quick Login / Sign up</name>
+	<version>2x</version>
+	<code>Quick Login / Sign up</code>
+	<author>Webmedialdh</author>
+	
+	<file name="catalog/view/theme/*/template/common/header.tpl">
+		<operation>
+			<search position="after"><![CDATA[<li class="quick-login">]]></search>
+			<add position="after"><![CDATA[<?php echo $quicksignup; ?>]]></add>
+		</operation>
+	</file>
+	
+	<file path="catalog/controller/common/header.php">
+		<operation>
+			<search position="before"><![CDATA[$this->load->language('common/header');]]></search>
+			<add position="before"><![CDATA[
+			//XML
+			if ($this->customer->isLogged()) {
+				$data['welcome_message'] = sprintf("Welcome %s %s,", $this->customer->getFirstName(), $this->customer->getLastName());
+			}
+			$data['quicksignup'] = $this->load->controller('common/quicksignup');
+			$data['signin_or_register'] = $this->language->get('signin_or_register');
+		]]></add>
+		</operation>
+	</file>
+	<file path="catalog/language/*/common/header.php">
+		<operation>
+			<search position="before"><![CDATA[// Text]]></search>
+			<add><![CDATA[$_['signin_or_register']           = 'Sign In\Register';]]>			</add>
+		</operation>
+	</file>
+	
+</modification>

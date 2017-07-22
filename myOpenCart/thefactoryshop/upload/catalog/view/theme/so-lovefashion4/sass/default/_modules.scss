@@ -1,0 +1,445 @@
+/*--------------------STYLE MODULE--------------
+	*------------ 1. Search Pro ----------- *
+	*------------ 2. Block Language ------- *
+	*------------ 3. Slideshow ------------ *
+	*------------ 4. Block Cart ----------- *
+	*------------ 5. Vertical Menu--------- *
+	*------------ 6. Block Category ------- *
+	*------------ 7. Other Module --------- *
+*/
+
+.module{margin-bottom: 40px;
+	h3.modtitle{
+		font-size: 20px;
+		color: #666;
+		margin: 0 0 10px;
+		padding: 0 0 8px 0;
+		font-weight: normal;
+		position: relative;
+		display: inline-block;
+		&:before{
+			content: "";
+			height: 1px;
+			width: 40%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: $background1;
+		}
+	}
+	
+	&.icon-style{
+		h3.modtitle{
+			font-size: 14px;
+			font-weight: bold;
+			color: #444;
+			text-transform: uppercase;
+			padding: 12px 0 12px 50px;
+			background: #eee;
+			border-bottom: 1px solid $linkColor;
+			i{
+				height: 100%;
+				width: 40px;
+				line-height: 40px;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: $background1;
+				color: #fff;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+/*-------- MODULE SEARCH ------------*/
+#sosearchpro.search-pro{ padding: 0 ; width: 100%;border-radius: 4px;float: right;border-radius: 4px;
+	.dropdown-menu{
+		box-shadow: 2px 2px 1px rgba(0,0,0, 0.2);
+		.media:hover{background: #fdfbfb}
+		.media-left{
+			height: 70px;
+			margin: 6px 10px;
+			width: 70px;
+		}
+		.media-body{
+			a{font-size: 16px;font-weight: normal;float: none;color: #666;}
+			.price span.price{font-size: 14px;}
+		}
+	}
+	.select_category{width: 151px;border-width: 0 1px 0 0;border-style: solid;border-color: #ddd;
+		select{background: #ededed; height: 40px; line-height: 40px; border-radius: 0 !important;
+			option{background: #fff;}
+			&:focus{border: none;}
+		}
+	}
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		.icon-select:after{
+			top: 3px;
+		}
+	}
+	.icon-select:after{
+		content: "\f0d7";
+		background: #ededed;
+		color: #909090;
+		font-size: 20px;
+	}
+	
+	.input-group{
+		display: block;
+		.select_category{
+			width: 25%;
+			float: left;
+			display: inline-block;
+			font-size: 11px;
+			color: #909090;
+			overflow: hidden;
+			border-radius: 4px;
+		}
+		.autosearch-input{
+			width: 75%;
+			border: none;
+			background: #ededed;
+			height: 40px;
+			padding: 0 40px;
+			font-size: 11px;
+			color: #909090;
+		}
+		.input-group-btn{height: 100%; width: 40px; line-height: 40px;background: $background1; position: absolute;top: 0;right: 0;;z-index: 5;
+			.button-search{
+				border: none;
+				background: $background1;
+				color: #fff;
+				height: 40px;
+				padding: 0 ;
+				width: 40px;
+				margin: 0;
+				border-radius: 5px;
+				&:hover{
+					background: darken($background1,20%)
+				}
+			}
+		}
+	}
+}
+
+/*-------------- 2. LANGUAGE BLOCK -------------------------*/
+.header-top ul.dropdown-menu{min-width: 120px;margin:0;border-radius:0;
+	li a{color: $textBody;}
+	li:hover a{color: $linkColor;}
+}
+
+.header-top .languages-block{position:relative;vertical-align:top; margin-bottom:0;
+	img{margin-top: -4px;}
+    form{
+	 >  a{ color: #444; display:block;line-height:22px;padding:6px 0 6px 10px;font-size: 12px; }
+		&:hover{
+			> a{color: $linkColor;}
+		}
+	   
+    }
+    .dropdown-menu{
+		padding: 10px;
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.176);
+		li{
+			border-bottom: 1px solid #efefef;
+			font-size: 11px;
+			&:last-child{
+				border: none;
+			}
+			a{
+				padding: 5px 0;
+				&:hover{background: none;}
+			}
+		}
+	}
+}
+//------------------CURRENCY BLOCK -------------------------
+.currencies-block{position:relative;vertical-align:top; margin-bottom:0 !important;
+	form{
+	 >  a{ color: #444; display:block;line-height:22px;padding:6px 10px 6px 0;;font-size: 12px; }
+		&:hover{
+			> a{color: $linkColor;}
+		}
+	   
+    }
+	.dropdown-menu{
+		padding: 10px;
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.176);
+		li{
+			border-bottom: 1px solid #efefef;
+			font-size: 11px;
+			&:last-child{
+				border: none;
+			}
+			a{
+				padding: 5px 0;
+				&:hover{background: none;}
+			}
+		}
+	}
+	
+}
+
+/* ************************************************************************************************/
+
+/*-------------------- 3. SLIDESHOW --------------------*/
+
+/*========================== 4. BLOCK CART ======================*/
+.shopping_cart{
+	.btn-group{display: block;}
+	.text-right{text-align: center;}
+	.top_cart{
+		display: block;
+		position: relative;
+		box-shadow: none !important;
+		text-decoration: none !important;
+		padding-left: 80px;
+		background: url("../images/icon/bags.png") no-repeat left center;
+		cursor: pointer;
+		top: -5px;
+		h3.title-mod{
+			 font-size: 14px;
+			 font-weight: 300;
+			 text-transform: uppercase;
+			 color: #666;
+			 top: 7px;
+			 position: relative;
+		}
+		span.text{
+			position: relative;
+			top: 5px;
+		}
+		span.number{
+			height: 32px;
+			width: 32px;
+			border-radius: 32px;
+			border: 2px solid #fff;
+			line-height: 27px;
+			text-align: center;
+			background: $background1;
+			color: #fff;
+			position: absolute;
+			bottom: -12px;
+			left: 36px;
+			
+		}
+		&:hover{
+			color: $linkColor;
+		}
+    }
+    .shoppingcart-box{min-width: 350px; padding: 15px;border-radius: 0; border-top: 3px solid $linkColor;margin-top: 15px;
+		&:before{content: ""; height: 1px; width: 1px; border-style: solid; border-bottom: 10px solid $linkColor; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: transparent; position: absolute;top: -10px;right: 114px;}
+		.added_items{margin-bottom: 10px;}
+		.table-striped{
+		  >tbody>tr:nth-of-type(odd){background: #fff;}
+			a{color: $textBody;font-weight: normal;font-size: 12px;
+			    &.fa-edit{display: none;}
+			    &:hover{color: $linkColor;}
+			}
+			
+			a.fa-delete{width: 20px; height: 20px; background: #d6d6d6; border-radius: 3px; text-align: center; line-height: 19px; color: #000;
+				&:hover{background: $background1; color: #fff; text-decoration: none;}
+			}
+			
+	   }
+	   a.btn{padding: 6px 20px 6px 10px;  color: #fff;background: #444; border-color: #444;
+		  i{margin-right: 5px;}
+		  &:hover{border: 1px solid $linkColor;background: $background1;}
+	   }
+	   .img-item{
+			position: relative;
+			img{
+				border: 1px solid #ddd;
+				max-width: none;
+			}
+			a.remove{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				border-radius: 50%;
+				background: #999;
+				font-weight: normal;
+				color: #fff;
+			}
+	   }
+	   .price-item .btn{
+			background: #999;
+			color: #fff;
+	   }
+    }
+    .table-bordered{border-left: 0; border-right: 0;}
+    .table>tbody>tr{margin: 10px 0;
+		&:first-child>td{border-top: 0;}
+	}
+	.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{vertical-align: middle;}
+	.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td,
+	.table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{border: 0;}
+}
+
+
+/*-------------------- 5. VERTICAL MENU ---------------------*/
+
+
+/*------------------- 6. BLOCK CATEGORIES -----------*/
+.block_category{margin-top: 0;
+	.box-content{margin-top: 20px;
+		ul{display: block;
+			li{position: relative;border-bottom: 1px dashed #c9c9c9;
+				a{display: block;line-height: 30px; padding: 5px 30px 5px 0px; color: #666;border-radius: 0; border: 0; background-color: transparent;font-size: 14px;
+					&:hover{color: $linkColor;}
+					
+				}
+				span.button-view{display: block;position: absolute; right: 0;top: 5px;cursor: pointer; z-index: 10; font-size: 0;text-align: center;
+					&:before{content: "\f147";font-family: "FontAwesome"; display: block;vertical-align: middle;width: 30px;height: 30px;line-height: 30px; font-size: 14px;}
+					&.ttclose:before{content: "\f196"}
+					
+				}
+				ul{padding-bottom: 10px;
+					li{border-bottom: none;
+						a{line-height: 20px; padding-right: 0;
+							&:before{font-family: fontawesome; content: "\f105";margin-left: -12px;-webkit-transition: all 400ms ease;transition: all 400ms ease;opacity: 0;filter: alpha(opacity=0);}
+							&:hover:before{margin-left: 0; opacity: 1;}
+						}
+					}
+				} 
+				&:hover{
+					background: #fafafa;
+					>a, span:before{color: $linkColor;}
+				}
+			}
+		}
+	}
+}
+/*----------- 7. OTHER MODULES -------*/
+
+/*----------------- 7.1 BLOCK FILTER ------------*/
+.so_filter_shop_by_loading{z-index: 999;}
+.so_filter_shop{
+        .box-heading{padding: 0 0 8px;margin: 0 0 30px;font-weight: normal; text-transform: capitalize; color: #666;position: relative;font-size: 20px;
+			&:before{
+				background: $background1;
+				bottom: 0;
+				content: "";
+				height: 1px;
+				left: 0;
+				position: absolute;
+				width: 48px;
+			}
+		}
+		.so_filter_shop_by_item_scroll_content{
+			background: #c4c4c4;
+			margin: 0 16px;
+		}
+		.so_filter_shop_by_item{margin: 0 0 30px;}
+		.so_filter_shop_by_item_Min_Max{
+			background: #eee;
+			padding: 20px 10px;
+			position: relative;
+			.so_filter_shop_by_item_title{
+				text-align: center;
+				margin: 0 0 20px;
+				i{position: absolute;top: 5px;right: 10px;}
+			}
+			.so_filter_shop_by_item_content_scroll_left,
+			.so_filter_shop_by_item_content_scroll_right{
+				height: 15px;
+				width: 15px;
+				top: -5px;
+				background: #898989;
+			}
+			.so_filter_shop_by_item_content_min_max{margin: 0;
+				.so_filter_shop_by_item_content_input_min,
+				.so_filter_shop_by_item_content_input_max{
+					padding: 5px 30px;
+					float: none;
+					margin: 0 10px;
+					background: #fff;
+					border: 1px solid #dfdfdf;
+					display: inline-block;
+				}
+				
+			}
+			.so_filter_shop_by_item_content_scroll{
+				margin: 10px 0;
+			}
+			
+		}
+        .so_filter_shop_by_item_title, .so_filter_shop_by_item_title_s, .so_filter_shop_by_item_title_rs{padding: 0; text-transform: uppercase; font-size: 12px; color: #666;background: none;margin: 0 0 20px;}
+        .so_filter_shop_by_item_title i{line-height: 24px;}
+        .sj_count_item{float: left;  background: transparent; color: #666;                
+                &:after{border: 0;}
+        }
+        .so_filter_shop_by_item_category{
+			margin: 0 0 10px;
+			border-bottom: 1px dashed #c9c9c9;
+			&:last-child{margin: 0;}
+			input{
+				margin: 0;
+			}
+		}
+		.sj_filter_category_img{margin-left: 0;}
+        .so_filter_shop_by_item_category p, .so_filter_shop_by_item_category input{color: #666; font-family: Arial;}
+        .sj_filter_color_item{height: auto;
+                .sj_img{float: left; width: 100%;  border: 0; padding: 0 0 0 10px;
+                        img{width: 16px; height: 16px; float: left;}
+                        span{float: left; margin: 0 5px; text-transform: capitalize;}
+                }
+                .sj_count_item{display: none;}
+        }
+		.so_filter_shop_by_item_Color{
+			.so_filter_shop_by_item_category{border: none;}
+			.sj_img{padding: 0;img{margin-right: 10px;}}
+			.so_filter_shop_by_item_content{
+				text-align: inherit;
+			}
+		}
+}
+/*--------------------  7.2 LATEST PRODUCT -----------------*/
+
+.latest-product{margin-bottom: 30px;
+	h3.modtitle{margin: 0 0 30px;padding: 0 0 8px;}
+	.product-latest-item{margin-bottom:  20px;}
+	.product-latest-item:last-child{margin:0;}
+	.media{
+		.media-left{float: left;padding: 0; margin-right: 20px;overflow: hidden;}
+		.media-body{
+			h4{margin-top: 0;
+				a{font-size: 16px; color: #666; font-weight: normal;
+					&:hover{color: $linkColor;}
+				}
+			} 
+			.description, .button-group{display: none;}
+			.price{margin-bottom: 0;
+				.price-new{font-size: 18px;font-weight: normal;}
+			} 
+		}
+		&:hover {
+			.media-left{
+				img{
+					opacity: 0.8;
+				}
+			}
+			.media-body{
+				a{color: $linkColor;}
+			}
+		}
+	}
+}
+
+/*----- 7.3 FEATURED PRODUCT --------*/
+.module{
+	.products-list.grid .product-layout .product-item-container{margin-bottom: 0;}
+}
+/*----- 7.4 WISHLIST BLOCK TOP------*/
+
+/*----- 7.5 MY ACCOUNT --------------*/
+#my_account{
+	.dropdown-toggle{
+		color: #444; display:block;line-height:22px;padding:6px 10px;font-size: 12px;
+	}
+	&:hover{
+		> .dropdown-toggle{color: $linkColor;}
+	}
+}

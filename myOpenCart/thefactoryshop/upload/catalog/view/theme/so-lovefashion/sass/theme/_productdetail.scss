@@ -1,0 +1,14 @@
+.product-detail{
+    .detail-aside{
+        .right_column{width: 100%;padding: 0;}
+        
+    }
+    .price .price-new, .price span.price{
+        font-size: 24px;
+        font-weight: 300;
+    }
+    .ratings span.fa-stack .fa-stack-1x.fa-star-o{top: 2px;}
+    .addthis_native_toolbox{
+        margin: 0 0 20px;
+    }
+}

@@ -1,0 +1,237 @@
+<modification>
+	<id><![CDATA[soconfig theme]]></id>
+	<version><![CDATA[1.0]]></version>
+	<vqmver><![CDATA[2.X]]></vqmver>
+	<author><![CDATA[Magentech - Magentech.com]]></author>
+	
+	<file name="catalog/controller/common/header.php">
+		<operation>
+			<search position="before"><![CDATA[$this->load->language('common/header');]]></search>
+			<add><![CDATA[	
+			$this->load->language('common/soconfig');
+			$data['text_contact'] = $this->language->get('text_contact');
+			$data['text_more'] 	  = $this->language->get('text_more');
+			$data['text_menu'] 	  = $this->language->get('text_menu');
+			$data['content_search'] = $this->load->controller('common/content_search');
+			$data['content_menu'] = $this->load->controller('common/content_menu');
+			$data['content_block1'] = $this->load->controller('common/content_block1');
+			$data['compare'] = $this->url->link('product/compare', '', 'SSL');
+			$data['text_compare']  = sprintf($this->language->get('text_compare'),(isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+		]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA[$data['title'] = $this->document->getTitle();]]></search>
+			<add><![CDATA[
+				$this->document->addStyle('catalog/view/javascript/so_searchpro/css/so_searchpro.css'); 
+				$this->document->addStyle('catalog/view/javascript/so_megamenu/so_megamenu.css');
+				$this->document->addStyle('catalog/view/javascript/so_megamenu/wide-grid.css');
+				$this->document->addScript('catalog/view/javascript/so_megamenu/so_megamenu.js');
+			]]></add>
+		</operation>	
+	</file>
+	
+	
+	<file name="catalog/controller/common/home.php">
+		<operation>
+			<search position="before"><![CDATA[
+			$data['column_left'] = $this->load->controller('common/column_left');
+			]]></search>
+			<add><![CDATA[
+			$data['content_block1'] = $this->load->controller('common/content_block1');
+			$data['content_block2'] = $this->load->controller('common/content_block2');
+			$data['content_block3'] = $this->load->controller('common/content_block3');
+			$data['content_block4'] = $this->load->controller('common/content_block4');
+			$data['content_block5'] = $this->load->controller('common/content_block5');
+			$data['content_block6'] = $this->load->controller('common/content_block6');
+			$data['content_block7'] = $this->load->controller('common/content_block7');
+			$data['content_block8'] = $this->load->controller('common/content_block8');
+		]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/module/newsletters.php">
+		<operation>
+			<search position="before"><![CDATA[$this->load->language('module/newsletter');]]></search>
+			<add><![CDATA[	
+			$this->load->language('common/soconfig');
+			$data['heading_title1'] = $this->language->get('heading_title1');
+			$data['description1'] = $this->language->get('description1');
+			$data['Subscribe_text'] = $this->language->get('Subscribe_text');
+			$data['email_text'] = $this->language->get('email_text');
+			$data['heading_title3'] = $this->language->get('heading_title3');
+			$data['description3'] = $this->language->get('description3');
+			$data['offer_text'] = $this->language->get('offer_text');
+			$data['privacy_text'] = $this->language->get('privacy_text');
+			$data['heading_title4'] = $this->language->get('heading_title4');
+			$data['description4'] = $this->language->get('description4');
+			$data['Subscribe_text4'] = $this->language->get('Subscribe_text4');
+		]]></add>
+		</operation>
+		
+	</file>
+	
+	<file name="catalog/controller/module/so_home_slider.php">
+		<operation>
+			<search position="before"><![CDATA[$this->load->language('module/so_home_slider');]]></search>
+			<add><![CDATA[	
+			$this->load->language('common/soconfig');
+			$data['text_readmore'] = $this->language->get('text_readmore');
+			$data['text_discover'] = $this->language->get('text_discover');
+		]]></add>
+		</operation>
+		
+	</file>
+	<file name="catalog/controller/module/manufacturers.php">
+		<operation>
+			<search position="before"><![CDATA[$this->load->language('product/manufacturer');]]></search>
+			<add><![CDATA[	
+			$this->load->language('common/soconfig');
+			$data['heading_title_manufacturer'] = $this->language->get('heading_title_manufacturer');
+			
+		]]></add>
+		</operation>
+		
+	</file>
+	<file name="catalog/controller/module/so_deals.php">
+		
+		<operation>
+			<search position="before"><![CDATA[$this->load->language('module/so_deals');]]></search>
+			<add><![CDATA[	
+			$this->load->language('common/soconfig');
+			$data['text_day'] = $this->language->get('text_day');
+			$data['text_days'] = $this->language->get('text_days');
+			$data['text_hour'] = $this->language->get('text_hour');
+			$data['text_hours'] = $this->language->get('text_hours');
+			$data['text_min'] = $this->language->get('text_min');
+			$data['text_mins'] = $this->language->get('text_mins');
+			$data['text_sec'] = $this->language->get('text_sec');
+			$data['text_secs'] = $this->language->get('text_secs');
+			$data['quick_view_text'] = $this->language->get('quick_view_text');
+			$data['text_cart'] = $this->language->get('text_cart');
+			
+		]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/module/so_searchpro.php">
+		<operation>
+			<search position="after"><![CDATA[$this->load->language('module/so_searchpro');]]></search>
+			<add><![CDATA[	
+			$this->load->language('common/soconfig');
+			$this->data['btn_search'] = $this->language->get('btn_search');
+		]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/module/so_listing_tabs.php">
+			<operation>
+			<search position="before"><![CDATA[$this->load->language('module/so_listing_tabs');]]></search>
+			<add><![CDATA[		
+			$this->load->language('common/soconfig');
+			$data['sale_text'] = $this->language->get('sale_text');
+			$data['quick_view_text'] = $this->language->get('quick_view_text');
+		]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/module/so_megamenu.php">
+		<operation>
+			<search position="before"><![CDATA[$this->load->model('module/so_megamenu');]]></search>
+			<add><![CDATA[		
+			$this->load->language('common/soconfig');
+			$data['more_text'] = $this->language->get('more_text');
+			$data['close_text'] = $this->language->get('close_text');
+			
+		]]></add>
+		</operation>
+		
+	</file>
+	
+	<file name="catalog/controller/module/so_extra_slider.php">
+		<operation>
+			<search position="before"><![CDATA[$this->load->language('module/so_extra_slider');]]></search>
+			<add><![CDATA[		
+			$this->load->language('common/soconfig');
+			$data['sale_text'] = $this->language->get('sale_text');
+			$data['quick_view_text'] = $this->language->get('quick_view_text');
+		]]></add>
+		</operation>
+		
+		
+	</file>
+	
+	
+	
+	<file name="catalog/controller/common/cart.php">
+		<operation>
+			<search position="before"><![CDATA[$this->load->language('common/cart');]]></search>
+			<add><![CDATA[		
+			$this->load->language('common/soconfig');
+			$data['text_shop'] 	  = $this->language->get('text_shop');
+			$data['text_shop_cart'] 	  = $this->language->get('text_shop_cart');
+			$data['header_title_cart'] = $this->language->get('header_title_cart');
+			
+		]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/controller/product/category.php" error="log">
+		<operation error="log">
+			<search position="before"><![CDATA[
+			$data['breadcrumbs'] = array();
+			]]></search>
+			<add><![CDATA[
+			$this->load->language('common/soconfig');
+			
+			]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[$data['products'][] = array(]]></search>
+			<add><![CDATA[
+				$images = $this->model_catalog_product->getProductImages($result['product_id']);
+            	if(isset($images[0]['image']) && !empty($images[0]['image'])){
+                 $images =$images[0]['image'];
+               } else {
+				$images = false;
+				}
+			   ]]></add>
+		</operation>
+		<operation>
+			<search position="after"><![CDATA['special'     => $special,]]></search>
+			<add><![CDATA[
+			  
+			  'thumb2'  => $this->model_tool_image->resize($images, $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height')),
+			  
+			   ]]></add>
+		</operation>
+		<operation error="log">
+			<search position="before"><![CDATA[
+			$data['categories'][] = array(
+			]]></search>
+			<add>
+			$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_width'));
+			</add>
+		</operation>
+		<operation error="log">
+			<search position="after"><![CDATA[
+			$data['categories'][] = array(
+			]]></search>
+			<add>
+			'thumb' => $image,
+			</add>
+		</operation>
+	</file>
+	
+	<file name="admin/controller/design/layout.php">
+		<operation error="log">
+			<search position="replace"><![CDATA[layout_form.tpl]]></search>
+			<add>layout_form_soconfig.tpl</add>
+		</operation>
+	</file>
+	<file name="admin/view/template/setting/store_list.tpl">
+        <operation>
+            <search position="replace"  ><![CDATA[ $store['name']]]></search>
+            <add><![CDATA[
+             $store['name'].' <span class="label label-default" style="font-weight:normal"> Version v1.1.3</span> ';
+            ]]></add>
+	    </operation>
+    </file>
+</modification>

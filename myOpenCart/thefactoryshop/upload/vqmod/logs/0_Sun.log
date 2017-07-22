@@ -1,0 +1,14 @@
+---------- Date: 2017-04-16 07:01:00 ~ IP : 103.51.92.51 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : /home/thefak2i/public_html/vqmod/xml/cookie_low.xml
+   id        : EU Cookie Law - top, bottom, floating
+   version   : 
+   vqmver    : 2.X
+   author    : arveo
+VQModObject::parseMods - Could not resolve path for [catalog/language/hungarian/common/footer.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/language/hungarian/setting/setting.php] (SKIPPED)
+
+----------------------------------------------------------------------
+
+

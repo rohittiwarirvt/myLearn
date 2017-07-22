@@ -1,0 +1,118 @@
+/*Add Css Custom Here*/
+
+.megamenu-style-dev .navbar-default .horizontal .megamenu-wrapper ul.megamenu > li > a
+{
+
+	border:none;
+}
+
+
+
+
+
+.header-center .cart-wishlish-compare {
+    margin: 0 0 10px;
+display:none;
+}
+
+
+.module.slideshow .so-homeslider .owl2-item .sohomeslider-description h1{
+
+   display:none;
+
+}
+
+@media (max-width: 767px){
+
+.module.slideshow .so-homeslider .owl2-item img {
+    width: auto;
+    height: 206px;
+}
+
+ .header-bottom-right .log-reg > li > span {
+
+     color:#e74847;
+
+
+}
+
+.header-bottom-right .log-reg{
+
+     background:white
+
+}
+.header-bottom-right .log-reg > li.quick-register:after{
+
+     color:#e74847;
+
+
+}
+.header-bottom-right .log-reg > li{
+
+
+   padding:5px;
+
+}
+.header-bottom-right .log-reg > li > div > a{
+
+   color:#e74847;
+}
+
+}
+
+
+a:link{
+
+
+color:white;
+
+}
+
+
+.button-group .addToCart{
+
+
+ padding: 0 19px 0 38px;
+    height: 36px;
+
+}
+
+.button-group .wishlist{
+
+  width: 37px;
+  height: 34px;
+
+}
+
+
+.module.style-dev-listing-tabs .wap-listing-tabs .ltabs-items-container .ltabs-items .ltabs-item .item-inner:hover .button-group .addToCart{
+
+
+       font-size: 15px;
+
+}
+
+
+.button-group .compare{
+
+    width: 36px;
+    height: 36px;
+
+
+}
+
+.header-top-right ul.top-link > li.checkout a{
+
+
+  color:black;
+
+}
+
+
+
+.header-top-right ul.top-link > li.navbar-help a{
+
+
+  color:black;
+
+}

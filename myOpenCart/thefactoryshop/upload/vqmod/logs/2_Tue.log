@@ -1,0 +1,42 @@
+---------- Date: 2016-04-12 04:26:36 ~ IP : ::1 ----------
+REQUEST URI : /ytc_templates/opencart/so_lovefashion/layout4/
+MOD DETAILS:
+   modFile   : D:\xampp\htdocs\ytc_templates\opencart\so_lovefashion\vqmod/xml/cookie_low.xml
+   id        : EU Cookie Law - top, bottom, floating
+   version   : 
+   vqmver    : 2.X
+   author    : arveo
+VQModObject::parseMods - Could not resolve path for [catalog/language/hungarian/common/footer.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/language/hungarian/setting/setting.php] (SKIPPED)
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-04-12 04:31:40 ~ IP : ::1 ----------
+REQUEST URI : /ytc_templates/opencart/so_lovefashion/layout2/
+MOD DETAILS:
+   modFile   : D:\xampp\htdocs\ytc_templates\opencart\so_lovefashion\vqmod/xml/quicksignup.xml
+   id        : 
+   version   : 2x
+   vqmver    : 
+   author    : Webmedialdh
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <li class="quick-login">
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-04-12 09:07:04 ~ IP : ::1 ----------
+REQUEST URI : /ytc_templates/opencart/placehoder/so_lovefashion/
+MOD DETAILS:
+   modFile   : D:\xampp\htdocs\ytc_templates\opencart\placehoder\so_lovefashion\vqmod/xml/cookie_low.xml
+   id        : EU Cookie Law - top, bottom, floating
+   version   : 
+   vqmver    : 2.X
+   author    : arveo
+VQModObject::parseMods - Could not resolve path for [catalog/language/hungarian/common/footer.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [admin/language/hungarian/setting/setting.php] (SKIPPED)
+
+----------------------------------------------------------------------
+
+

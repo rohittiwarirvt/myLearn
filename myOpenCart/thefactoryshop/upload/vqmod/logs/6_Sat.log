@@ -1,0 +1,14 @@
+---------- Date: 2016-04-02 05:40:16 ~ IP : ::1 ----------
+REQUEST URI : /ytc_templates/opencart/so_lovefashion/layout2/
+MOD DETAILS:
+   modFile   : D:\xampp\htdocs\ytc_templates\opencart\so_lovefashion\vqmod/xml/quicksignup.xml
+   id        : 
+   version   : 2x
+   vqmver    : 
+   author    : Webmedialdh
+
+File Name    : catalog/view/theme/*/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <li class="quick-login">
+----------------------------------------------------------------------
+
+

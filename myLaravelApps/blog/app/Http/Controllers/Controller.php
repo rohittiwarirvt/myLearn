@@ -10,4 +10,13 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public $user
+    public function __construct(User $user, Product $product ) {
+      $this->user = $user;
+    }
+
+    public function test() {
+      $this->user;
+      __
+    }
 }

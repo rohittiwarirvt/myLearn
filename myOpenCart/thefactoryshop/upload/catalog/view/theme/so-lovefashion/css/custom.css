@@ -1,5 +1,144 @@
-/*Add Css Custom Here*/
+body .header-bottom {
+    background: #272727;
+    margin: 0;
+}
 
+.slideshow .sohomeslider-description h1{
+   display:none;
+}
+body .module.top-category {
+  transform: none;
+  -moz-transform: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+}
+.module.top-category p.des {
+  display: none
+}
+.common-home #content {
+  margin-top:20px;
+}
+
+body .footer-container {
+  background: #1b1b1b;
+}
+section#yt_spotlight5,#yt_spotlight8,section#yt_spotlight9,section#yt_spotlight3 {
+    display: none;
+}
+
+body .module.slideshow .sohomepage-slider .so-homeslider img {
+  width: 100%;
+}
+
+html a, html a:visited, html a:active, html a:link, html a:focus {
+  color: inherit;
+}
+
+html .module.top-category .content .text h3.title {
+  font-size: 2.2em;
+  //color: #000;
+}
+.top-category .content {
+  border: 1px solid #e6dede;
+  background-color: #f5f5f5;
+  padding: 10px;
+  box-shadow: 0 0 12px 0 #d8cdc7;
+}
+.module.top-category .content .img-cate {
+  border: 4px solid #fff;
+}
+
+html .module.style-dev-listing-tabs {
+  margin-top: 30px;
+  box-shadow: 0 0 5px 3px #f5f5f5;
+}
+html .module.what-client-say {
+  padding: 55px 80px;;
+}
+html .module .header-title {
+  margin: 15px 0;
+}
+
+html footer.footer-container .module .modtitle {
+  color: #fff;
+}
+
+.style-dev-listing-tabs a.block-images img {
+    box-shadow: 0 17px 20px 5px #9e9996;
+}
+html .module.style-dev-listing-tabs  .so-listing-tabs
+ .wap-listing-tabs .ltabs-items-container .ltabs-items
+  .ltabs-item > .item-inner {
+  margin-left: 23px;
+}
+html .module.style-dev-listing-tabs .header-title {
+  padding-top: 30px;
+}
+
+.module.style-dev-listing-tabs .wap-listing-tabs
+ .ltabs-items-container .ltabs-items {
+  overflow: hidden;
+}
+
+.top-category .text:hover {
+    background: rgba(0,0, 0,.3);
+    /* opacity: 0.4; */
+    transition: all 2s;
+    /* color: white; */
+    width: 82%;
+    margin-left: 4px;
+}
+.top-category .top .text:hover {
+  width: 91%;
+}
+html .module.top-category .content:hover .text {
+ padding: 10px 50px;
+}
+
+.top-category .text:hover .title a {
+  color: #e74847
+}
+.top-category .text:hover a {
+  color: #fff;
+}
+
+html .footer-container:before {
+  background: url(/image/cache/catalog/casual%20kurtis/_AM_7131-333x500.JPG) no-repeat left 0;
+  background-size: cover;
+  opacity: 0.25;
+}
+@media (max-width: 767px){
+
+ html .module.slideshow .so-homeslider .owl2-item img {
+    //width: auto;
+    //height: 206px;
+  }
+
+  .header-bottom-right .log-reg > li > span {
+    color:#e74847;
+  }
+
+  html .header-bottom-right .log-reg{
+    background:white
+  }
+
+  html .header-bottom-right .log-reg > li.quick-register:after{
+    color:#e74847;
+  }
+
+  html .header-bottom-right .log-reg > li{
+    padding:5px;
+  }
+  html .header-bottom-right .log-reg > li > div > a{
+    color:#e74847;
+  }
+
+}
+.footer-container .copyright-text {
+  color: #fff;
+}
+/*Add Css Custom Here*/
+/*
 .megamenu-style-dev .navbar-default .horizontal .megamenu-wrapper ul.megamenu > li > a
 {
 
@@ -116,3 +255,4 @@ color:white;
   color:black;
 
 }
+*/
